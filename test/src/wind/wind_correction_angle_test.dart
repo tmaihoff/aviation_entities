@@ -2,8 +2,9 @@
 
 import 'package:aviation_entities/src/wind/wind.dart';
 import 'package:aviation_units/aviation_units.dart';
-import 'package:shared_dart/shared_dart.dart';
 import 'package:test/test.dart';
+
+import '../test_utils.dart';
 
 void main() {
   group('wind correction angle:', () {

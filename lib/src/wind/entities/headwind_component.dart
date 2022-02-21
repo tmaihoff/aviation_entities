@@ -1,9 +1,9 @@
 import 'dart:math';
 
+import 'package:aviation_entities/src/trigonometry/trigonometry_rule_of_thumb.dart';
 import 'package:aviation_entities/src/wind/entities/wind.dart';
 import 'package:aviation_units/aviation_units.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shared_dart/shared_dart.dart';
 
 part 'headwind_component.freezed.dart';
 
