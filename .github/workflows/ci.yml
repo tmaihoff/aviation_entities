@@ -25,6 +25,9 @@ jobs:
           flutter-version: "2.10.0"
           channel: "stable"
 
+      - name: Clone aviation_units submodule
+        run: $ git -C ../ clone https://github.com/tmaihoff/aviation_units.git
+
       - name: Pub get
         run: flutter pub get
 
