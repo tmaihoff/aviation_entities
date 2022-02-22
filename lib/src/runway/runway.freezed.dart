@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'runway.dart';
@@ -32,7 +33,7 @@ class _$RunwaySetTearOff {
     );
   }
 
-  RunwaySet fromJson(Map<String, Object> json) {
+  RunwaySet fromJson(Map<String, Object?> json) {
     return RunwaySet.fromJson(json);
   }
 }
@@ -180,24 +181,22 @@ class _$_RunwaySet extends _RunwaySet {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _RunwaySet &&
-            (identical(other.airportIcaoCode, airportIcaoCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.airportIcaoCode, airportIcaoCode)) &&
-            (identical(other.direction1, direction1) ||
-                const DeepCollectionEquality()
-                    .equals(other.direction1, direction1)) &&
-            (identical(other.direction2, direction2) ||
-                const DeepCollectionEquality()
-                    .equals(other.direction2, direction2)));
+        (other.runtimeType == runtimeType &&
+            other is _RunwaySet &&
+            const DeepCollectionEquality()
+                .equals(other.airportIcaoCode, airportIcaoCode) &&
+            const DeepCollectionEquality()
+                .equals(other.direction1, direction1) &&
+            const DeepCollectionEquality()
+                .equals(other.direction2, direction2));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(airportIcaoCode) ^
-      const DeepCollectionEquality().hash(direction1) ^
-      const DeepCollectionEquality().hash(direction2);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(airportIcaoCode),
+      const DeepCollectionEquality().hash(direction1),
+      const DeepCollectionEquality().hash(direction2));
 
   @JsonKey(ignore: true)
   @override
@@ -221,11 +220,11 @@ abstract class _RunwaySet extends RunwaySet {
       _$_RunwaySet.fromJson;
 
   @override
-  String get airportIcaoCode => throw _privateConstructorUsedError;
+  String get airportIcaoCode;
   @override
-  Runway get direction1 => throw _privateConstructorUsedError;
+  Runway get direction1;
   @override
-  Runway get direction2 => throw _privateConstructorUsedError;
+  Runway get direction2;
   @override
   @JsonKey(ignore: true)
   _$RunwaySetCopyWith<_RunwaySet> get copyWith =>
@@ -265,7 +264,7 @@ class _$RunwayTearOff {
     );
   }
 
-  Runway fromJson(Map<String, Object> json) {
+  Runway fromJson(Map<String, Object?> json) {
     return Runway.fromJson(json);
   }
 }
@@ -529,47 +528,36 @@ class _$_Runway extends _Runway {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Runway &&
-            (identical(other.airportIcaoCode, airportIcaoCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.airportIcaoCode, airportIcaoCode)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.trueHeading, trueHeading) ||
-                const DeepCollectionEquality()
-                    .equals(other.trueHeading, trueHeading)) &&
-            (identical(other.length, length) ||
-                const DeepCollectionEquality().equals(other.length, length)) &&
-            (identical(other.width, width) ||
-                const DeepCollectionEquality().equals(other.width, width)) &&
-            (identical(other.surface, surface) ||
-                const DeepCollectionEquality()
-                    .equals(other.surface, surface)) &&
-            (identical(other.lighted, lighted) ||
-                const DeepCollectionEquality()
-                    .equals(other.lighted, lighted)) &&
-            (identical(other.closed, closed) ||
-                const DeepCollectionEquality().equals(other.closed, closed)) &&
-            (identical(other.start, start) ||
-                const DeepCollectionEquality().equals(other.start, start)) &&
-            (identical(other.end, end) ||
-                const DeepCollectionEquality().equals(other.end, end)));
+        (other.runtimeType == runtimeType &&
+            other is _Runway &&
+            const DeepCollectionEquality()
+                .equals(other.airportIcaoCode, airportIcaoCode) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality()
+                .equals(other.trueHeading, trueHeading) &&
+            const DeepCollectionEquality().equals(other.length, length) &&
+            const DeepCollectionEquality().equals(other.width, width) &&
+            const DeepCollectionEquality().equals(other.surface, surface) &&
+            const DeepCollectionEquality().equals(other.lighted, lighted) &&
+            const DeepCollectionEquality().equals(other.closed, closed) &&
+            const DeepCollectionEquality().equals(other.start, start) &&
+            const DeepCollectionEquality().equals(other.end, end));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(airportIcaoCode) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(trueHeading) ^
-      const DeepCollectionEquality().hash(length) ^
-      const DeepCollectionEquality().hash(width) ^
-      const DeepCollectionEquality().hash(surface) ^
-      const DeepCollectionEquality().hash(lighted) ^
-      const DeepCollectionEquality().hash(closed) ^
-      const DeepCollectionEquality().hash(start) ^
-      const DeepCollectionEquality().hash(end);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(airportIcaoCode),
+      const DeepCollectionEquality().hash(identifier),
+      const DeepCollectionEquality().hash(trueHeading),
+      const DeepCollectionEquality().hash(length),
+      const DeepCollectionEquality().hash(width),
+      const DeepCollectionEquality().hash(surface),
+      const DeepCollectionEquality().hash(lighted),
+      const DeepCollectionEquality().hash(closed),
+      const DeepCollectionEquality().hash(start),
+      const DeepCollectionEquality().hash(end));
 
   @JsonKey(ignore: true)
   @override
@@ -599,25 +587,25 @@ abstract class _Runway extends Runway {
   factory _Runway.fromJson(Map<String, dynamic> json) = _$_Runway.fromJson;
 
   @override
-  String get airportIcaoCode => throw _privateConstructorUsedError;
+  String get airportIcaoCode;
   @override
-  String get identifier => throw _privateConstructorUsedError;
+  String get identifier;
   @override
-  Heading get trueHeading => throw _privateConstructorUsedError;
+  Heading get trueHeading;
   @override
-  Length get length => throw _privateConstructorUsedError;
+  Length get length;
   @override
-  Length get width => throw _privateConstructorUsedError;
+  Length get width;
   @override
-  String get surface => throw _privateConstructorUsedError;
+  String get surface;
   @override
-  bool get lighted => throw _privateConstructorUsedError;
+  bool get lighted;
   @override
-  bool get closed => throw _privateConstructorUsedError;
+  bool get closed;
   @override
-  Threshold get start => throw _privateConstructorUsedError;
+  Threshold get start;
   @override
-  Threshold get end => throw _privateConstructorUsedError;
+  Threshold get end;
   @override
   @JsonKey(ignore: true)
   _$RunwayCopyWith<_Runway> get copyWith => throw _privateConstructorUsedError;
@@ -644,7 +632,7 @@ class _$ThresholdTearOff {
     );
   }
 
-  Threshold fromJson(Map<String, Object> json) {
+  Threshold fromJson(Map<String, Object?> json) {
     return Threshold.fromJson(json);
   }
 }
@@ -786,28 +774,21 @@ class _$_Threshold extends _Threshold {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Threshold &&
-            (identical(other.latitude, latitude) ||
-                const DeepCollectionEquality()
-                    .equals(other.latitude, latitude)) &&
-            (identical(other.longitude, longitude) ||
-                const DeepCollectionEquality()
-                    .equals(other.longitude, longitude)) &&
-            (identical(other.displaced, displaced) ||
-                const DeepCollectionEquality()
-                    .equals(other.displaced, displaced)) &&
-            (identical(other.elevation, elevation) ||
-                const DeepCollectionEquality()
-                    .equals(other.elevation, elevation)));
+        (other.runtimeType == runtimeType &&
+            other is _Threshold &&
+            const DeepCollectionEquality().equals(other.latitude, latitude) &&
+            const DeepCollectionEquality().equals(other.longitude, longitude) &&
+            const DeepCollectionEquality().equals(other.displaced, displaced) &&
+            const DeepCollectionEquality().equals(other.elevation, elevation));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(latitude) ^
-      const DeepCollectionEquality().hash(longitude) ^
-      const DeepCollectionEquality().hash(displaced) ^
-      const DeepCollectionEquality().hash(elevation);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(latitude),
+      const DeepCollectionEquality().hash(longitude),
+      const DeepCollectionEquality().hash(displaced),
+      const DeepCollectionEquality().hash(elevation));
 
   @JsonKey(ignore: true)
   @override
@@ -832,13 +813,13 @@ abstract class _Threshold extends Threshold {
       _$_Threshold.fromJson;
 
   @override
-  double get latitude => throw _privateConstructorUsedError;
+  double get latitude;
   @override
-  double get longitude => throw _privateConstructorUsedError;
+  double get longitude;
   @override
-  Length get displaced => throw _privateConstructorUsedError;
+  Length get displaced;
   @override
-  Length get elevation => throw _privateConstructorUsedError;
+  Length get elevation;
   @override
   @JsonKey(ignore: true)
   _$ThresholdCopyWith<_Threshold> get copyWith =>

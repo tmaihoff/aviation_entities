@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'holding_solution.dart';
@@ -215,31 +216,26 @@ class _$_HoldingSolution extends _HoldingSolution {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _HoldingSolution &&
-            (identical(other.holding, holding) ||
-                const DeepCollectionEquality()
-                    .equals(other.holding, holding)) &&
-            (identical(other.entry, entry) ||
-                const DeepCollectionEquality().equals(other.entry, entry)) &&
-            (identical(other.outboundWca, outboundWca) ||
-                const DeepCollectionEquality()
-                    .equals(other.outboundWca, outboundWca)) &&
-            (identical(other.inboundWca, inboundWca) ||
-                const DeepCollectionEquality()
-                    .equals(other.inboundWca, inboundWca)) &&
-            (identical(other.outboundTiming, outboundTiming) ||
-                const DeepCollectionEquality()
-                    .equals(other.outboundTiming, outboundTiming)));
+        (other.runtimeType == runtimeType &&
+            other is _HoldingSolution &&
+            const DeepCollectionEquality().equals(other.holding, holding) &&
+            const DeepCollectionEquality().equals(other.entry, entry) &&
+            const DeepCollectionEquality()
+                .equals(other.outboundWca, outboundWca) &&
+            const DeepCollectionEquality()
+                .equals(other.inboundWca, inboundWca) &&
+            const DeepCollectionEquality()
+                .equals(other.outboundTiming, outboundTiming));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(holding) ^
-      const DeepCollectionEquality().hash(entry) ^
-      const DeepCollectionEquality().hash(outboundWca) ^
-      const DeepCollectionEquality().hash(inboundWca) ^
-      const DeepCollectionEquality().hash(outboundTiming);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(holding),
+      const DeepCollectionEquality().hash(entry),
+      const DeepCollectionEquality().hash(outboundWca),
+      const DeepCollectionEquality().hash(inboundWca),
+      const DeepCollectionEquality().hash(outboundTiming));
 
   @JsonKey(ignore: true)
   @override
@@ -257,15 +253,15 @@ abstract class _HoldingSolution extends HoldingSolution {
   const _HoldingSolution._() : super._();
 
   @override
-  Holding get holding => throw _privateConstructorUsedError;
+  Holding get holding;
   @override
-  HoldingEntry get entry => throw _privateConstructorUsedError;
+  HoldingEntry get entry;
   @override
-  Angle get outboundWca => throw _privateConstructorUsedError;
+  Angle get outboundWca;
   @override
-  Angle get inboundWca => throw _privateConstructorUsedError;
+  Angle get inboundWca;
   @override
-  Duration get outboundTiming => throw _privateConstructorUsedError;
+  Duration get outboundTiming;
   @override
   @JsonKey(ignore: true)
   _$HoldingSolutionCopyWith<_HoldingSolution> get copyWith =>

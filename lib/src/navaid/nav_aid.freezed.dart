@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'nav_aid.dart';
@@ -42,7 +43,7 @@ class _$NavAidTearOff {
     );
   }
 
-  NavAid fromJson(Map<String, Object> json) {
+  NavAid fromJson(Map<String, Object?> json) {
     return NavAid.fromJson(json);
   }
 }
@@ -252,42 +253,31 @@ class _$_NavAid extends _NavAid {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _NavAid &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.frequency, frequency) ||
-                const DeepCollectionEquality()
-                    .equals(other.frequency, frequency)) &&
-            (identical(other.latitude, latitude) ||
-                const DeepCollectionEquality()
-                    .equals(other.latitude, latitude)) &&
-            (identical(other.longitude, longitude) ||
-                const DeepCollectionEquality()
-                    .equals(other.longitude, longitude)) &&
-            (identical(other.elevation, elevation) ||
-                const DeepCollectionEquality()
-                    .equals(other.elevation, elevation)) &&
-            (identical(other.magneticVariation, magneticVariation) ||
-                const DeepCollectionEquality()
-                    .equals(other.magneticVariation, magneticVariation)));
+        (other.runtimeType == runtimeType &&
+            other is _NavAid &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.frequency, frequency) &&
+            const DeepCollectionEquality().equals(other.latitude, latitude) &&
+            const DeepCollectionEquality().equals(other.longitude, longitude) &&
+            const DeepCollectionEquality().equals(other.elevation, elevation) &&
+            const DeepCollectionEquality()
+                .equals(other.magneticVariation, magneticVariation));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(frequency) ^
-      const DeepCollectionEquality().hash(latitude) ^
-      const DeepCollectionEquality().hash(longitude) ^
-      const DeepCollectionEquality().hash(elevation) ^
-      const DeepCollectionEquality().hash(magneticVariation);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(identifier),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(frequency),
+      const DeepCollectionEquality().hash(latitude),
+      const DeepCollectionEquality().hash(longitude),
+      const DeepCollectionEquality().hash(elevation),
+      const DeepCollectionEquality().hash(magneticVariation));
 
   @JsonKey(ignore: true)
   @override
@@ -315,21 +305,21 @@ abstract class _NavAid extends NavAid {
   factory _NavAid.fromJson(Map<String, dynamic> json) = _$_NavAid.fromJson;
 
   @override
-  NavAidType get type => throw _privateConstructorUsedError;
+  NavAidType get type;
   @override
-  String get identifier => throw _privateConstructorUsedError;
+  String get identifier;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get frequency => throw _privateConstructorUsedError;
+  String get frequency;
   @override // khz
-  double get latitude => throw _privateConstructorUsedError;
+  double get latitude;
   @override
-  double get longitude => throw _privateConstructorUsedError;
+  double get longitude;
   @override
-  Length get elevation => throw _privateConstructorUsedError;
+  Length get elevation;
   @override
-  Angle get magneticVariation => throw _privateConstructorUsedError;
+  Angle get magneticVariation;
   @override
   @JsonKey(ignore: true)
   _$NavAidCopyWith<_NavAid> get copyWith => throw _privateConstructorUsedError;

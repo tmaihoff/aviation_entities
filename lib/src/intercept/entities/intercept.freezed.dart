@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'intercept.dart';
@@ -204,30 +205,26 @@ class _$_Intercept extends _Intercept {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Intercept &&
-            (identical(other.interceptCourse, interceptCourse) ||
-                const DeepCollectionEquality()
-                    .equals(other.interceptCourse, interceptCourse)) &&
-            (identical(other.aircraftBearingToFix, aircraftBearingToFix) ||
-                const DeepCollectionEquality().equals(
-                    other.aircraftBearingToFix, aircraftBearingToFix)) &&
-            (identical(other.aircraftHeading, aircraftHeading) ||
-                const DeepCollectionEquality()
-                    .equals(other.aircraftHeading, aircraftHeading)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.navAid, navAid) ||
-                const DeepCollectionEquality().equals(other.navAid, navAid)));
+        (other.runtimeType == runtimeType &&
+            other is _Intercept &&
+            const DeepCollectionEquality()
+                .equals(other.interceptCourse, interceptCourse) &&
+            const DeepCollectionEquality()
+                .equals(other.aircraftBearingToFix, aircraftBearingToFix) &&
+            const DeepCollectionEquality()
+                .equals(other.aircraftHeading, aircraftHeading) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.navAid, navAid));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(interceptCourse) ^
-      const DeepCollectionEquality().hash(aircraftBearingToFix) ^
-      const DeepCollectionEquality().hash(aircraftHeading) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(navAid);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(interceptCourse),
+      const DeepCollectionEquality().hash(aircraftBearingToFix),
+      const DeepCollectionEquality().hash(aircraftHeading),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(navAid));
 
   @JsonKey(ignore: true)
   @override
@@ -245,15 +242,15 @@ abstract class _Intercept extends Intercept {
   const _Intercept._() : super._();
 
   @override
-  Heading get interceptCourse => throw _privateConstructorUsedError;
+  Heading get interceptCourse;
   @override
-  Heading get aircraftBearingToFix => throw _privateConstructorUsedError;
+  Heading get aircraftBearingToFix;
   @override
-  Heading get aircraftHeading => throw _privateConstructorUsedError;
+  Heading get aircraftHeading;
   @override
-  InterceptType get type => throw _privateConstructorUsedError;
+  InterceptType get type;
   @override
-  NavAid? get navAid => throw _privateConstructorUsedError;
+  NavAid? get navAid;
   @override
   @JsonKey(ignore: true)
   _$InterceptCopyWith<_Intercept> get copyWith =>

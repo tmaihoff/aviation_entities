@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'airport.dart';
@@ -44,7 +45,7 @@ class _$AirportTearOff {
     );
   }
 
-  Airport fromJson(Map<String, Object> json) {
+  Airport fromJson(Map<String, Object?> json) {
     return Airport.fromJson(json);
   }
 }
@@ -271,44 +272,31 @@ class _$_Airport extends _Airport {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Airport &&
-            (identical(other.icaoCode, icaoCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.icaoCode, icaoCode)) &&
-            (identical(other.iataCode, iataCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.iataCode, iataCode)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.city, city) ||
-                const DeepCollectionEquality().equals(other.city, city)) &&
-            (identical(other.latitude, latitude) ||
-                const DeepCollectionEquality()
-                    .equals(other.latitude, latitude)) &&
-            (identical(other.longitude, longitude) ||
-                const DeepCollectionEquality()
-                    .equals(other.longitude, longitude)) &&
-            (identical(other.elevation, elevation) ||
-                const DeepCollectionEquality()
-                    .equals(other.elevation, elevation)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.runways, runways) ||
-                const DeepCollectionEquality().equals(other.runways, runways)));
+        (other.runtimeType == runtimeType &&
+            other is _Airport &&
+            const DeepCollectionEquality().equals(other.icaoCode, icaoCode) &&
+            const DeepCollectionEquality().equals(other.iataCode, iataCode) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.city, city) &&
+            const DeepCollectionEquality().equals(other.latitude, latitude) &&
+            const DeepCollectionEquality().equals(other.longitude, longitude) &&
+            const DeepCollectionEquality().equals(other.elevation, elevation) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.runways, runways));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(icaoCode) ^
-      const DeepCollectionEquality().hash(iataCode) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(city) ^
-      const DeepCollectionEquality().hash(latitude) ^
-      const DeepCollectionEquality().hash(longitude) ^
-      const DeepCollectionEquality().hash(elevation) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(runways);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(icaoCode),
+      const DeepCollectionEquality().hash(iataCode),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(city),
+      const DeepCollectionEquality().hash(latitude),
+      const DeepCollectionEquality().hash(longitude),
+      const DeepCollectionEquality().hash(elevation),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(runways));
 
   @JsonKey(ignore: true)
   @override
@@ -337,23 +325,23 @@ abstract class _Airport extends Airport {
   factory _Airport.fromJson(Map<String, dynamic> json) = _$_Airport.fromJson;
 
   @override
-  String get icaoCode => throw _privateConstructorUsedError;
+  String get icaoCode;
   @override
-  String get iataCode => throw _privateConstructorUsedError;
+  String get iataCode;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get city => throw _privateConstructorUsedError;
+  String get city;
   @override
-  double get latitude => throw _privateConstructorUsedError;
+  double get latitude;
   @override
-  double get longitude => throw _privateConstructorUsedError;
+  double get longitude;
   @override
-  double get elevation => throw _privateConstructorUsedError;
+  double get elevation;
   @override // TODO: use Length class?
-  String get type => throw _privateConstructorUsedError;
+  String get type;
   @override
-  List<RunwaySet> get runways => throw _privateConstructorUsedError;
+  List<RunwaySet> get runways;
   @override
   @JsonKey(ignore: true)
   _$AirportCopyWith<_Airport> get copyWith =>

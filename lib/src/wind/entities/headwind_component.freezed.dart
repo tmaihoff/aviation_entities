@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'headwind_component.dart';
@@ -161,23 +162,20 @@ class _$_HeadwindComponent extends _HeadwindComponent {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _HeadwindComponent &&
-            (identical(other.wind, wind) ||
-                const DeepCollectionEquality().equals(other.wind, wind)) &&
-            (identical(other.heading, heading) ||
-                const DeepCollectionEquality()
-                    .equals(other.heading, heading)) &&
-            (identical(other.trueAirspeed, trueAirspeed) ||
-                const DeepCollectionEquality()
-                    .equals(other.trueAirspeed, trueAirspeed)));
+        (other.runtimeType == runtimeType &&
+            other is _HeadwindComponent &&
+            const DeepCollectionEquality().equals(other.wind, wind) &&
+            const DeepCollectionEquality().equals(other.heading, heading) &&
+            const DeepCollectionEquality()
+                .equals(other.trueAirspeed, trueAirspeed));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(wind) ^
-      const DeepCollectionEquality().hash(heading) ^
-      const DeepCollectionEquality().hash(trueAirspeed);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(wind),
+      const DeepCollectionEquality().hash(heading),
+      const DeepCollectionEquality().hash(trueAirspeed));
 
   @JsonKey(ignore: true)
   @override
@@ -193,11 +191,11 @@ abstract class _HeadwindComponent extends HeadwindComponent {
   const _HeadwindComponent._() : super._();
 
   @override
-  Wind get wind => throw _privateConstructorUsedError;
+  Wind get wind;
   @override
-  Heading get heading => throw _privateConstructorUsedError;
+  Heading get heading;
   @override
-  Speed get trueAirspeed => throw _privateConstructorUsedError;
+  Speed get trueAirspeed;
   @override
   @JsonKey(ignore: true)
   _$HeadwindComponentCopyWith<_HeadwindComponent> get copyWith =>

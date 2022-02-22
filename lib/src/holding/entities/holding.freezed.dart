@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'holding.dart';
@@ -230,34 +231,29 @@ class _$_Holding extends _Holding {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Holding &&
-            (identical(other.inboundCourse, inboundCourse) ||
-                const DeepCollectionEquality()
-                    .equals(other.inboundCourse, inboundCourse)) &&
-            (identical(other.turnDirection, turnDirection) ||
-                const DeepCollectionEquality()
-                    .equals(other.turnDirection, turnDirection)) &&
-            (identical(other.aircraftBearingToFix, aircraftBearingToFix) ||
-                const DeepCollectionEquality().equals(
-                    other.aircraftBearingToFix, aircraftBearingToFix)) &&
-            (identical(other.trueAirspeed, trueAirspeed) ||
-                const DeepCollectionEquality()
-                    .equals(other.trueAirspeed, trueAirspeed)) &&
-            (identical(other.wind, wind) ||
-                const DeepCollectionEquality().equals(other.wind, wind)) &&
-            (identical(other.navAid, navAid) ||
-                const DeepCollectionEquality().equals(other.navAid, navAid)));
+        (other.runtimeType == runtimeType &&
+            other is _Holding &&
+            const DeepCollectionEquality()
+                .equals(other.inboundCourse, inboundCourse) &&
+            const DeepCollectionEquality()
+                .equals(other.turnDirection, turnDirection) &&
+            const DeepCollectionEquality()
+                .equals(other.aircraftBearingToFix, aircraftBearingToFix) &&
+            const DeepCollectionEquality()
+                .equals(other.trueAirspeed, trueAirspeed) &&
+            const DeepCollectionEquality().equals(other.wind, wind) &&
+            const DeepCollectionEquality().equals(other.navAid, navAid));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(inboundCourse) ^
-      const DeepCollectionEquality().hash(turnDirection) ^
-      const DeepCollectionEquality().hash(aircraftBearingToFix) ^
-      const DeepCollectionEquality().hash(trueAirspeed) ^
-      const DeepCollectionEquality().hash(wind) ^
-      const DeepCollectionEquality().hash(navAid);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(inboundCourse),
+      const DeepCollectionEquality().hash(turnDirection),
+      const DeepCollectionEquality().hash(aircraftBearingToFix),
+      const DeepCollectionEquality().hash(trueAirspeed),
+      const DeepCollectionEquality().hash(wind),
+      const DeepCollectionEquality().hash(navAid));
 
   @JsonKey(ignore: true)
   @override
@@ -276,17 +272,17 @@ abstract class _Holding extends Holding {
   const _Holding._() : super._();
 
   @override
-  Heading get inboundCourse => throw _privateConstructorUsedError;
+  Heading get inboundCourse;
   @override
-  TurnDirection get turnDirection => throw _privateConstructorUsedError;
+  TurnDirection get turnDirection;
   @override
-  Heading get aircraftBearingToFix => throw _privateConstructorUsedError;
+  Heading get aircraftBearingToFix;
   @override
-  Speed get trueAirspeed => throw _privateConstructorUsedError;
+  Speed get trueAirspeed;
   @override
-  Wind get wind => throw _privateConstructorUsedError;
+  Wind get wind;
   @override
-  NavAid? get navAid => throw _privateConstructorUsedError;
+  NavAid? get navAid;
   @override
   @JsonKey(ignore: true)
   _$HoldingCopyWith<_Holding> get copyWith =>

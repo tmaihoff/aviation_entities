@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'intercept_solution.dart';
@@ -174,23 +175,19 @@ class _$_InterceptSolution extends _InterceptSolution {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _InterceptSolution &&
-            (identical(other.intercept, intercept) ||
-                const DeepCollectionEquality()
-                    .equals(other.intercept, intercept)) &&
-            (identical(other.heading, heading) ||
-                const DeepCollectionEquality()
-                    .equals(other.heading, heading)) &&
-            (identical(other.g, g) ||
-                const DeepCollectionEquality().equals(other.g, g)));
+        (other.runtimeType == runtimeType &&
+            other is _InterceptSolution &&
+            const DeepCollectionEquality().equals(other.intercept, intercept) &&
+            const DeepCollectionEquality().equals(other.heading, heading) &&
+            const DeepCollectionEquality().equals(other.g, g));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(intercept) ^
-      const DeepCollectionEquality().hash(heading) ^
-      const DeepCollectionEquality().hash(g);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(intercept),
+      const DeepCollectionEquality().hash(heading),
+      const DeepCollectionEquality().hash(g));
 
   @JsonKey(ignore: true)
   @override
@@ -208,17 +205,17 @@ abstract class _InterceptSolution extends InterceptSolution {
   @override
 
   /// The Intercept task this solution is based on.
-  Intercept get intercept => throw _privateConstructorUsedError;
+  Intercept get intercept;
   @override
 
   /// Correct heading to solve the intercept task.
-  Heading get heading => throw _privateConstructorUsedError;
+  Heading get heading;
   @override
 
   /// G angle of the intercept solution. Only present if type is
   /// [InterceptType.outbound]. Angle from the tail of the bearingTo
   /// pointer to the intercept course.
-  Angle? get g => throw _privateConstructorUsedError;
+  Angle? get g;
   @override
   @JsonKey(ignore: true)
   _$InterceptSolutionCopyWith<_InterceptSolution> get copyWith =>
