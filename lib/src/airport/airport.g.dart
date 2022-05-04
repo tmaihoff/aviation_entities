@@ -30,5 +30,5 @@ Map<String, dynamic> _$$_AirportToJson(_$_Airport instance) =>
       'longitude': instance.longitude,
       'elevation': instance.elevation,
       'type': instance.type,
-      'runways': instance.runways,
+      'runways': instance.runways.map((e) => e.toJson()).toList(),
     };

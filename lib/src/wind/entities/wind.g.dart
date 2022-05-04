@@ -12,6 +12,6 @@ _$_Wind _$$_WindFromJson(Map<String, dynamic> json) => _$_Wind(
     );
 
 Map<String, dynamic> _$$_WindToJson(_$_Wind instance) => <String, dynamic>{
-      'from': instance.from,
-      'speed': instance.speed,
+      'from': instance.from.toJson(),
+      'speed': instance.speed.toJson(),
     };

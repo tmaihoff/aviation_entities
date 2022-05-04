@@ -15,8 +15,8 @@ _$_RunwaySet _$$_RunwaySetFromJson(Map<String, dynamic> json) => _$_RunwaySet(
 Map<String, dynamic> _$$_RunwaySetToJson(_$_RunwaySet instance) =>
     <String, dynamic>{
       'airportIcaoCode': instance.airportIcaoCode,
-      'direction1': instance.direction1,
-      'direction2': instance.direction2,
+      'direction1': instance.direction1.toJson(),
+      'direction2': instance.direction2.toJson(),
     };
 
 _$_Runway _$$_RunwayFromJson(Map<String, dynamic> json) => _$_Runway(
@@ -36,14 +36,14 @@ _$_Runway _$$_RunwayFromJson(Map<String, dynamic> json) => _$_Runway(
 Map<String, dynamic> _$$_RunwayToJson(_$_Runway instance) => <String, dynamic>{
       'airportIcaoCode': instance.airportIcaoCode,
       'identifier': instance.identifier,
-      'trueHeading': instance.trueHeading,
-      'length': instance.length,
-      'width': instance.width,
+      'trueHeading': instance.trueHeading.toJson(),
+      'length': instance.length.toJson(),
+      'width': instance.width.toJson(),
       'surface': instance.surface,
       'lighted': instance.lighted,
       'closed': instance.closed,
-      'start': instance.start,
-      'end': instance.end,
+      'start': instance.start.toJson(),
+      'end': instance.end.toJson(),
     };
 
 _$_Threshold _$$_ThresholdFromJson(Map<String, dynamic> json) => _$_Threshold(
@@ -57,6 +57,6 @@ Map<String, dynamic> _$$_ThresholdToJson(_$_Threshold instance) =>
     <String, dynamic>{
       'latitude': instance.latitude,
       'longitude': instance.longitude,
-      'displaced': instance.displaced,
-      'elevation': instance.elevation,
+      'displaced': instance.displaced.toJson(),
+      'elevation': instance.elevation.toJson(),
     };
