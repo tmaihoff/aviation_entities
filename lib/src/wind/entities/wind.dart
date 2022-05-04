@@ -5,6 +5,7 @@ import 'package:aviation_units/aviation_units.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'wind.freezed.dart';
+part 'wind.g.dart';
 
 @freezed
 class Wind with _$Wind {
@@ -14,6 +15,8 @@ class Wind with _$Wind {
     required Heading from,
     required Speed speed,
   }) = _Wind;
+
+  factory Wind.fromJson(Map<String, dynamic> json) => _$WindFromJson(json);
 
   factory Wind.random({Speed maxSpeed = const Speed(kt: 30)}) => Wind(
         from: Heading.randomInt(),

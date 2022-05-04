@@ -25,8 +25,8 @@ Map<String, dynamic> _$$_NavAidToJson(_$_NavAid instance) => <String, dynamic>{
       'frequency': instance.frequency,
       'latitude': instance.latitude,
       'longitude': instance.longitude,
-      'elevation': instance.elevation.toJson(),
-      'magneticVariation': instance.magneticVariation.toJson(),
+      'elevation': instance.elevation,
+      'magneticVariation': instance.magneticVariation,
     };
 
 const _$NavAidTypeEnumMap = {

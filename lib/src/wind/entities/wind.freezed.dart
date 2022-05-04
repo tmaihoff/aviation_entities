@@ -14,6 +14,10 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+Wind _$WindFromJson(Map<String, dynamic> json) {
+  return _Wind.fromJson(json);
+}
+
 /// @nodoc
 class _$WindTearOff {
   const _$WindTearOff();
@@ -23,6 +27,10 @@ class _$WindTearOff {
       from: from,
       speed: speed,
     );
+  }
+
+  Wind fromJson(Map<String, Object?> json) {
+    return Wind.fromJson(json);
   }
 }
 
@@ -35,6 +43,7 @@ mixin _$Wind {
   Heading get from => throw _privateConstructorUsedError;
   Speed get speed => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $WindCopyWith<Wind> get copyWith => throw _privateConstructorUsedError;
 }
@@ -108,9 +117,11 @@ class __$WindCopyWithImpl<$Res> extends _$WindCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_Wind extends _Wind {
   const _$_Wind({required this.from, required this.speed}) : super._();
+
+  factory _$_Wind.fromJson(Map<String, dynamic> json) => _$$_WindFromJson(json);
 
   @override
 
@@ -138,11 +149,18 @@ class _$_Wind extends _Wind {
   @override
   _$WindCopyWith<_Wind> get copyWith =>
       __$WindCopyWithImpl<_Wind>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_WindToJson(this);
+  }
 }
 
 abstract class _Wind extends Wind {
   const factory _Wind({required Heading from, required Speed speed}) = _$_Wind;
   const _Wind._() : super._();
+
+  factory _Wind.fromJson(Map<String, dynamic> json) = _$_Wind.fromJson;
 
   @override
 
