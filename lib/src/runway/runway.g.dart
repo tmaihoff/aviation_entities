@@ -31,6 +31,9 @@ _$_Runway _$$_RunwayFromJson(Map<String, dynamic> json) => _$_Runway(
       closed: json['closed'] as bool,
       start: Threshold.fromJson(json['start'] as Map<String, dynamic>),
       end: Threshold.fromJson(json['end'] as Map<String, dynamic>),
+      ils: json['ils'] == null
+          ? null
+          : Ils.fromJson(json['ils'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_RunwayToJson(_$_Runway instance) => <String, dynamic>{
@@ -44,6 +47,7 @@ Map<String, dynamic> _$$_RunwayToJson(_$_Runway instance) => <String, dynamic>{
       'closed': instance.closed,
       'start': instance.start.toJson(),
       'end': instance.end.toJson(),
+      'ils': instance.ils?.toJson(),
     };
 
 _$_Threshold _$$_ThresholdFromJson(Map<String, dynamic> json) => _$_Threshold(

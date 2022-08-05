@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:aviation_entities/ils.dart';
 import 'package:aviation_units/aviation_units.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -15,7 +16,12 @@ class RunwaySet with _$RunwaySet {
     required Runway direction2,
   }) = _RunwaySet;
 
-  List<Runway> getBoth() => [direction1, direction2];
+// TODO: test this
+  List<Runway> get getBoth => [direction1, direction2];
+  List<Ils> get allIls => getBoth
+      .map((runway) => runway.ils) //
+      .whereType<Ils>()
+      .toList();
 
   factory RunwaySet.fromJson(Map<String, dynamic> json) =>
       _$RunwaySetFromJson(json);
@@ -41,6 +47,7 @@ class Runway with _$Runway {
     required bool closed,
     required Threshold start,
     required Threshold end,
+    required Ils? ils,
   }) = _Runway;
 
   LatLng get startLatLng => start.latLng;

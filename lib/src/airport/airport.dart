@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:aviation_entities/ils.dart';
 import 'package:aviation_entities/runway.dart';
 import 'package:aviation_units/aviation_units.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -21,6 +22,12 @@ class Airport with _$Airport {
     required String type,
     required List<RunwaySet> runways,
   }) = _Airport;
+
+// TODO: Test this
+  List<Ils> get allIls => runways
+      .map((runway) => runway.allIls) //
+      .expand((ils) => ils)
+      .toList();
 
   //! FOR DATABASE ACCESS / MUST MATCH ATTRIBUTE NAMES
   static const $icaoCode = 'icaoCode';

@@ -249,7 +249,8 @@ class _$RunwayTearOff {
       required bool lighted,
       required bool closed,
       required Threshold start,
-      required Threshold end}) {
+      required Threshold end,
+      required Ils? ils}) {
     return _Runway(
       airportIcaoCode: airportIcaoCode,
       identifier: identifier,
@@ -261,6 +262,7 @@ class _$RunwayTearOff {
       closed: closed,
       start: start,
       end: end,
+      ils: ils,
     );
   }
 
@@ -284,6 +286,7 @@ mixin _$Runway {
   bool get closed => throw _privateConstructorUsedError;
   Threshold get start => throw _privateConstructorUsedError;
   Threshold get end => throw _privateConstructorUsedError;
+  Ils? get ils => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -304,10 +307,12 @@ abstract class $RunwayCopyWith<$Res> {
       bool lighted,
       bool closed,
       Threshold start,
-      Threshold end});
+      Threshold end,
+      Ils? ils});
 
   $ThresholdCopyWith<$Res> get start;
   $ThresholdCopyWith<$Res> get end;
+  $IlsCopyWith<$Res>? get ils;
 }
 
 /// @nodoc
@@ -330,6 +335,7 @@ class _$RunwayCopyWithImpl<$Res> implements $RunwayCopyWith<$Res> {
     Object? closed = freezed,
     Object? start = freezed,
     Object? end = freezed,
+    Object? ils = freezed,
   }) {
     return _then(_value.copyWith(
       airportIcaoCode: airportIcaoCode == freezed
@@ -372,6 +378,10 @@ class _$RunwayCopyWithImpl<$Res> implements $RunwayCopyWith<$Res> {
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
               as Threshold,
+      ils: ils == freezed
+          ? _value.ils
+          : ils // ignore: cast_nullable_to_non_nullable
+              as Ils?,
     ));
   }
 
@@ -386,6 +396,17 @@ class _$RunwayCopyWithImpl<$Res> implements $RunwayCopyWith<$Res> {
   $ThresholdCopyWith<$Res> get end {
     return $ThresholdCopyWith<$Res>(_value.end, (value) {
       return _then(_value.copyWith(end: value));
+    });
+  }
+
+  @override
+  $IlsCopyWith<$Res>? get ils {
+    if (_value.ils == null) {
+      return null;
+    }
+
+    return $IlsCopyWith<$Res>(_value.ils!, (value) {
+      return _then(_value.copyWith(ils: value));
     });
   }
 }
@@ -405,12 +426,15 @@ abstract class _$RunwayCopyWith<$Res> implements $RunwayCopyWith<$Res> {
       bool lighted,
       bool closed,
       Threshold start,
-      Threshold end});
+      Threshold end,
+      Ils? ils});
 
   @override
   $ThresholdCopyWith<$Res> get start;
   @override
   $ThresholdCopyWith<$Res> get end;
+  @override
+  $IlsCopyWith<$Res>? get ils;
 }
 
 /// @nodoc
@@ -434,6 +458,7 @@ class __$RunwayCopyWithImpl<$Res> extends _$RunwayCopyWithImpl<$Res>
     Object? closed = freezed,
     Object? start = freezed,
     Object? end = freezed,
+    Object? ils = freezed,
   }) {
     return _then(_Runway(
       airportIcaoCode: airportIcaoCode == freezed
@@ -476,6 +501,10 @@ class __$RunwayCopyWithImpl<$Res> extends _$RunwayCopyWithImpl<$Res>
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
               as Threshold,
+      ils: ils == freezed
+          ? _value.ils
+          : ils // ignore: cast_nullable_to_non_nullable
+              as Ils?,
     ));
   }
 }
@@ -493,7 +522,8 @@ class _$_Runway extends _Runway {
       required this.lighted,
       required this.closed,
       required this.start,
-      required this.end})
+      required this.end,
+      required this.ils})
       : super._();
 
   factory _$_Runway.fromJson(Map<String, dynamic> json) =>
@@ -519,10 +549,12 @@ class _$_Runway extends _Runway {
   final Threshold start;
   @override
   final Threshold end;
+  @override
+  final Ils? ils;
 
   @override
   String toString() {
-    return 'Runway(airportIcaoCode: $airportIcaoCode, identifier: $identifier, trueHeading: $trueHeading, length: $length, width: $width, surface: $surface, lighted: $lighted, closed: $closed, start: $start, end: $end)';
+    return 'Runway(airportIcaoCode: $airportIcaoCode, identifier: $identifier, trueHeading: $trueHeading, length: $length, width: $width, surface: $surface, lighted: $lighted, closed: $closed, start: $start, end: $end, ils: $ils)';
   }
 
   @override
@@ -542,7 +574,8 @@ class _$_Runway extends _Runway {
             const DeepCollectionEquality().equals(other.lighted, lighted) &&
             const DeepCollectionEquality().equals(other.closed, closed) &&
             const DeepCollectionEquality().equals(other.start, start) &&
-            const DeepCollectionEquality().equals(other.end, end));
+            const DeepCollectionEquality().equals(other.end, end) &&
+            const DeepCollectionEquality().equals(other.ils, ils));
   }
 
   @override
@@ -557,7 +590,8 @@ class _$_Runway extends _Runway {
       const DeepCollectionEquality().hash(lighted),
       const DeepCollectionEquality().hash(closed),
       const DeepCollectionEquality().hash(start),
-      const DeepCollectionEquality().hash(end));
+      const DeepCollectionEquality().hash(end),
+      const DeepCollectionEquality().hash(ils));
 
   @JsonKey(ignore: true)
   @override
@@ -581,7 +615,8 @@ abstract class _Runway extends Runway {
       required bool lighted,
       required bool closed,
       required Threshold start,
-      required Threshold end}) = _$_Runway;
+      required Threshold end,
+      required Ils? ils}) = _$_Runway;
   const _Runway._() : super._();
 
   factory _Runway.fromJson(Map<String, dynamic> json) = _$_Runway.fromJson;
@@ -606,6 +641,8 @@ abstract class _Runway extends Runway {
   Threshold get start;
   @override
   Threshold get end;
+  @override
+  Ils? get ils;
   @override
   @JsonKey(ignore: true)
   _$RunwayCopyWith<_Runway> get copyWith => throw _privateConstructorUsedError;
