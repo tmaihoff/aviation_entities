@@ -28,14 +28,16 @@ class _$IlsTearOff {
       required String frequency,
       required String airportIcaoCode,
       required double range,
-      required double magneticVariation,
+      required Angle magneticVariation,
       required Angle glideSlopeAngle,
-      required double glideSlopeElevation,
+      required Length glideSlopeElevation,
       required double glideSlopeLatitude,
       required double glideSlopeLongitude,
-      required double localizerHeading,
+      required Heading localizerHeading,
+      required double localizerLatitude,
+      required double localizerLongitude,
       required bool hasDme,
-      required double? dmeElevation,
+      required Length? dmeElevation,
       required double? dmeLatitude,
       required double? dmeLongitude}) {
     return _Ils(
@@ -50,6 +52,8 @@ class _$IlsTearOff {
       glideSlopeLatitude: glideSlopeLatitude,
       glideSlopeLongitude: glideSlopeLongitude,
       localizerHeading: localizerHeading,
+      localizerLatitude: localizerLatitude,
+      localizerLongitude: localizerLongitude,
       hasDme: hasDme,
       dmeElevation: dmeElevation,
       dmeLatitude: dmeLatitude,
@@ -72,14 +76,16 @@ mixin _$Ils {
   String get frequency => throw _privateConstructorUsedError;
   String get airportIcaoCode => throw _privateConstructorUsedError;
   double get range => throw _privateConstructorUsedError;
-  double get magneticVariation => throw _privateConstructorUsedError;
+  Angle get magneticVariation => throw _privateConstructorUsedError;
   Angle get glideSlopeAngle => throw _privateConstructorUsedError;
-  double get glideSlopeElevation => throw _privateConstructorUsedError;
+  Length get glideSlopeElevation => throw _privateConstructorUsedError;
   double get glideSlopeLatitude => throw _privateConstructorUsedError;
   double get glideSlopeLongitude => throw _privateConstructorUsedError;
-  double get localizerHeading => throw _privateConstructorUsedError;
+  Heading get localizerHeading => throw _privateConstructorUsedError;
+  double get localizerLatitude => throw _privateConstructorUsedError;
+  double get localizerLongitude => throw _privateConstructorUsedError;
   bool get hasDme => throw _privateConstructorUsedError;
-  double? get dmeElevation => throw _privateConstructorUsedError;
+  Length? get dmeElevation => throw _privateConstructorUsedError;
   double? get dmeLatitude => throw _privateConstructorUsedError;
   double? get dmeLongitude => throw _privateConstructorUsedError;
 
@@ -98,14 +104,16 @@ abstract class $IlsCopyWith<$Res> {
       String frequency,
       String airportIcaoCode,
       double range,
-      double magneticVariation,
+      Angle magneticVariation,
       Angle glideSlopeAngle,
-      double glideSlopeElevation,
+      Length glideSlopeElevation,
       double glideSlopeLatitude,
       double glideSlopeLongitude,
-      double localizerHeading,
+      Heading localizerHeading,
+      double localizerLatitude,
+      double localizerLongitude,
       bool hasDme,
-      double? dmeElevation,
+      Length? dmeElevation,
       double? dmeLatitude,
       double? dmeLongitude});
 }
@@ -131,6 +139,8 @@ class _$IlsCopyWithImpl<$Res> implements $IlsCopyWith<$Res> {
     Object? glideSlopeLatitude = freezed,
     Object? glideSlopeLongitude = freezed,
     Object? localizerHeading = freezed,
+    Object? localizerLatitude = freezed,
+    Object? localizerLongitude = freezed,
     Object? hasDme = freezed,
     Object? dmeElevation = freezed,
     Object? dmeLatitude = freezed,
@@ -160,7 +170,7 @@ class _$IlsCopyWithImpl<$Res> implements $IlsCopyWith<$Res> {
       magneticVariation: magneticVariation == freezed
           ? _value.magneticVariation
           : magneticVariation // ignore: cast_nullable_to_non_nullable
-              as double,
+              as Angle,
       glideSlopeAngle: glideSlopeAngle == freezed
           ? _value.glideSlopeAngle
           : glideSlopeAngle // ignore: cast_nullable_to_non_nullable
@@ -168,7 +178,7 @@ class _$IlsCopyWithImpl<$Res> implements $IlsCopyWith<$Res> {
       glideSlopeElevation: glideSlopeElevation == freezed
           ? _value.glideSlopeElevation
           : glideSlopeElevation // ignore: cast_nullable_to_non_nullable
-              as double,
+              as Length,
       glideSlopeLatitude: glideSlopeLatitude == freezed
           ? _value.glideSlopeLatitude
           : glideSlopeLatitude // ignore: cast_nullable_to_non_nullable
@@ -180,6 +190,14 @@ class _$IlsCopyWithImpl<$Res> implements $IlsCopyWith<$Res> {
       localizerHeading: localizerHeading == freezed
           ? _value.localizerHeading
           : localizerHeading // ignore: cast_nullable_to_non_nullable
+              as Heading,
+      localizerLatitude: localizerLatitude == freezed
+          ? _value.localizerLatitude
+          : localizerLatitude // ignore: cast_nullable_to_non_nullable
+              as double,
+      localizerLongitude: localizerLongitude == freezed
+          ? _value.localizerLongitude
+          : localizerLongitude // ignore: cast_nullable_to_non_nullable
               as double,
       hasDme: hasDme == freezed
           ? _value.hasDme
@@ -188,7 +206,7 @@ class _$IlsCopyWithImpl<$Res> implements $IlsCopyWith<$Res> {
       dmeElevation: dmeElevation == freezed
           ? _value.dmeElevation
           : dmeElevation // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as Length?,
       dmeLatitude: dmeLatitude == freezed
           ? _value.dmeLatitude
           : dmeLatitude // ignore: cast_nullable_to_non_nullable
@@ -212,14 +230,16 @@ abstract class _$IlsCopyWith<$Res> implements $IlsCopyWith<$Res> {
       String frequency,
       String airportIcaoCode,
       double range,
-      double magneticVariation,
+      Angle magneticVariation,
       Angle glideSlopeAngle,
-      double glideSlopeElevation,
+      Length glideSlopeElevation,
       double glideSlopeLatitude,
       double glideSlopeLongitude,
-      double localizerHeading,
+      Heading localizerHeading,
+      double localizerLatitude,
+      double localizerLongitude,
       bool hasDme,
-      double? dmeElevation,
+      Length? dmeElevation,
       double? dmeLatitude,
       double? dmeLongitude});
 }
@@ -246,6 +266,8 @@ class __$IlsCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res>
     Object? glideSlopeLatitude = freezed,
     Object? glideSlopeLongitude = freezed,
     Object? localizerHeading = freezed,
+    Object? localizerLatitude = freezed,
+    Object? localizerLongitude = freezed,
     Object? hasDme = freezed,
     Object? dmeElevation = freezed,
     Object? dmeLatitude = freezed,
@@ -275,7 +297,7 @@ class __$IlsCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res>
       magneticVariation: magneticVariation == freezed
           ? _value.magneticVariation
           : magneticVariation // ignore: cast_nullable_to_non_nullable
-              as double,
+              as Angle,
       glideSlopeAngle: glideSlopeAngle == freezed
           ? _value.glideSlopeAngle
           : glideSlopeAngle // ignore: cast_nullable_to_non_nullable
@@ -283,7 +305,7 @@ class __$IlsCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res>
       glideSlopeElevation: glideSlopeElevation == freezed
           ? _value.glideSlopeElevation
           : glideSlopeElevation // ignore: cast_nullable_to_non_nullable
-              as double,
+              as Length,
       glideSlopeLatitude: glideSlopeLatitude == freezed
           ? _value.glideSlopeLatitude
           : glideSlopeLatitude // ignore: cast_nullable_to_non_nullable
@@ -295,6 +317,14 @@ class __$IlsCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res>
       localizerHeading: localizerHeading == freezed
           ? _value.localizerHeading
           : localizerHeading // ignore: cast_nullable_to_non_nullable
+              as Heading,
+      localizerLatitude: localizerLatitude == freezed
+          ? _value.localizerLatitude
+          : localizerLatitude // ignore: cast_nullable_to_non_nullable
+              as double,
+      localizerLongitude: localizerLongitude == freezed
+          ? _value.localizerLongitude
+          : localizerLongitude // ignore: cast_nullable_to_non_nullable
               as double,
       hasDme: hasDme == freezed
           ? _value.hasDme
@@ -303,7 +333,7 @@ class __$IlsCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res>
       dmeElevation: dmeElevation == freezed
           ? _value.dmeElevation
           : dmeElevation // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as Length?,
       dmeLatitude: dmeLatitude == freezed
           ? _value.dmeLatitude
           : dmeLatitude // ignore: cast_nullable_to_non_nullable
@@ -331,6 +361,8 @@ class _$_Ils extends _Ils {
       required this.glideSlopeLatitude,
       required this.glideSlopeLongitude,
       required this.localizerHeading,
+      required this.localizerLatitude,
+      required this.localizerLongitude,
       required this.hasDme,
       required this.dmeElevation,
       required this.dmeLatitude,
@@ -350,21 +382,25 @@ class _$_Ils extends _Ils {
   @override
   final double range;
   @override
-  final double magneticVariation;
+  final Angle magneticVariation;
   @override
   final Angle glideSlopeAngle;
   @override
-  final double glideSlopeElevation;
+  final Length glideSlopeElevation;
   @override
   final double glideSlopeLatitude;
   @override
   final double glideSlopeLongitude;
   @override
-  final double localizerHeading;
+  final Heading localizerHeading;
+  @override
+  final double localizerLatitude;
+  @override
+  final double localizerLongitude;
   @override
   final bool hasDme;
   @override
-  final double? dmeElevation;
+  final Length? dmeElevation;
   @override
   final double? dmeLatitude;
   @override
@@ -372,7 +408,7 @@ class _$_Ils extends _Ils {
 
   @override
   String toString() {
-    return 'Ils(identifier: $identifier, name: $name, frequency: $frequency, airportIcaoCode: $airportIcaoCode, range: $range, magneticVariation: $magneticVariation, glideSlopeAngle: $glideSlopeAngle, glideSlopeElevation: $glideSlopeElevation, glideSlopeLatitude: $glideSlopeLatitude, glideSlopeLongitude: $glideSlopeLongitude, localizerHeading: $localizerHeading, hasDme: $hasDme, dmeElevation: $dmeElevation, dmeLatitude: $dmeLatitude, dmeLongitude: $dmeLongitude)';
+    return 'Ils(identifier: $identifier, name: $name, frequency: $frequency, airportIcaoCode: $airportIcaoCode, range: $range, magneticVariation: $magneticVariation, glideSlopeAngle: $glideSlopeAngle, glideSlopeElevation: $glideSlopeElevation, glideSlopeLatitude: $glideSlopeLatitude, glideSlopeLongitude: $glideSlopeLongitude, localizerHeading: $localizerHeading, localizerLatitude: $localizerLatitude, localizerLongitude: $localizerLongitude, hasDme: $hasDme, dmeElevation: $dmeElevation, dmeLatitude: $dmeLatitude, dmeLongitude: $dmeLongitude)';
   }
 
   @override
@@ -399,6 +435,10 @@ class _$_Ils extends _Ils {
                 .equals(other.glideSlopeLongitude, glideSlopeLongitude) &&
             const DeepCollectionEquality()
                 .equals(other.localizerHeading, localizerHeading) &&
+            const DeepCollectionEquality()
+                .equals(other.localizerLatitude, localizerLatitude) &&
+            const DeepCollectionEquality()
+                .equals(other.localizerLongitude, localizerLongitude) &&
             const DeepCollectionEquality().equals(other.hasDme, hasDme) &&
             const DeepCollectionEquality()
                 .equals(other.dmeElevation, dmeElevation) &&
@@ -422,6 +462,8 @@ class _$_Ils extends _Ils {
       const DeepCollectionEquality().hash(glideSlopeLatitude),
       const DeepCollectionEquality().hash(glideSlopeLongitude),
       const DeepCollectionEquality().hash(localizerHeading),
+      const DeepCollectionEquality().hash(localizerLatitude),
+      const DeepCollectionEquality().hash(localizerLongitude),
       const DeepCollectionEquality().hash(hasDme),
       const DeepCollectionEquality().hash(dmeElevation),
       const DeepCollectionEquality().hash(dmeLatitude),
@@ -445,14 +487,16 @@ abstract class _Ils extends Ils {
       required String frequency,
       required String airportIcaoCode,
       required double range,
-      required double magneticVariation,
+      required Angle magneticVariation,
       required Angle glideSlopeAngle,
-      required double glideSlopeElevation,
+      required Length glideSlopeElevation,
       required double glideSlopeLatitude,
       required double glideSlopeLongitude,
-      required double localizerHeading,
+      required Heading localizerHeading,
+      required double localizerLatitude,
+      required double localizerLongitude,
       required bool hasDme,
-      required double? dmeElevation,
+      required Length? dmeElevation,
       required double? dmeLatitude,
       required double? dmeLongitude}) = _$_Ils;
   const _Ils._() : super._();
@@ -470,21 +514,25 @@ abstract class _Ils extends Ils {
   @override
   double get range;
   @override
-  double get magneticVariation;
+  Angle get magneticVariation;
   @override
   Angle get glideSlopeAngle;
   @override
-  double get glideSlopeElevation;
+  Length get glideSlopeElevation;
   @override
   double get glideSlopeLatitude;
   @override
   double get glideSlopeLongitude;
   @override
-  double get localizerHeading;
+  Heading get localizerHeading;
+  @override
+  double get localizerLatitude;
+  @override
+  double get localizerLongitude;
   @override
   bool get hasDme;
   @override
-  double? get dmeElevation;
+  Length? get dmeElevation;
   @override
   double? get dmeLatitude;
   @override

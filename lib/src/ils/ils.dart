@@ -13,14 +13,16 @@ class Ils with _$Ils {
     required String frequency,
     required String airportIcaoCode,
     required double range,
-    required double magneticVariation,
+    required Angle magneticVariation,
     required Angle glideSlopeAngle,
-    required double glideSlopeElevation,
+    required Length glideSlopeElevation,
     required double glideSlopeLatitude,
     required double glideSlopeLongitude,
-    required double localizerHeading,
+    required Heading localizerHeading,
+    required double localizerLatitude,
+    required double localizerLongitude,
     required bool hasDme,
-    required double? dmeElevation,
+    required Length? dmeElevation,
     required double? dmeLatitude,
     required double? dmeLongitude,
   }) = _Ils;
@@ -29,6 +31,8 @@ class Ils with _$Ils {
 
   LatLng get glideSlopeLatLng =>
       LatLng(glideSlopeLatitude, glideSlopeLongitude);
+
+  LatLng get localizerLatLng => LatLng(localizerLatitude, localizerLongitude);
 
   LatLng? get dmeLatLng => dmeLatitude != null && dmeLongitude != null
       ? LatLng(dmeLatitude!, dmeLongitude!)
