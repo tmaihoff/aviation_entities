@@ -21,7 +21,8 @@ class Holding with _$Holding {
   Heading get outboundCourse => inboundCourse.opposite;
 
   factory Holding.randomValues({
-    Speed trueAirspeed = const Speed(kt: 220), // TODO: set Holding speed
+    Speed trueAirspeed = const Speed(kt: 220),
+    Speed minWindSpeed = Speed.zero,
     Speed maxWindSpeed = const Speed(kt: 30),
   }) {
     return Holding(
@@ -29,7 +30,7 @@ class Holding with _$Holding {
       turnDirection: randomDirection(),
       aircraftBearingToFix: Heading.randomInt(),
       trueAirspeed: trueAirspeed,
-      wind: Wind.random(maxSpeed: maxWindSpeed),
+      wind: Wind.random(minSpeed: minWindSpeed, maxSpeed: maxWindSpeed),
     );
   }
 

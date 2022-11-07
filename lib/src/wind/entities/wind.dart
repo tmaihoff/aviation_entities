@@ -18,9 +18,13 @@ class Wind with _$Wind {
 
   factory Wind.fromJson(Map<String, dynamic> json) => _$WindFromJson(json);
 
-  factory Wind.random({Speed maxSpeed = const Speed(kt: 30)}) => Wind(
+  factory Wind.random({
+    Speed minSpeed = Speed.zero,
+    Speed maxSpeed = const Speed(kt: 30),
+  }) =>
+      Wind(
         from: Heading.randomInt(),
-        speed: Speed.random(max: maxSpeed),
+        speed: Speed.random(min: minSpeed, max: maxSpeed),
       );
 
   static const zero = Wind(from: Heading.zero, speed: Speed.zero);
