@@ -63,6 +63,6 @@ class Wind with _$Wind {
 
   @override
   String toString() {
-    return '${from.deg.round()}° / ${speed.kt.round()} kt';
+    return '${from.degTo3DigitsString()}° / ${speed.kt.round()} kt';
   }
 }
