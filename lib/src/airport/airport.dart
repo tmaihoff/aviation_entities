@@ -19,6 +19,7 @@ class Airport with _$Airport {
     required double latitude,
     required double longitude,
     required double elevation, // TODO: use Length class?
+    required Angle magneticVariation,
     required String type,
     required List<RunwaySet> runways,
   }) = _Airport;
@@ -28,17 +29,6 @@ class Airport with _$Airport {
       .map((runway) => runway.allIls) //
       .expand((ils) => ils)
       .toList();
-
-  //! FOR DATABASE ACCESS / MUST MATCH ATTRIBUTE NAMES
-  static const $icaoCode = 'icaoCode';
-  static const $iataCode = 'iataCode';
-  static const $name = 'name';
-  static const $city = 'city';
-  static const $latitude = 'latitude';
-  static const $longitude = 'longitude';
-  static const $elevation = 'elevation';
-  static const $type = 'type';
-  static const $runways = 'runways';
 
   String get displayName {
     if (name.toLowerCase().contains(city.toLowerCase())) {

@@ -12,30 +12,7 @@ part of 'intercept.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$InterceptTearOff {
-  const _$InterceptTearOff();
-
-  _Intercept call(
-      {required Heading interceptCourse,
-      required Heading aircraftBearingToFix,
-      required Heading aircraftHeading,
-      required InterceptType type,
-      NavAid? navAid}) {
-    return _Intercept(
-      interceptCourse: interceptCourse,
-      aircraftBearingToFix: aircraftBearingToFix,
-      aircraftHeading: aircraftHeading,
-      type: type,
-      navAid: navAid,
-    );
-  }
-}
-
-/// @nodoc
-const $Intercept = _$InterceptTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$Intercept {
@@ -117,10 +94,10 @@ class _$InterceptCopyWithImpl<$Res> implements $InterceptCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$InterceptCopyWith<$Res> implements $InterceptCopyWith<$Res> {
-  factory _$InterceptCopyWith(
-          _Intercept value, $Res Function(_Intercept) then) =
-      __$InterceptCopyWithImpl<$Res>;
+abstract class _$$_InterceptCopyWith<$Res> implements $InterceptCopyWith<$Res> {
+  factory _$$_InterceptCopyWith(
+          _$_Intercept value, $Res Function(_$_Intercept) then) =
+      __$$_InterceptCopyWithImpl<$Res>;
   @override
   $Res call(
       {Heading interceptCourse,
@@ -134,13 +111,14 @@ abstract class _$InterceptCopyWith<$Res> implements $InterceptCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$InterceptCopyWithImpl<$Res> extends _$InterceptCopyWithImpl<$Res>
-    implements _$InterceptCopyWith<$Res> {
-  __$InterceptCopyWithImpl(_Intercept _value, $Res Function(_Intercept) _then)
-      : super(_value, (v) => _then(v as _Intercept));
+class __$$_InterceptCopyWithImpl<$Res> extends _$InterceptCopyWithImpl<$Res>
+    implements _$$_InterceptCopyWith<$Res> {
+  __$$_InterceptCopyWithImpl(
+      _$_Intercept _value, $Res Function(_$_Intercept) _then)
+      : super(_value, (v) => _then(v as _$_Intercept));
 
   @override
-  _Intercept get _value => super._value as _Intercept;
+  _$_Intercept get _value => super._value as _$_Intercept;
 
   @override
   $Res call({
@@ -150,7 +128,7 @@ class __$InterceptCopyWithImpl<$Res> extends _$InterceptCopyWithImpl<$Res>
     Object? type = freezed,
     Object? navAid = freezed,
   }) {
-    return _then(_Intercept(
+    return _then(_$_Intercept(
       interceptCourse: interceptCourse == freezed
           ? _value.interceptCourse
           : interceptCourse // ignore: cast_nullable_to_non_nullable
@@ -206,7 +184,7 @@ class _$_Intercept extends _Intercept {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Intercept &&
+            other is _$_Intercept &&
             const DeepCollectionEquality()
                 .equals(other.interceptCourse, interceptCourse) &&
             const DeepCollectionEquality()
@@ -228,17 +206,17 @@ class _$_Intercept extends _Intercept {
 
   @JsonKey(ignore: true)
   @override
-  _$InterceptCopyWith<_Intercept> get copyWith =>
-      __$InterceptCopyWithImpl<_Intercept>(this, _$identity);
+  _$$_InterceptCopyWith<_$_Intercept> get copyWith =>
+      __$$_InterceptCopyWithImpl<_$_Intercept>(this, _$identity);
 }
 
 abstract class _Intercept extends Intercept {
   const factory _Intercept(
-      {required Heading interceptCourse,
-      required Heading aircraftBearingToFix,
-      required Heading aircraftHeading,
-      required InterceptType type,
-      NavAid? navAid}) = _$_Intercept;
+      {required final Heading interceptCourse,
+      required final Heading aircraftBearingToFix,
+      required final Heading aircraftHeading,
+      required final InterceptType type,
+      final NavAid? navAid}) = _$_Intercept;
   const _Intercept._() : super._();
 
   @override
@@ -253,6 +231,6 @@ abstract class _Intercept extends Intercept {
   NavAid? get navAid;
   @override
   @JsonKey(ignore: true)
-  _$InterceptCopyWith<_Intercept> get copyWith =>
+  _$$_InterceptCopyWith<_$_Intercept> get copyWith =>
       throw _privateConstructorUsedError;
 }

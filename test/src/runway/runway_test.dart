@@ -26,6 +26,7 @@ void main() {
         elevation: Length.zero,
       ),
       ils: null,
+      magneticVariation: Angle.zero,
     );
 
     final runwaySet = RunwaySet(

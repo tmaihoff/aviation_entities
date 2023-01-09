@@ -12,26 +12,7 @@ part of 'crosswind_component.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$CrosswindComponentTearOff {
-  const _$CrosswindComponentTearOff();
-
-  _CrosswindComponent call(
-      {required Wind wind,
-      required Heading heading,
-      required Speed trueAirspeed}) {
-    return _CrosswindComponent(
-      wind: wind,
-      heading: heading,
-      trueAirspeed: trueAirspeed,
-    );
-  }
-}
-
-/// @nodoc
-const $CrosswindComponent = _$CrosswindComponentTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$CrosswindComponent {
@@ -94,11 +75,11 @@ class _$CrosswindComponentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CrosswindComponentCopyWith<$Res>
+abstract class _$$_CrosswindComponentCopyWith<$Res>
     implements $CrosswindComponentCopyWith<$Res> {
-  factory _$CrosswindComponentCopyWith(
-          _CrosswindComponent value, $Res Function(_CrosswindComponent) then) =
-      __$CrosswindComponentCopyWithImpl<$Res>;
+  factory _$$_CrosswindComponentCopyWith(_$_CrosswindComponent value,
+          $Res Function(_$_CrosswindComponent) then) =
+      __$$_CrosswindComponentCopyWithImpl<$Res>;
   @override
   $Res call({Wind wind, Heading heading, Speed trueAirspeed});
 
@@ -107,15 +88,15 @@ abstract class _$CrosswindComponentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CrosswindComponentCopyWithImpl<$Res>
+class __$$_CrosswindComponentCopyWithImpl<$Res>
     extends _$CrosswindComponentCopyWithImpl<$Res>
-    implements _$CrosswindComponentCopyWith<$Res> {
-  __$CrosswindComponentCopyWithImpl(
-      _CrosswindComponent _value, $Res Function(_CrosswindComponent) _then)
-      : super(_value, (v) => _then(v as _CrosswindComponent));
+    implements _$$_CrosswindComponentCopyWith<$Res> {
+  __$$_CrosswindComponentCopyWithImpl(
+      _$_CrosswindComponent _value, $Res Function(_$_CrosswindComponent) _then)
+      : super(_value, (v) => _then(v as _$_CrosswindComponent));
 
   @override
-  _CrosswindComponent get _value => super._value as _CrosswindComponent;
+  _$_CrosswindComponent get _value => super._value as _$_CrosswindComponent;
 
   @override
   $Res call({
@@ -123,7 +104,7 @@ class __$CrosswindComponentCopyWithImpl<$Res>
     Object? heading = freezed,
     Object? trueAirspeed = freezed,
   }) {
-    return _then(_CrosswindComponent(
+    return _then(_$_CrosswindComponent(
       wind: wind == freezed
           ? _value.wind
           : wind // ignore: cast_nullable_to_non_nullable
@@ -163,7 +144,7 @@ class _$_CrosswindComponent extends _CrosswindComponent {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CrosswindComponent &&
+            other is _$_CrosswindComponent &&
             const DeepCollectionEquality().equals(other.wind, wind) &&
             const DeepCollectionEquality().equals(other.heading, heading) &&
             const DeepCollectionEquality()
@@ -179,15 +160,16 @@ class _$_CrosswindComponent extends _CrosswindComponent {
 
   @JsonKey(ignore: true)
   @override
-  _$CrosswindComponentCopyWith<_CrosswindComponent> get copyWith =>
-      __$CrosswindComponentCopyWithImpl<_CrosswindComponent>(this, _$identity);
+  _$$_CrosswindComponentCopyWith<_$_CrosswindComponent> get copyWith =>
+      __$$_CrosswindComponentCopyWithImpl<_$_CrosswindComponent>(
+          this, _$identity);
 }
 
 abstract class _CrosswindComponent extends CrosswindComponent {
   const factory _CrosswindComponent(
-      {required Wind wind,
-      required Heading heading,
-      required Speed trueAirspeed}) = _$_CrosswindComponent;
+      {required final Wind wind,
+      required final Heading heading,
+      required final Speed trueAirspeed}) = _$_CrosswindComponent;
   const _CrosswindComponent._() : super._();
 
   @override
@@ -198,6 +180,6 @@ abstract class _CrosswindComponent extends CrosswindComponent {
   Speed get trueAirspeed;
   @override
   @JsonKey(ignore: true)
-  _$CrosswindComponentCopyWith<_CrosswindComponent> get copyWith =>
+  _$$_CrosswindComponentCopyWith<_$_CrosswindComponent> get copyWith =>
       throw _privateConstructorUsedError;
 }

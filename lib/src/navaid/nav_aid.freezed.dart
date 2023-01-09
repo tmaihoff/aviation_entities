@@ -12,44 +12,11 @@ part of 'nav_aid.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 NavAid _$NavAidFromJson(Map<String, dynamic> json) {
   return _NavAid.fromJson(json);
 }
-
-/// @nodoc
-class _$NavAidTearOff {
-  const _$NavAidTearOff();
-
-  _NavAid call(
-      {required NavAidType type,
-      required String identifier,
-      required String name,
-      required String frequency,
-      required double latitude,
-      required double longitude,
-      required Length elevation,
-      required Angle magneticVariation}) {
-    return _NavAid(
-      type: type,
-      identifier: identifier,
-      name: name,
-      frequency: frequency,
-      latitude: latitude,
-      longitude: longitude,
-      elevation: elevation,
-      magneticVariation: magneticVariation,
-    );
-  }
-
-  NavAid fromJson(Map<String, Object?> json) {
-    return NavAid.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $NavAid = _$NavAidTearOff();
 
 /// @nodoc
 mixin _$NavAid {
@@ -139,9 +106,9 @@ class _$NavAidCopyWithImpl<$Res> implements $NavAidCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$NavAidCopyWith<$Res> implements $NavAidCopyWith<$Res> {
-  factory _$NavAidCopyWith(_NavAid value, $Res Function(_NavAid) then) =
-      __$NavAidCopyWithImpl<$Res>;
+abstract class _$$_NavAidCopyWith<$Res> implements $NavAidCopyWith<$Res> {
+  factory _$$_NavAidCopyWith(_$_NavAid value, $Res Function(_$_NavAid) then) =
+      __$$_NavAidCopyWithImpl<$Res>;
   @override
   $Res call(
       {NavAidType type,
@@ -155,13 +122,13 @@ abstract class _$NavAidCopyWith<$Res> implements $NavAidCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$NavAidCopyWithImpl<$Res> extends _$NavAidCopyWithImpl<$Res>
-    implements _$NavAidCopyWith<$Res> {
-  __$NavAidCopyWithImpl(_NavAid _value, $Res Function(_NavAid) _then)
-      : super(_value, (v) => _then(v as _NavAid));
+class __$$_NavAidCopyWithImpl<$Res> extends _$NavAidCopyWithImpl<$Res>
+    implements _$$_NavAidCopyWith<$Res> {
+  __$$_NavAidCopyWithImpl(_$_NavAid _value, $Res Function(_$_NavAid) _then)
+      : super(_value, (v) => _then(v as _$_NavAid));
 
   @override
-  _NavAid get _value => super._value as _NavAid;
+  _$_NavAid get _value => super._value as _$_NavAid;
 
   @override
   $Res call({
@@ -174,7 +141,7 @@ class __$NavAidCopyWithImpl<$Res> extends _$NavAidCopyWithImpl<$Res>
     Object? elevation = freezed,
     Object? magneticVariation = freezed,
   }) {
-    return _then(_NavAid(
+    return _then(_$_NavAid(
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -236,7 +203,8 @@ class _$_NavAid extends _NavAid {
   final String name;
   @override
   final String frequency;
-  @override // khz
+// khz
+  @override
   final double latitude;
   @override
   final double longitude;
@@ -254,7 +222,7 @@ class _$_NavAid extends _NavAid {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _NavAid &&
+            other is _$_NavAid &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
@@ -267,6 +235,7 @@ class _$_NavAid extends _NavAid {
                 .equals(other.magneticVariation, magneticVariation));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -281,25 +250,27 @@ class _$_NavAid extends _NavAid {
 
   @JsonKey(ignore: true)
   @override
-  _$NavAidCopyWith<_NavAid> get copyWith =>
-      __$NavAidCopyWithImpl<_NavAid>(this, _$identity);
+  _$$_NavAidCopyWith<_$_NavAid> get copyWith =>
+      __$$_NavAidCopyWithImpl<_$_NavAid>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NavAidToJson(this);
+    return _$$_NavAidToJson(
+      this,
+    );
   }
 }
 
 abstract class _NavAid extends NavAid {
   const factory _NavAid(
-      {required NavAidType type,
-      required String identifier,
-      required String name,
-      required String frequency,
-      required double latitude,
-      required double longitude,
-      required Length elevation,
-      required Angle magneticVariation}) = _$_NavAid;
+      {required final NavAidType type,
+      required final String identifier,
+      required final String name,
+      required final String frequency,
+      required final double latitude,
+      required final double longitude,
+      required final Length elevation,
+      required final Angle magneticVariation}) = _$_NavAid;
   const _NavAid._() : super._();
 
   factory _NavAid.fromJson(Map<String, dynamic> json) = _$_NavAid.fromJson;
@@ -322,5 +293,6 @@ abstract class _NavAid extends NavAid {
   Angle get magneticVariation;
   @override
   @JsonKey(ignore: true)
-  _$NavAidCopyWith<_NavAid> get copyWith => throw _privateConstructorUsedError;
+  _$$_NavAidCopyWith<_$_NavAid> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -12,30 +12,11 @@ part of 'wind.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Wind _$WindFromJson(Map<String, dynamic> json) {
   return _Wind.fromJson(json);
 }
-
-/// @nodoc
-class _$WindTearOff {
-  const _$WindTearOff();
-
-  _Wind call({required Heading from, required Speed speed}) {
-    return _Wind(
-      from: from,
-      speed: speed,
-    );
-  }
-
-  Wind fromJson(Map<String, Object?> json) {
-    return Wind.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Wind = _$WindTearOff();
 
 /// @nodoc
 mixin _$Wind {
@@ -82,28 +63,28 @@ class _$WindCopyWithImpl<$Res> implements $WindCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$WindCopyWith<$Res> implements $WindCopyWith<$Res> {
-  factory _$WindCopyWith(_Wind value, $Res Function(_Wind) then) =
-      __$WindCopyWithImpl<$Res>;
+abstract class _$$_WindCopyWith<$Res> implements $WindCopyWith<$Res> {
+  factory _$$_WindCopyWith(_$_Wind value, $Res Function(_$_Wind) then) =
+      __$$_WindCopyWithImpl<$Res>;
   @override
   $Res call({Heading from, Speed speed});
 }
 
 /// @nodoc
-class __$WindCopyWithImpl<$Res> extends _$WindCopyWithImpl<$Res>
-    implements _$WindCopyWith<$Res> {
-  __$WindCopyWithImpl(_Wind _value, $Res Function(_Wind) _then)
-      : super(_value, (v) => _then(v as _Wind));
+class __$$_WindCopyWithImpl<$Res> extends _$WindCopyWithImpl<$Res>
+    implements _$$_WindCopyWith<$Res> {
+  __$$_WindCopyWithImpl(_$_Wind _value, $Res Function(_$_Wind) _then)
+      : super(_value, (v) => _then(v as _$_Wind));
 
   @override
-  _Wind get _value => super._value as _Wind;
+  _$_Wind get _value => super._value as _$_Wind;
 
   @override
   $Res call({
     Object? from = freezed,
     Object? speed = freezed,
   }) {
-    return _then(_Wind(
+    return _then(_$_Wind(
       from: from == freezed
           ? _value.from
           : from // ignore: cast_nullable_to_non_nullable
@@ -123,9 +104,8 @@ class _$_Wind extends _Wind {
 
   factory _$_Wind.fromJson(Map<String, dynamic> json) => _$$_WindFromJson(json);
 
-  @override
-
   /// Wind blowing from this direction
+  @override
   final Heading from;
   @override
   final Speed speed;
@@ -134,11 +114,12 @@ class _$_Wind extends _Wind {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Wind &&
+            other is _$_Wind &&
             const DeepCollectionEquality().equals(other.from, from) &&
             const DeepCollectionEquality().equals(other.speed, speed));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -147,17 +128,20 @@ class _$_Wind extends _Wind {
 
   @JsonKey(ignore: true)
   @override
-  _$WindCopyWith<_Wind> get copyWith =>
-      __$WindCopyWithImpl<_Wind>(this, _$identity);
+  _$$_WindCopyWith<_$_Wind> get copyWith =>
+      __$$_WindCopyWithImpl<_$_Wind>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_WindToJson(this);
+    return _$$_WindToJson(
+      this,
+    );
   }
 }
 
 abstract class _Wind extends Wind {
-  const factory _Wind({required Heading from, required Speed speed}) = _$_Wind;
+  const factory _Wind(
+      {required final Heading from, required final Speed speed}) = _$_Wind;
   const _Wind._() : super._();
 
   factory _Wind.fromJson(Map<String, dynamic> json) = _$_Wind.fromJson;
@@ -170,5 +154,5 @@ abstract class _Wind extends Wind {
   Speed get speed;
   @override
   @JsonKey(ignore: true)
-  _$WindCopyWith<_Wind> get copyWith => throw _privateConstructorUsedError;
+  _$$_WindCopyWith<_$_Wind> get copyWith => throw _privateConstructorUsedError;
 }

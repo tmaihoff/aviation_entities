@@ -34,6 +34,8 @@ _$_Runway _$$_RunwayFromJson(Map<String, dynamic> json) => _$_Runway(
       ils: json['ils'] == null
           ? null
           : Ils.fromJson(json['ils'] as Map<String, dynamic>),
+      magneticVariation:
+          Angle.fromJson(json['magneticVariation'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_RunwayToJson(_$_Runway instance) => <String, dynamic>{
@@ -48,6 +50,7 @@ Map<String, dynamic> _$$_RunwayToJson(_$_Runway instance) => <String, dynamic>{
       'start': instance.start.toJson(),
       'end': instance.end.toJson(),
       'ils': instance.ils?.toJson(),
+      'magneticVariation': instance.magneticVariation.toJson(),
     };
 
 _$_Threshold _$$_ThresholdFromJson(Map<String, dynamic> json) => _$_Threshold(

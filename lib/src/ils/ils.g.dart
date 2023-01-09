@@ -20,8 +20,8 @@ _$_Ils _$$_IlsFromJson(Map<String, dynamic> json) => _$_Ils(
           Length.fromJson(json['glideSlopeElevation'] as Map<String, dynamic>),
       glideSlopeLatitude: (json['glideSlopeLatitude'] as num).toDouble(),
       glideSlopeLongitude: (json['glideSlopeLongitude'] as num).toDouble(),
-      localizerHeading:
-          Heading.fromJson(json['localizerHeading'] as Map<String, dynamic>),
+      localizerTrueHeading: Heading.fromJson(
+          json['localizerTrueHeading'] as Map<String, dynamic>),
       localizerLatitude: (json['localizerLatitude'] as num).toDouble(),
       localizerLongitude: (json['localizerLongitude'] as num).toDouble(),
       hasDme: json['hasDme'] as bool,
@@ -43,7 +43,7 @@ Map<String, dynamic> _$$_IlsToJson(_$_Ils instance) => <String, dynamic>{
       'glideSlopeElevation': instance.glideSlopeElevation.toJson(),
       'glideSlopeLatitude': instance.glideSlopeLatitude,
       'glideSlopeLongitude': instance.glideSlopeLongitude,
-      'localizerHeading': instance.localizerHeading.toJson(),
+      'localizerTrueHeading': instance.localizerTrueHeading.toJson(),
       'localizerLatitude': instance.localizerLatitude,
       'localizerLongitude': instance.localizerLongitude,
       'hasDme': instance.hasDme,

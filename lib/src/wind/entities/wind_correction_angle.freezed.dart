@@ -12,26 +12,7 @@ part of 'wind_correction_angle.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$WindCorrectionAngleTearOff {
-  const _$WindCorrectionAngleTearOff();
-
-  _WindCorrectionAngle call(
-      {required Wind wind,
-      required Heading heading,
-      required Speed trueAirspeed}) {
-    return _WindCorrectionAngle(
-      wind: wind,
-      heading: heading,
-      trueAirspeed: trueAirspeed,
-    );
-  }
-}
-
-/// @nodoc
-const $WindCorrectionAngle = _$WindCorrectionAngleTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$WindCorrectionAngle {
@@ -94,11 +75,11 @@ class _$WindCorrectionAngleCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$WindCorrectionAngleCopyWith<$Res>
+abstract class _$$_WindCorrectionAngleCopyWith<$Res>
     implements $WindCorrectionAngleCopyWith<$Res> {
-  factory _$WindCorrectionAngleCopyWith(_WindCorrectionAngle value,
-          $Res Function(_WindCorrectionAngle) then) =
-      __$WindCorrectionAngleCopyWithImpl<$Res>;
+  factory _$$_WindCorrectionAngleCopyWith(_$_WindCorrectionAngle value,
+          $Res Function(_$_WindCorrectionAngle) then) =
+      __$$_WindCorrectionAngleCopyWithImpl<$Res>;
   @override
   $Res call({Wind wind, Heading heading, Speed trueAirspeed});
 
@@ -107,15 +88,15 @@ abstract class _$WindCorrectionAngleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$WindCorrectionAngleCopyWithImpl<$Res>
+class __$$_WindCorrectionAngleCopyWithImpl<$Res>
     extends _$WindCorrectionAngleCopyWithImpl<$Res>
-    implements _$WindCorrectionAngleCopyWith<$Res> {
-  __$WindCorrectionAngleCopyWithImpl(
-      _WindCorrectionAngle _value, $Res Function(_WindCorrectionAngle) _then)
-      : super(_value, (v) => _then(v as _WindCorrectionAngle));
+    implements _$$_WindCorrectionAngleCopyWith<$Res> {
+  __$$_WindCorrectionAngleCopyWithImpl(_$_WindCorrectionAngle _value,
+      $Res Function(_$_WindCorrectionAngle) _then)
+      : super(_value, (v) => _then(v as _$_WindCorrectionAngle));
 
   @override
-  _WindCorrectionAngle get _value => super._value as _WindCorrectionAngle;
+  _$_WindCorrectionAngle get _value => super._value as _$_WindCorrectionAngle;
 
   @override
   $Res call({
@@ -123,7 +104,7 @@ class __$WindCorrectionAngleCopyWithImpl<$Res>
     Object? heading = freezed,
     Object? trueAirspeed = freezed,
   }) {
-    return _then(_WindCorrectionAngle(
+    return _then(_$_WindCorrectionAngle(
       wind: wind == freezed
           ? _value.wind
           : wind // ignore: cast_nullable_to_non_nullable
@@ -163,7 +144,7 @@ class _$_WindCorrectionAngle extends _WindCorrectionAngle {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _WindCorrectionAngle &&
+            other is _$_WindCorrectionAngle &&
             const DeepCollectionEquality().equals(other.wind, wind) &&
             const DeepCollectionEquality().equals(other.heading, heading) &&
             const DeepCollectionEquality()
@@ -179,16 +160,16 @@ class _$_WindCorrectionAngle extends _WindCorrectionAngle {
 
   @JsonKey(ignore: true)
   @override
-  _$WindCorrectionAngleCopyWith<_WindCorrectionAngle> get copyWith =>
-      __$WindCorrectionAngleCopyWithImpl<_WindCorrectionAngle>(
+  _$$_WindCorrectionAngleCopyWith<_$_WindCorrectionAngle> get copyWith =>
+      __$$_WindCorrectionAngleCopyWithImpl<_$_WindCorrectionAngle>(
           this, _$identity);
 }
 
 abstract class _WindCorrectionAngle extends WindCorrectionAngle {
   const factory _WindCorrectionAngle(
-      {required Wind wind,
-      required Heading heading,
-      required Speed trueAirspeed}) = _$_WindCorrectionAngle;
+      {required final Wind wind,
+      required final Heading heading,
+      required final Speed trueAirspeed}) = _$_WindCorrectionAngle;
   const _WindCorrectionAngle._() : super._();
 
   @override
@@ -199,6 +180,6 @@ abstract class _WindCorrectionAngle extends WindCorrectionAngle {
   Speed get trueAirspeed;
   @override
   @JsonKey(ignore: true)
-  _$WindCorrectionAngleCopyWith<_WindCorrectionAngle> get copyWith =>
+  _$$_WindCorrectionAngleCopyWith<_$_WindCorrectionAngle> get copyWith =>
       throw _privateConstructorUsedError;
 }

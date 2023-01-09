@@ -12,24 +12,7 @@ part of 'holding_entry.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$HoldingEntryTearOff {
-  const _$HoldingEntryTearOff();
-
-  _HoldingEntry call(
-      {required EntryType type, required Heading course, required Angle wca}) {
-    return _HoldingEntry(
-      type: type,
-      course: course,
-      wca: wca,
-    );
-  }
-}
-
-/// @nodoc
-const $HoldingEntry = _$HoldingEntryTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$HoldingEntry {
@@ -82,24 +65,25 @@ class _$HoldingEntryCopyWithImpl<$Res> implements $HoldingEntryCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$HoldingEntryCopyWith<$Res>
+abstract class _$$_HoldingEntryCopyWith<$Res>
     implements $HoldingEntryCopyWith<$Res> {
-  factory _$HoldingEntryCopyWith(
-          _HoldingEntry value, $Res Function(_HoldingEntry) then) =
-      __$HoldingEntryCopyWithImpl<$Res>;
+  factory _$$_HoldingEntryCopyWith(
+          _$_HoldingEntry value, $Res Function(_$_HoldingEntry) then) =
+      __$$_HoldingEntryCopyWithImpl<$Res>;
   @override
   $Res call({EntryType type, Heading course, Angle wca});
 }
 
 /// @nodoc
-class __$HoldingEntryCopyWithImpl<$Res> extends _$HoldingEntryCopyWithImpl<$Res>
-    implements _$HoldingEntryCopyWith<$Res> {
-  __$HoldingEntryCopyWithImpl(
-      _HoldingEntry _value, $Res Function(_HoldingEntry) _then)
-      : super(_value, (v) => _then(v as _HoldingEntry));
+class __$$_HoldingEntryCopyWithImpl<$Res>
+    extends _$HoldingEntryCopyWithImpl<$Res>
+    implements _$$_HoldingEntryCopyWith<$Res> {
+  __$$_HoldingEntryCopyWithImpl(
+      _$_HoldingEntry _value, $Res Function(_$_HoldingEntry) _then)
+      : super(_value, (v) => _then(v as _$_HoldingEntry));
 
   @override
-  _HoldingEntry get _value => super._value as _HoldingEntry;
+  _$_HoldingEntry get _value => super._value as _$_HoldingEntry;
 
   @override
   $Res call({
@@ -107,7 +91,7 @@ class __$HoldingEntryCopyWithImpl<$Res> extends _$HoldingEntryCopyWithImpl<$Res>
     Object? course = freezed,
     Object? wca = freezed,
   }) {
-    return _then(_HoldingEntry(
+    return _then(_$_HoldingEntry(
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -147,7 +131,7 @@ class _$_HoldingEntry extends _HoldingEntry {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _HoldingEntry &&
+            other is _$_HoldingEntry &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.course, course) &&
             const DeepCollectionEquality().equals(other.wca, wca));
@@ -162,15 +146,15 @@ class _$_HoldingEntry extends _HoldingEntry {
 
   @JsonKey(ignore: true)
   @override
-  _$HoldingEntryCopyWith<_HoldingEntry> get copyWith =>
-      __$HoldingEntryCopyWithImpl<_HoldingEntry>(this, _$identity);
+  _$$_HoldingEntryCopyWith<_$_HoldingEntry> get copyWith =>
+      __$$_HoldingEntryCopyWithImpl<_$_HoldingEntry>(this, _$identity);
 }
 
 abstract class _HoldingEntry extends HoldingEntry {
   const factory _HoldingEntry(
-      {required EntryType type,
-      required Heading course,
-      required Angle wca}) = _$_HoldingEntry;
+      {required final EntryType type,
+      required final Heading course,
+      required final Angle wca}) = _$_HoldingEntry;
   const _HoldingEntry._() : super._();
 
   @override
@@ -181,6 +165,6 @@ abstract class _HoldingEntry extends HoldingEntry {
   Angle get wca;
   @override
   @JsonKey(ignore: true)
-  _$HoldingEntryCopyWith<_HoldingEntry> get copyWith =>
+  _$$_HoldingEntryCopyWith<_$_HoldingEntry> get copyWith =>
       throw _privateConstructorUsedError;
 }

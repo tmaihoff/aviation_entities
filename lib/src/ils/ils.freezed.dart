@@ -12,62 +12,11 @@ part of 'ils.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Ils _$IlsFromJson(Map<String, dynamic> json) {
   return _Ils.fromJson(json);
 }
-
-/// @nodoc
-class _$IlsTearOff {
-  const _$IlsTearOff();
-
-  _Ils call(
-      {required String identifier,
-      required String name,
-      required String frequency,
-      required String airportIcaoCode,
-      required double range,
-      required Angle magneticVariation,
-      required Angle glideSlopeAngle,
-      required Length glideSlopeElevation,
-      required double glideSlopeLatitude,
-      required double glideSlopeLongitude,
-      required Heading localizerHeading,
-      required double localizerLatitude,
-      required double localizerLongitude,
-      required bool hasDme,
-      required Length? dmeElevation,
-      required double? dmeLatitude,
-      required double? dmeLongitude}) {
-    return _Ils(
-      identifier: identifier,
-      name: name,
-      frequency: frequency,
-      airportIcaoCode: airportIcaoCode,
-      range: range,
-      magneticVariation: magneticVariation,
-      glideSlopeAngle: glideSlopeAngle,
-      glideSlopeElevation: glideSlopeElevation,
-      glideSlopeLatitude: glideSlopeLatitude,
-      glideSlopeLongitude: glideSlopeLongitude,
-      localizerHeading: localizerHeading,
-      localizerLatitude: localizerLatitude,
-      localizerLongitude: localizerLongitude,
-      hasDme: hasDme,
-      dmeElevation: dmeElevation,
-      dmeLatitude: dmeLatitude,
-      dmeLongitude: dmeLongitude,
-    );
-  }
-
-  Ils fromJson(Map<String, Object?> json) {
-    return Ils.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Ils = _$IlsTearOff();
 
 /// @nodoc
 mixin _$Ils {
@@ -81,7 +30,7 @@ mixin _$Ils {
   Length get glideSlopeElevation => throw _privateConstructorUsedError;
   double get glideSlopeLatitude => throw _privateConstructorUsedError;
   double get glideSlopeLongitude => throw _privateConstructorUsedError;
-  Heading get localizerHeading => throw _privateConstructorUsedError;
+  Heading get localizerTrueHeading => throw _privateConstructorUsedError;
   double get localizerLatitude => throw _privateConstructorUsedError;
   double get localizerLongitude => throw _privateConstructorUsedError;
   bool get hasDme => throw _privateConstructorUsedError;
@@ -109,7 +58,7 @@ abstract class $IlsCopyWith<$Res> {
       Length glideSlopeElevation,
       double glideSlopeLatitude,
       double glideSlopeLongitude,
-      Heading localizerHeading,
+      Heading localizerTrueHeading,
       double localizerLatitude,
       double localizerLongitude,
       bool hasDme,
@@ -138,7 +87,7 @@ class _$IlsCopyWithImpl<$Res> implements $IlsCopyWith<$Res> {
     Object? glideSlopeElevation = freezed,
     Object? glideSlopeLatitude = freezed,
     Object? glideSlopeLongitude = freezed,
-    Object? localizerHeading = freezed,
+    Object? localizerTrueHeading = freezed,
     Object? localizerLatitude = freezed,
     Object? localizerLongitude = freezed,
     Object? hasDme = freezed,
@@ -187,9 +136,9 @@ class _$IlsCopyWithImpl<$Res> implements $IlsCopyWith<$Res> {
           ? _value.glideSlopeLongitude
           : glideSlopeLongitude // ignore: cast_nullable_to_non_nullable
               as double,
-      localizerHeading: localizerHeading == freezed
-          ? _value.localizerHeading
-          : localizerHeading // ignore: cast_nullable_to_non_nullable
+      localizerTrueHeading: localizerTrueHeading == freezed
+          ? _value.localizerTrueHeading
+          : localizerTrueHeading // ignore: cast_nullable_to_non_nullable
               as Heading,
       localizerLatitude: localizerLatitude == freezed
           ? _value.localizerLatitude
@@ -220,9 +169,9 @@ class _$IlsCopyWithImpl<$Res> implements $IlsCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$IlsCopyWith<$Res> implements $IlsCopyWith<$Res> {
-  factory _$IlsCopyWith(_Ils value, $Res Function(_Ils) then) =
-      __$IlsCopyWithImpl<$Res>;
+abstract class _$$_IlsCopyWith<$Res> implements $IlsCopyWith<$Res> {
+  factory _$$_IlsCopyWith(_$_Ils value, $Res Function(_$_Ils) then) =
+      __$$_IlsCopyWithImpl<$Res>;
   @override
   $Res call(
       {String identifier,
@@ -235,7 +184,7 @@ abstract class _$IlsCopyWith<$Res> implements $IlsCopyWith<$Res> {
       Length glideSlopeElevation,
       double glideSlopeLatitude,
       double glideSlopeLongitude,
-      Heading localizerHeading,
+      Heading localizerTrueHeading,
       double localizerLatitude,
       double localizerLongitude,
       bool hasDme,
@@ -245,13 +194,13 @@ abstract class _$IlsCopyWith<$Res> implements $IlsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$IlsCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res>
-    implements _$IlsCopyWith<$Res> {
-  __$IlsCopyWithImpl(_Ils _value, $Res Function(_Ils) _then)
-      : super(_value, (v) => _then(v as _Ils));
+class __$$_IlsCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res>
+    implements _$$_IlsCopyWith<$Res> {
+  __$$_IlsCopyWithImpl(_$_Ils _value, $Res Function(_$_Ils) _then)
+      : super(_value, (v) => _then(v as _$_Ils));
 
   @override
-  _Ils get _value => super._value as _Ils;
+  _$_Ils get _value => super._value as _$_Ils;
 
   @override
   $Res call({
@@ -265,7 +214,7 @@ class __$IlsCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res>
     Object? glideSlopeElevation = freezed,
     Object? glideSlopeLatitude = freezed,
     Object? glideSlopeLongitude = freezed,
-    Object? localizerHeading = freezed,
+    Object? localizerTrueHeading = freezed,
     Object? localizerLatitude = freezed,
     Object? localizerLongitude = freezed,
     Object? hasDme = freezed,
@@ -273,7 +222,7 @@ class __$IlsCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res>
     Object? dmeLatitude = freezed,
     Object? dmeLongitude = freezed,
   }) {
-    return _then(_Ils(
+    return _then(_$_Ils(
       identifier: identifier == freezed
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
@@ -314,9 +263,9 @@ class __$IlsCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res>
           ? _value.glideSlopeLongitude
           : glideSlopeLongitude // ignore: cast_nullable_to_non_nullable
               as double,
-      localizerHeading: localizerHeading == freezed
-          ? _value.localizerHeading
-          : localizerHeading // ignore: cast_nullable_to_non_nullable
+      localizerTrueHeading: localizerTrueHeading == freezed
+          ? _value.localizerTrueHeading
+          : localizerTrueHeading // ignore: cast_nullable_to_non_nullable
               as Heading,
       localizerLatitude: localizerLatitude == freezed
           ? _value.localizerLatitude
@@ -360,7 +309,7 @@ class _$_Ils extends _Ils {
       required this.glideSlopeElevation,
       required this.glideSlopeLatitude,
       required this.glideSlopeLongitude,
-      required this.localizerHeading,
+      required this.localizerTrueHeading,
       required this.localizerLatitude,
       required this.localizerLongitude,
       required this.hasDme,
@@ -392,7 +341,7 @@ class _$_Ils extends _Ils {
   @override
   final double glideSlopeLongitude;
   @override
-  final Heading localizerHeading;
+  final Heading localizerTrueHeading;
   @override
   final double localizerLatitude;
   @override
@@ -408,14 +357,14 @@ class _$_Ils extends _Ils {
 
   @override
   String toString() {
-    return 'Ils(identifier: $identifier, name: $name, frequency: $frequency, airportIcaoCode: $airportIcaoCode, range: $range, magneticVariation: $magneticVariation, glideSlopeAngle: $glideSlopeAngle, glideSlopeElevation: $glideSlopeElevation, glideSlopeLatitude: $glideSlopeLatitude, glideSlopeLongitude: $glideSlopeLongitude, localizerHeading: $localizerHeading, localizerLatitude: $localizerLatitude, localizerLongitude: $localizerLongitude, hasDme: $hasDme, dmeElevation: $dmeElevation, dmeLatitude: $dmeLatitude, dmeLongitude: $dmeLongitude)';
+    return 'Ils(identifier: $identifier, name: $name, frequency: $frequency, airportIcaoCode: $airportIcaoCode, range: $range, magneticVariation: $magneticVariation, glideSlopeAngle: $glideSlopeAngle, glideSlopeElevation: $glideSlopeElevation, glideSlopeLatitude: $glideSlopeLatitude, glideSlopeLongitude: $glideSlopeLongitude, localizerTrueHeading: $localizerTrueHeading, localizerLatitude: $localizerLatitude, localizerLongitude: $localizerLongitude, hasDme: $hasDme, dmeElevation: $dmeElevation, dmeLatitude: $dmeLatitude, dmeLongitude: $dmeLongitude)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Ils &&
+            other is _$_Ils &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality().equals(other.name, name) &&
@@ -434,7 +383,7 @@ class _$_Ils extends _Ils {
             const DeepCollectionEquality()
                 .equals(other.glideSlopeLongitude, glideSlopeLongitude) &&
             const DeepCollectionEquality()
-                .equals(other.localizerHeading, localizerHeading) &&
+                .equals(other.localizerTrueHeading, localizerTrueHeading) &&
             const DeepCollectionEquality()
                 .equals(other.localizerLatitude, localizerLatitude) &&
             const DeepCollectionEquality()
@@ -448,6 +397,7 @@ class _$_Ils extends _Ils {
                 .equals(other.dmeLongitude, dmeLongitude));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -461,7 +411,7 @@ class _$_Ils extends _Ils {
       const DeepCollectionEquality().hash(glideSlopeElevation),
       const DeepCollectionEquality().hash(glideSlopeLatitude),
       const DeepCollectionEquality().hash(glideSlopeLongitude),
-      const DeepCollectionEquality().hash(localizerHeading),
+      const DeepCollectionEquality().hash(localizerTrueHeading),
       const DeepCollectionEquality().hash(localizerLatitude),
       const DeepCollectionEquality().hash(localizerLongitude),
       const DeepCollectionEquality().hash(hasDme),
@@ -471,34 +421,36 @@ class _$_Ils extends _Ils {
 
   @JsonKey(ignore: true)
   @override
-  _$IlsCopyWith<_Ils> get copyWith =>
-      __$IlsCopyWithImpl<_Ils>(this, _$identity);
+  _$$_IlsCopyWith<_$_Ils> get copyWith =>
+      __$$_IlsCopyWithImpl<_$_Ils>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_IlsToJson(this);
+    return _$$_IlsToJson(
+      this,
+    );
   }
 }
 
 abstract class _Ils extends Ils {
   const factory _Ils(
-      {required String identifier,
-      required String name,
-      required String frequency,
-      required String airportIcaoCode,
-      required double range,
-      required Angle magneticVariation,
-      required Angle glideSlopeAngle,
-      required Length glideSlopeElevation,
-      required double glideSlopeLatitude,
-      required double glideSlopeLongitude,
-      required Heading localizerHeading,
-      required double localizerLatitude,
-      required double localizerLongitude,
-      required bool hasDme,
-      required Length? dmeElevation,
-      required double? dmeLatitude,
-      required double? dmeLongitude}) = _$_Ils;
+      {required final String identifier,
+      required final String name,
+      required final String frequency,
+      required final String airportIcaoCode,
+      required final double range,
+      required final Angle magneticVariation,
+      required final Angle glideSlopeAngle,
+      required final Length glideSlopeElevation,
+      required final double glideSlopeLatitude,
+      required final double glideSlopeLongitude,
+      required final Heading localizerTrueHeading,
+      required final double localizerLatitude,
+      required final double localizerLongitude,
+      required final bool hasDme,
+      required final Length? dmeElevation,
+      required final double? dmeLatitude,
+      required final double? dmeLongitude}) = _$_Ils;
   const _Ils._() : super._();
 
   factory _Ils.fromJson(Map<String, dynamic> json) = _$_Ils.fromJson;
@@ -524,7 +476,7 @@ abstract class _Ils extends Ils {
   @override
   double get glideSlopeLongitude;
   @override
-  Heading get localizerHeading;
+  Heading get localizerTrueHeading;
   @override
   double get localizerLatitude;
   @override
@@ -539,5 +491,5 @@ abstract class _Ils extends Ils {
   double? get dmeLongitude;
   @override
   @JsonKey(ignore: true)
-  _$IlsCopyWith<_Ils> get copyWith => throw _privateConstructorUsedError;
+  _$$_IlsCopyWith<_$_Ils> get copyWith => throw _privateConstructorUsedError;
 }

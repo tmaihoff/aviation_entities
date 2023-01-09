@@ -18,7 +18,7 @@ class Ils with _$Ils {
     required Length glideSlopeElevation,
     required double glideSlopeLatitude,
     required double glideSlopeLongitude,
-    required Heading localizerHeading,
+    required Heading localizerTrueHeading,
     required double localizerLatitude,
     required double localizerLongitude,
     required bool hasDme,
@@ -33,6 +33,9 @@ class Ils with _$Ils {
       LatLng(glideSlopeLatitude, glideSlopeLongitude);
 
   LatLng get localizerLatLng => LatLng(localizerLatitude, localizerLongitude);
+
+  Heading get localizerMagneticHeading =>
+      localizerTrueHeading.minus(deg: magneticVariation.deg);
 
   LatLng? get dmeLatLng => dmeLatitude != null && dmeLongitude != null
       ? LatLng(dmeLatitude!, dmeLongitude!)

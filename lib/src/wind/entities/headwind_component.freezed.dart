@@ -12,26 +12,7 @@ part of 'headwind_component.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$HeadwindComponentTearOff {
-  const _$HeadwindComponentTearOff();
-
-  _HeadwindComponent call(
-      {required Wind wind,
-      required Heading heading,
-      required Speed trueAirspeed}) {
-    return _HeadwindComponent(
-      wind: wind,
-      heading: heading,
-      trueAirspeed: trueAirspeed,
-    );
-  }
-}
-
-/// @nodoc
-const $HeadwindComponent = _$HeadwindComponentTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$HeadwindComponent {
@@ -94,11 +75,11 @@ class _$HeadwindComponentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$HeadwindComponentCopyWith<$Res>
+abstract class _$$_HeadwindComponentCopyWith<$Res>
     implements $HeadwindComponentCopyWith<$Res> {
-  factory _$HeadwindComponentCopyWith(
-          _HeadwindComponent value, $Res Function(_HeadwindComponent) then) =
-      __$HeadwindComponentCopyWithImpl<$Res>;
+  factory _$$_HeadwindComponentCopyWith(_$_HeadwindComponent value,
+          $Res Function(_$_HeadwindComponent) then) =
+      __$$_HeadwindComponentCopyWithImpl<$Res>;
   @override
   $Res call({Wind wind, Heading heading, Speed trueAirspeed});
 
@@ -107,15 +88,15 @@ abstract class _$HeadwindComponentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$HeadwindComponentCopyWithImpl<$Res>
+class __$$_HeadwindComponentCopyWithImpl<$Res>
     extends _$HeadwindComponentCopyWithImpl<$Res>
-    implements _$HeadwindComponentCopyWith<$Res> {
-  __$HeadwindComponentCopyWithImpl(
-      _HeadwindComponent _value, $Res Function(_HeadwindComponent) _then)
-      : super(_value, (v) => _then(v as _HeadwindComponent));
+    implements _$$_HeadwindComponentCopyWith<$Res> {
+  __$$_HeadwindComponentCopyWithImpl(
+      _$_HeadwindComponent _value, $Res Function(_$_HeadwindComponent) _then)
+      : super(_value, (v) => _then(v as _$_HeadwindComponent));
 
   @override
-  _HeadwindComponent get _value => super._value as _HeadwindComponent;
+  _$_HeadwindComponent get _value => super._value as _$_HeadwindComponent;
 
   @override
   $Res call({
@@ -123,7 +104,7 @@ class __$HeadwindComponentCopyWithImpl<$Res>
     Object? heading = freezed,
     Object? trueAirspeed = freezed,
   }) {
-    return _then(_HeadwindComponent(
+    return _then(_$_HeadwindComponent(
       wind: wind == freezed
           ? _value.wind
           : wind // ignore: cast_nullable_to_non_nullable
@@ -163,7 +144,7 @@ class _$_HeadwindComponent extends _HeadwindComponent {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _HeadwindComponent &&
+            other is _$_HeadwindComponent &&
             const DeepCollectionEquality().equals(other.wind, wind) &&
             const DeepCollectionEquality().equals(other.heading, heading) &&
             const DeepCollectionEquality()
@@ -179,15 +160,16 @@ class _$_HeadwindComponent extends _HeadwindComponent {
 
   @JsonKey(ignore: true)
   @override
-  _$HeadwindComponentCopyWith<_HeadwindComponent> get copyWith =>
-      __$HeadwindComponentCopyWithImpl<_HeadwindComponent>(this, _$identity);
+  _$$_HeadwindComponentCopyWith<_$_HeadwindComponent> get copyWith =>
+      __$$_HeadwindComponentCopyWithImpl<_$_HeadwindComponent>(
+          this, _$identity);
 }
 
 abstract class _HeadwindComponent extends HeadwindComponent {
   const factory _HeadwindComponent(
-      {required Wind wind,
-      required Heading heading,
-      required Speed trueAirspeed}) = _$_HeadwindComponent;
+      {required final Wind wind,
+      required final Heading heading,
+      required final Speed trueAirspeed}) = _$_HeadwindComponent;
   const _HeadwindComponent._() : super._();
 
   @override
@@ -198,6 +180,6 @@ abstract class _HeadwindComponent extends HeadwindComponent {
   Speed get trueAirspeed;
   @override
   @JsonKey(ignore: true)
-  _$HeadwindComponentCopyWith<_HeadwindComponent> get copyWith =>
+  _$$_HeadwindComponentCopyWith<_$_HeadwindComponent> get copyWith =>
       throw _privateConstructorUsedError;
 }

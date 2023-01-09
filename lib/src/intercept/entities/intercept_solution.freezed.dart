@@ -12,24 +12,7 @@ part of 'intercept_solution.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$InterceptSolutionTearOff {
-  const _$InterceptSolutionTearOff();
-
-  _InterceptSolution call(
-      {required Intercept intercept, required Heading heading, Angle? g}) {
-    return _InterceptSolution(
-      intercept: intercept,
-      heading: heading,
-      g: g,
-    );
-  }
-}
-
-/// @nodoc
-const $InterceptSolution = _$InterceptSolutionTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$InterceptSolution {
@@ -99,11 +82,11 @@ class _$InterceptSolutionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$InterceptSolutionCopyWith<$Res>
+abstract class _$$_InterceptSolutionCopyWith<$Res>
     implements $InterceptSolutionCopyWith<$Res> {
-  factory _$InterceptSolutionCopyWith(
-          _InterceptSolution value, $Res Function(_InterceptSolution) then) =
-      __$InterceptSolutionCopyWithImpl<$Res>;
+  factory _$$_InterceptSolutionCopyWith(_$_InterceptSolution value,
+          $Res Function(_$_InterceptSolution) then) =
+      __$$_InterceptSolutionCopyWithImpl<$Res>;
   @override
   $Res call({Intercept intercept, Heading heading, Angle? g});
 
@@ -112,15 +95,15 @@ abstract class _$InterceptSolutionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$InterceptSolutionCopyWithImpl<$Res>
+class __$$_InterceptSolutionCopyWithImpl<$Res>
     extends _$InterceptSolutionCopyWithImpl<$Res>
-    implements _$InterceptSolutionCopyWith<$Res> {
-  __$InterceptSolutionCopyWithImpl(
-      _InterceptSolution _value, $Res Function(_InterceptSolution) _then)
-      : super(_value, (v) => _then(v as _InterceptSolution));
+    implements _$$_InterceptSolutionCopyWith<$Res> {
+  __$$_InterceptSolutionCopyWithImpl(
+      _$_InterceptSolution _value, $Res Function(_$_InterceptSolution) _then)
+      : super(_value, (v) => _then(v as _$_InterceptSolution));
 
   @override
-  _InterceptSolution get _value => super._value as _InterceptSolution;
+  _$_InterceptSolution get _value => super._value as _$_InterceptSolution;
 
   @override
   $Res call({
@@ -128,7 +111,7 @@ class __$InterceptSolutionCopyWithImpl<$Res>
     Object? heading = freezed,
     Object? g = freezed,
   }) {
-    return _then(_InterceptSolution(
+    return _then(_$_InterceptSolution(
       intercept: intercept == freezed
           ? _value.intercept
           : intercept // ignore: cast_nullable_to_non_nullable
@@ -152,19 +135,18 @@ class _$_InterceptSolution extends _InterceptSolution {
       {required this.intercept, required this.heading, this.g})
       : super._();
 
-  @override
-
   /// The Intercept task this solution is based on.
-  final Intercept intercept;
   @override
+  final Intercept intercept;
 
   /// Correct heading to solve the intercept task.
-  final Heading heading;
   @override
+  final Heading heading;
 
   /// G angle of the intercept solution. Only present if type is
   /// [InterceptType.outbound]. Angle from the tail of the bearingTo
   /// pointer to the intercept course.
+  @override
   final Angle? g;
 
   @override
@@ -176,7 +158,7 @@ class _$_InterceptSolution extends _InterceptSolution {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _InterceptSolution &&
+            other is _$_InterceptSolution &&
             const DeepCollectionEquality().equals(other.intercept, intercept) &&
             const DeepCollectionEquality().equals(other.heading, heading) &&
             const DeepCollectionEquality().equals(other.g, g));
@@ -191,15 +173,16 @@ class _$_InterceptSolution extends _InterceptSolution {
 
   @JsonKey(ignore: true)
   @override
-  _$InterceptSolutionCopyWith<_InterceptSolution> get copyWith =>
-      __$InterceptSolutionCopyWithImpl<_InterceptSolution>(this, _$identity);
+  _$$_InterceptSolutionCopyWith<_$_InterceptSolution> get copyWith =>
+      __$$_InterceptSolutionCopyWithImpl<_$_InterceptSolution>(
+          this, _$identity);
 }
 
 abstract class _InterceptSolution extends InterceptSolution {
   const factory _InterceptSolution(
-      {required Intercept intercept,
-      required Heading heading,
-      Angle? g}) = _$_InterceptSolution;
+      {required final Intercept intercept,
+      required final Heading heading,
+      final Angle? g}) = _$_InterceptSolution;
   const _InterceptSolution._() : super._();
 
   @override
@@ -218,6 +201,6 @@ abstract class _InterceptSolution extends InterceptSolution {
   Angle? get g;
   @override
   @JsonKey(ignore: true)
-  _$InterceptSolutionCopyWith<_InterceptSolution> get copyWith =>
+  _$$_InterceptSolutionCopyWith<_$_InterceptSolution> get copyWith =>
       throw _privateConstructorUsedError;
 }

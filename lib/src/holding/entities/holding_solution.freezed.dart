@@ -12,30 +12,7 @@ part of 'holding_solution.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$HoldingSolutionTearOff {
-  const _$HoldingSolutionTearOff();
-
-  _HoldingSolution call(
-      {required Holding holding,
-      required HoldingEntry entry,
-      required Angle outboundWca,
-      required Angle inboundWca,
-      required Duration outboundTiming}) {
-    return _HoldingSolution(
-      holding: holding,
-      entry: entry,
-      outboundWca: outboundWca,
-      inboundWca: inboundWca,
-      outboundTiming: outboundTiming,
-    );
-  }
-}
-
-/// @nodoc
-const $HoldingSolution = _$HoldingSolutionTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$HoldingSolution {
@@ -123,11 +100,11 @@ class _$HoldingSolutionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$HoldingSolutionCopyWith<$Res>
+abstract class _$$_HoldingSolutionCopyWith<$Res>
     implements $HoldingSolutionCopyWith<$Res> {
-  factory _$HoldingSolutionCopyWith(
-          _HoldingSolution value, $Res Function(_HoldingSolution) then) =
-      __$HoldingSolutionCopyWithImpl<$Res>;
+  factory _$$_HoldingSolutionCopyWith(
+          _$_HoldingSolution value, $Res Function(_$_HoldingSolution) then) =
+      __$$_HoldingSolutionCopyWithImpl<$Res>;
   @override
   $Res call(
       {Holding holding,
@@ -143,15 +120,15 @@ abstract class _$HoldingSolutionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$HoldingSolutionCopyWithImpl<$Res>
+class __$$_HoldingSolutionCopyWithImpl<$Res>
     extends _$HoldingSolutionCopyWithImpl<$Res>
-    implements _$HoldingSolutionCopyWith<$Res> {
-  __$HoldingSolutionCopyWithImpl(
-      _HoldingSolution _value, $Res Function(_HoldingSolution) _then)
-      : super(_value, (v) => _then(v as _HoldingSolution));
+    implements _$$_HoldingSolutionCopyWith<$Res> {
+  __$$_HoldingSolutionCopyWithImpl(
+      _$_HoldingSolution _value, $Res Function(_$_HoldingSolution) _then)
+      : super(_value, (v) => _then(v as _$_HoldingSolution));
 
   @override
-  _HoldingSolution get _value => super._value as _HoldingSolution;
+  _$_HoldingSolution get _value => super._value as _$_HoldingSolution;
 
   @override
   $Res call({
@@ -161,7 +138,7 @@ class __$HoldingSolutionCopyWithImpl<$Res>
     Object? inboundWca = freezed,
     Object? outboundTiming = freezed,
   }) {
-    return _then(_HoldingSolution(
+    return _then(_$_HoldingSolution(
       holding: holding == freezed
           ? _value.holding
           : holding // ignore: cast_nullable_to_non_nullable
@@ -217,7 +194,7 @@ class _$_HoldingSolution extends _HoldingSolution {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _HoldingSolution &&
+            other is _$_HoldingSolution &&
             const DeepCollectionEquality().equals(other.holding, holding) &&
             const DeepCollectionEquality().equals(other.entry, entry) &&
             const DeepCollectionEquality()
@@ -239,17 +216,17 @@ class _$_HoldingSolution extends _HoldingSolution {
 
   @JsonKey(ignore: true)
   @override
-  _$HoldingSolutionCopyWith<_HoldingSolution> get copyWith =>
-      __$HoldingSolutionCopyWithImpl<_HoldingSolution>(this, _$identity);
+  _$$_HoldingSolutionCopyWith<_$_HoldingSolution> get copyWith =>
+      __$$_HoldingSolutionCopyWithImpl<_$_HoldingSolution>(this, _$identity);
 }
 
 abstract class _HoldingSolution extends HoldingSolution {
   const factory _HoldingSolution(
-      {required Holding holding,
-      required HoldingEntry entry,
-      required Angle outboundWca,
-      required Angle inboundWca,
-      required Duration outboundTiming}) = _$_HoldingSolution;
+      {required final Holding holding,
+      required final HoldingEntry entry,
+      required final Angle outboundWca,
+      required final Angle inboundWca,
+      required final Duration outboundTiming}) = _$_HoldingSolution;
   const _HoldingSolution._() : super._();
 
   @override
@@ -264,6 +241,6 @@ abstract class _HoldingSolution extends HoldingSolution {
   Duration get outboundTiming;
   @override
   @JsonKey(ignore: true)
-  _$HoldingSolutionCopyWith<_HoldingSolution> get copyWith =>
+  _$$_HoldingSolutionCopyWith<_$_HoldingSolution> get copyWith =>
       throw _privateConstructorUsedError;
 }

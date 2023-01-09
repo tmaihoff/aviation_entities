@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:aviation_entities/airport.dart';
+import 'package:aviation_units/aviation_units.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -15,6 +16,7 @@ void main() {
       elevation: 3,
       type: 'type',
       runways: [],
+      magneticVariation: Angle.zero,
     );
 
     test('display name', () {

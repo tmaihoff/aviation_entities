@@ -12,32 +12,7 @@ part of 'holding.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$HoldingTearOff {
-  const _$HoldingTearOff();
-
-  _Holding call(
-      {required Heading inboundCourse,
-      required TurnDirection turnDirection,
-      required Heading aircraftBearingToFix,
-      required Speed trueAirspeed,
-      required Wind wind,
-      NavAid? navAid}) {
-    return _Holding(
-      inboundCourse: inboundCourse,
-      turnDirection: turnDirection,
-      aircraftBearingToFix: aircraftBearingToFix,
-      trueAirspeed: trueAirspeed,
-      wind: wind,
-      navAid: navAid,
-    );
-  }
-}
-
-/// @nodoc
-const $Holding = _$HoldingTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$Holding {
@@ -133,9 +108,10 @@ class _$HoldingCopyWithImpl<$Res> implements $HoldingCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$HoldingCopyWith<$Res> implements $HoldingCopyWith<$Res> {
-  factory _$HoldingCopyWith(_Holding value, $Res Function(_Holding) then) =
-      __$HoldingCopyWithImpl<$Res>;
+abstract class _$$_HoldingCopyWith<$Res> implements $HoldingCopyWith<$Res> {
+  factory _$$_HoldingCopyWith(
+          _$_Holding value, $Res Function(_$_Holding) then) =
+      __$$_HoldingCopyWithImpl<$Res>;
   @override
   $Res call(
       {Heading inboundCourse,
@@ -152,13 +128,13 @@ abstract class _$HoldingCopyWith<$Res> implements $HoldingCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$HoldingCopyWithImpl<$Res> extends _$HoldingCopyWithImpl<$Res>
-    implements _$HoldingCopyWith<$Res> {
-  __$HoldingCopyWithImpl(_Holding _value, $Res Function(_Holding) _then)
-      : super(_value, (v) => _then(v as _Holding));
+class __$$_HoldingCopyWithImpl<$Res> extends _$HoldingCopyWithImpl<$Res>
+    implements _$$_HoldingCopyWith<$Res> {
+  __$$_HoldingCopyWithImpl(_$_Holding _value, $Res Function(_$_Holding) _then)
+      : super(_value, (v) => _then(v as _$_Holding));
 
   @override
-  _Holding get _value => super._value as _Holding;
+  _$_Holding get _value => super._value as _$_Holding;
 
   @override
   $Res call({
@@ -169,7 +145,7 @@ class __$HoldingCopyWithImpl<$Res> extends _$HoldingCopyWithImpl<$Res>
     Object? wind = freezed,
     Object? navAid = freezed,
   }) {
-    return _then(_Holding(
+    return _then(_$_Holding(
       inboundCourse: inboundCourse == freezed
           ? _value.inboundCourse
           : inboundCourse // ignore: cast_nullable_to_non_nullable
@@ -232,7 +208,7 @@ class _$_Holding extends _Holding {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Holding &&
+            other is _$_Holding &&
             const DeepCollectionEquality()
                 .equals(other.inboundCourse, inboundCourse) &&
             const DeepCollectionEquality()
@@ -257,18 +233,18 @@ class _$_Holding extends _Holding {
 
   @JsonKey(ignore: true)
   @override
-  _$HoldingCopyWith<_Holding> get copyWith =>
-      __$HoldingCopyWithImpl<_Holding>(this, _$identity);
+  _$$_HoldingCopyWith<_$_Holding> get copyWith =>
+      __$$_HoldingCopyWithImpl<_$_Holding>(this, _$identity);
 }
 
 abstract class _Holding extends Holding {
   const factory _Holding(
-      {required Heading inboundCourse,
-      required TurnDirection turnDirection,
-      required Heading aircraftBearingToFix,
-      required Speed trueAirspeed,
-      required Wind wind,
-      NavAid? navAid}) = _$_Holding;
+      {required final Heading inboundCourse,
+      required final TurnDirection turnDirection,
+      required final Heading aircraftBearingToFix,
+      required final Speed trueAirspeed,
+      required final Wind wind,
+      final NavAid? navAid}) = _$_Holding;
   const _Holding._() : super._();
 
   @override
@@ -285,6 +261,6 @@ abstract class _Holding extends Holding {
   NavAid? get navAid;
   @override
   @JsonKey(ignore: true)
-  _$HoldingCopyWith<_Holding> get copyWith =>
+  _$$_HoldingCopyWith<_$_Holding> get copyWith =>
       throw _privateConstructorUsedError;
 }

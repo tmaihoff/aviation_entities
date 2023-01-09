@@ -12,46 +12,11 @@ part of 'airport.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Airport _$AirportFromJson(Map<String, dynamic> json) {
   return _Airport.fromJson(json);
 }
-
-/// @nodoc
-class _$AirportTearOff {
-  const _$AirportTearOff();
-
-  _Airport call(
-      {required String icaoCode,
-      required String iataCode,
-      required String name,
-      required String city,
-      required double latitude,
-      required double longitude,
-      required double elevation,
-      required String type,
-      required List<RunwaySet> runways}) {
-    return _Airport(
-      icaoCode: icaoCode,
-      iataCode: iataCode,
-      name: name,
-      city: city,
-      latitude: latitude,
-      longitude: longitude,
-      elevation: elevation,
-      type: type,
-      runways: runways,
-    );
-  }
-
-  Airport fromJson(Map<String, Object?> json) {
-    return Airport.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Airport = _$AirportTearOff();
 
 /// @nodoc
 mixin _$Airport {
@@ -63,6 +28,7 @@ mixin _$Airport {
   double get longitude => throw _privateConstructorUsedError;
   double get elevation =>
       throw _privateConstructorUsedError; // TODO: use Length class?
+  Angle get magneticVariation => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   List<RunwaySet> get runways => throw _privateConstructorUsedError;
 
@@ -83,6 +49,7 @@ abstract class $AirportCopyWith<$Res> {
       double latitude,
       double longitude,
       double elevation,
+      Angle magneticVariation,
       String type,
       List<RunwaySet> runways});
 }
@@ -104,6 +71,7 @@ class _$AirportCopyWithImpl<$Res> implements $AirportCopyWith<$Res> {
     Object? latitude = freezed,
     Object? longitude = freezed,
     Object? elevation = freezed,
+    Object? magneticVariation = freezed,
     Object? type = freezed,
     Object? runways = freezed,
   }) {
@@ -136,6 +104,10 @@ class _$AirportCopyWithImpl<$Res> implements $AirportCopyWith<$Res> {
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as double,
+      magneticVariation: magneticVariation == freezed
+          ? _value.magneticVariation
+          : magneticVariation // ignore: cast_nullable_to_non_nullable
+              as Angle,
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -149,9 +121,10 @@ class _$AirportCopyWithImpl<$Res> implements $AirportCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AirportCopyWith<$Res> implements $AirportCopyWith<$Res> {
-  factory _$AirportCopyWith(_Airport value, $Res Function(_Airport) then) =
-      __$AirportCopyWithImpl<$Res>;
+abstract class _$$_AirportCopyWith<$Res> implements $AirportCopyWith<$Res> {
+  factory _$$_AirportCopyWith(
+          _$_Airport value, $Res Function(_$_Airport) then) =
+      __$$_AirportCopyWithImpl<$Res>;
   @override
   $Res call(
       {String icaoCode,
@@ -161,18 +134,19 @@ abstract class _$AirportCopyWith<$Res> implements $AirportCopyWith<$Res> {
       double latitude,
       double longitude,
       double elevation,
+      Angle magneticVariation,
       String type,
       List<RunwaySet> runways});
 }
 
 /// @nodoc
-class __$AirportCopyWithImpl<$Res> extends _$AirportCopyWithImpl<$Res>
-    implements _$AirportCopyWith<$Res> {
-  __$AirportCopyWithImpl(_Airport _value, $Res Function(_Airport) _then)
-      : super(_value, (v) => _then(v as _Airport));
+class __$$_AirportCopyWithImpl<$Res> extends _$AirportCopyWithImpl<$Res>
+    implements _$$_AirportCopyWith<$Res> {
+  __$$_AirportCopyWithImpl(_$_Airport _value, $Res Function(_$_Airport) _then)
+      : super(_value, (v) => _then(v as _$_Airport));
 
   @override
-  _Airport get _value => super._value as _Airport;
+  _$_Airport get _value => super._value as _$_Airport;
 
   @override
   $Res call({
@@ -183,10 +157,11 @@ class __$AirportCopyWithImpl<$Res> extends _$AirportCopyWithImpl<$Res>
     Object? latitude = freezed,
     Object? longitude = freezed,
     Object? elevation = freezed,
+    Object? magneticVariation = freezed,
     Object? type = freezed,
     Object? runways = freezed,
   }) {
-    return _then(_Airport(
+    return _then(_$_Airport(
       icaoCode: icaoCode == freezed
           ? _value.icaoCode
           : icaoCode // ignore: cast_nullable_to_non_nullable
@@ -215,12 +190,16 @@ class __$AirportCopyWithImpl<$Res> extends _$AirportCopyWithImpl<$Res>
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as double,
+      magneticVariation: magneticVariation == freezed
+          ? _value.magneticVariation
+          : magneticVariation // ignore: cast_nullable_to_non_nullable
+              as Angle,
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
       runways: runways == freezed
-          ? _value.runways
+          ? _value._runways
           : runways // ignore: cast_nullable_to_non_nullable
               as List<RunwaySet>,
     ));
@@ -238,9 +217,11 @@ class _$_Airport extends _Airport {
       required this.latitude,
       required this.longitude,
       required this.elevation,
+      required this.magneticVariation,
       required this.type,
-      required this.runways})
-      : super._();
+      required final List<RunwaySet> runways})
+      : _runways = runways,
+        super._();
 
   factory _$_Airport.fromJson(Map<String, dynamic> json) =>
       _$$_AirportFromJson(json);
@@ -259,21 +240,28 @@ class _$_Airport extends _Airport {
   final double longitude;
   @override
   final double elevation;
-  @override // TODO: use Length class?
-  final String type;
+// TODO: use Length class?
   @override
-  final List<RunwaySet> runways;
+  final Angle magneticVariation;
+  @override
+  final String type;
+  final List<RunwaySet> _runways;
+  @override
+  List<RunwaySet> get runways {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_runways);
+  }
 
   @override
   String toString() {
-    return 'Airport(icaoCode: $icaoCode, iataCode: $iataCode, name: $name, city: $city, latitude: $latitude, longitude: $longitude, elevation: $elevation, type: $type, runways: $runways)';
+    return 'Airport(icaoCode: $icaoCode, iataCode: $iataCode, name: $name, city: $city, latitude: $latitude, longitude: $longitude, elevation: $elevation, magneticVariation: $magneticVariation, type: $type, runways: $runways)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Airport &&
+            other is _$_Airport &&
             const DeepCollectionEquality().equals(other.icaoCode, icaoCode) &&
             const DeepCollectionEquality().equals(other.iataCode, iataCode) &&
             const DeepCollectionEquality().equals(other.name, name) &&
@@ -281,10 +269,13 @@ class _$_Airport extends _Airport {
             const DeepCollectionEquality().equals(other.latitude, latitude) &&
             const DeepCollectionEquality().equals(other.longitude, longitude) &&
             const DeepCollectionEquality().equals(other.elevation, elevation) &&
+            const DeepCollectionEquality()
+                .equals(other.magneticVariation, magneticVariation) &&
             const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.runways, runways));
+            const DeepCollectionEquality().equals(other._runways, _runways));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -295,31 +286,35 @@ class _$_Airport extends _Airport {
       const DeepCollectionEquality().hash(latitude),
       const DeepCollectionEquality().hash(longitude),
       const DeepCollectionEquality().hash(elevation),
+      const DeepCollectionEquality().hash(magneticVariation),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(runways));
+      const DeepCollectionEquality().hash(_runways));
 
   @JsonKey(ignore: true)
   @override
-  _$AirportCopyWith<_Airport> get copyWith =>
-      __$AirportCopyWithImpl<_Airport>(this, _$identity);
+  _$$_AirportCopyWith<_$_Airport> get copyWith =>
+      __$$_AirportCopyWithImpl<_$_Airport>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AirportToJson(this);
+    return _$$_AirportToJson(
+      this,
+    );
   }
 }
 
 abstract class _Airport extends Airport {
   const factory _Airport(
-      {required String icaoCode,
-      required String iataCode,
-      required String name,
-      required String city,
-      required double latitude,
-      required double longitude,
-      required double elevation,
-      required String type,
-      required List<RunwaySet> runways}) = _$_Airport;
+      {required final String icaoCode,
+      required final String iataCode,
+      required final String name,
+      required final String city,
+      required final double latitude,
+      required final double longitude,
+      required final double elevation,
+      required final Angle magneticVariation,
+      required final String type,
+      required final List<RunwaySet> runways}) = _$_Airport;
   const _Airport._() : super._();
 
   factory _Airport.fromJson(Map<String, dynamic> json) = _$_Airport.fromJson;
@@ -339,11 +334,13 @@ abstract class _Airport extends Airport {
   @override
   double get elevation;
   @override // TODO: use Length class?
+  Angle get magneticVariation;
+  @override
   String get type;
   @override
   List<RunwaySet> get runways;
   @override
   @JsonKey(ignore: true)
-  _$AirportCopyWith<_Airport> get copyWith =>
+  _$$_AirportCopyWith<_$_Airport> get copyWith =>
       throw _privateConstructorUsedError;
 }
