@@ -31,7 +31,10 @@ class Airport with _$Airport {
       .toList();
 
   String get displayName {
-    if (name.toLowerCase().contains(city.toLowerCase())) {
+    if (name
+        .toLowerCase()
+        .removeSpecialCharacters()
+        .contains(city.toLowerCase().removeSpecialCharacters())) {
       return name;
     }
     return '$city $name';
@@ -47,5 +50,11 @@ class Airport with _$Airport {
     return (jsonDecode(jsonString) as List)
         .map((json) => Airport.fromJson(json as Map<String, dynamic>))
         .toList();
+  }
+}
+
+extension StringX on String {
+  String removeSpecialCharacters() {
+    return replaceAll(RegExp(r'[\!\"\§\$\{\%\&\/\(\)\=\`\-\_\,\.}]'), '');
   }
 }
