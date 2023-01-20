@@ -18,6 +18,9 @@ class NavAid with _$NavAid {
     required double longitude,
     required Length elevation,
     required Angle magneticVariation,
+
+    /// Only applicable for VORs, VORTACs, VORDMEs, and TACANs
+    required Angle slavedVariation,
   }) = _NavAid;
 
   factory NavAid.fromJson(Map<String, dynamic> json) => _$NavAidFromJson(json);

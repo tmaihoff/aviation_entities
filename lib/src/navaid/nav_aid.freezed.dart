@@ -29,6 +29,9 @@ mixin _$NavAid {
   Length get elevation => throw _privateConstructorUsedError;
   Angle get magneticVariation => throw _privateConstructorUsedError;
 
+  /// Only applicable for VORs, VORTACs, VORDMEs, and TACANs
+  Angle get slavedVariation => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $NavAidCopyWith<NavAid> get copyWith => throw _privateConstructorUsedError;
@@ -46,7 +49,8 @@ abstract class $NavAidCopyWith<$Res> {
       double latitude,
       double longitude,
       Length elevation,
-      Angle magneticVariation});
+      Angle magneticVariation,
+      Angle slavedVariation});
 }
 
 /// @nodoc
@@ -67,6 +71,7 @@ class _$NavAidCopyWithImpl<$Res> implements $NavAidCopyWith<$Res> {
     Object? longitude = freezed,
     Object? elevation = freezed,
     Object? magneticVariation = freezed,
+    Object? slavedVariation = freezed,
   }) {
     return _then(_value.copyWith(
       type: type == freezed
@@ -101,6 +106,10 @@ class _$NavAidCopyWithImpl<$Res> implements $NavAidCopyWith<$Res> {
           ? _value.magneticVariation
           : magneticVariation // ignore: cast_nullable_to_non_nullable
               as Angle,
+      slavedVariation: slavedVariation == freezed
+          ? _value.slavedVariation
+          : slavedVariation // ignore: cast_nullable_to_non_nullable
+              as Angle,
     ));
   }
 }
@@ -118,7 +127,8 @@ abstract class _$$_NavAidCopyWith<$Res> implements $NavAidCopyWith<$Res> {
       double latitude,
       double longitude,
       Length elevation,
-      Angle magneticVariation});
+      Angle magneticVariation,
+      Angle slavedVariation});
 }
 
 /// @nodoc
@@ -140,6 +150,7 @@ class __$$_NavAidCopyWithImpl<$Res> extends _$NavAidCopyWithImpl<$Res>
     Object? longitude = freezed,
     Object? elevation = freezed,
     Object? magneticVariation = freezed,
+    Object? slavedVariation = freezed,
   }) {
     return _then(_$_NavAid(
       type: type == freezed
@@ -174,6 +185,10 @@ class __$$_NavAidCopyWithImpl<$Res> extends _$NavAidCopyWithImpl<$Res>
           ? _value.magneticVariation
           : magneticVariation // ignore: cast_nullable_to_non_nullable
               as Angle,
+      slavedVariation: slavedVariation == freezed
+          ? _value.slavedVariation
+          : slavedVariation // ignore: cast_nullable_to_non_nullable
+              as Angle,
     ));
   }
 }
@@ -189,7 +204,8 @@ class _$_NavAid extends _NavAid {
       required this.latitude,
       required this.longitude,
       required this.elevation,
-      required this.magneticVariation})
+      required this.magneticVariation,
+      required this.slavedVariation})
       : super._();
 
   factory _$_NavAid.fromJson(Map<String, dynamic> json) =>
@@ -213,9 +229,13 @@ class _$_NavAid extends _NavAid {
   @override
   final Angle magneticVariation;
 
+  /// Only applicable for VORs, VORTACs, VORDMEs, and TACANs
+  @override
+  final Angle slavedVariation;
+
   @override
   String toString() {
-    return 'NavAid(type: $type, identifier: $identifier, name: $name, frequency: $frequency, latitude: $latitude, longitude: $longitude, elevation: $elevation, magneticVariation: $magneticVariation)';
+    return 'NavAid(type: $type, identifier: $identifier, name: $name, frequency: $frequency, latitude: $latitude, longitude: $longitude, elevation: $elevation, magneticVariation: $magneticVariation, slavedVariation: $slavedVariation)';
   }
 
   @override
@@ -232,7 +252,9 @@ class _$_NavAid extends _NavAid {
             const DeepCollectionEquality().equals(other.longitude, longitude) &&
             const DeepCollectionEquality().equals(other.elevation, elevation) &&
             const DeepCollectionEquality()
-                .equals(other.magneticVariation, magneticVariation));
+                .equals(other.magneticVariation, magneticVariation) &&
+            const DeepCollectionEquality()
+                .equals(other.slavedVariation, slavedVariation));
   }
 
   @JsonKey(ignore: true)
@@ -246,7 +268,8 @@ class _$_NavAid extends _NavAid {
       const DeepCollectionEquality().hash(latitude),
       const DeepCollectionEquality().hash(longitude),
       const DeepCollectionEquality().hash(elevation),
-      const DeepCollectionEquality().hash(magneticVariation));
+      const DeepCollectionEquality().hash(magneticVariation),
+      const DeepCollectionEquality().hash(slavedVariation));
 
   @JsonKey(ignore: true)
   @override
@@ -270,7 +293,8 @@ abstract class _NavAid extends NavAid {
       required final double latitude,
       required final double longitude,
       required final Length elevation,
-      required final Angle magneticVariation}) = _$_NavAid;
+      required final Angle magneticVariation,
+      required final Angle slavedVariation}) = _$_NavAid;
   const _NavAid._() : super._();
 
   factory _NavAid.fromJson(Map<String, dynamic> json) = _$_NavAid.fromJson;
@@ -291,6 +315,10 @@ abstract class _NavAid extends NavAid {
   Length get elevation;
   @override
   Angle get magneticVariation;
+  @override
+
+  /// Only applicable for VORs, VORTACs, VORDMEs, and TACANs
+  Angle get slavedVariation;
   @override
   @JsonKey(ignore: true)
   _$$_NavAidCopyWith<_$_NavAid> get copyWith =>
