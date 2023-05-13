@@ -1,5 +1,3 @@
-library holding;
-
 export 'entities/holding.dart';
 export 'entities/holding_entry.dart';
 export 'entities/holding_solution.dart';

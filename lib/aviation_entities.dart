@@ -1,5 +1,3 @@
-library aviation_entities;
-
 export 'airport.dart';
 export 'holding.dart';
 export 'ils.dart';
