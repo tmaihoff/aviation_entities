@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'wind.dart';
 
@@ -32,64 +32,69 @@ mixin _$Wind {
 /// @nodoc
 abstract class $WindCopyWith<$Res> {
   factory $WindCopyWith(Wind value, $Res Function(Wind) then) =
-      _$WindCopyWithImpl<$Res>;
+      _$WindCopyWithImpl<$Res, Wind>;
+  @useResult
   $Res call({Heading from, Speed speed});
 }
 
 /// @nodoc
-class _$WindCopyWithImpl<$Res> implements $WindCopyWith<$Res> {
+class _$WindCopyWithImpl<$Res, $Val extends Wind>
+    implements $WindCopyWith<$Res> {
   _$WindCopyWithImpl(this._value, this._then);
 
-  final Wind _value;
   // ignore: unused_field
-  final $Res Function(Wind) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? from = freezed,
-    Object? speed = freezed,
+    Object? from = null,
+    Object? speed = null,
   }) {
     return _then(_value.copyWith(
-      from: from == freezed
+      from: null == from
           ? _value.from
           : from // ignore: cast_nullable_to_non_nullable
               as Heading,
-      speed: speed == freezed
+      speed: null == speed
           ? _value.speed
           : speed // ignore: cast_nullable_to_non_nullable
               as Speed,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_WindCopyWith<$Res> implements $WindCopyWith<$Res> {
-  factory _$$_WindCopyWith(_$_Wind value, $Res Function(_$_Wind) then) =
-      __$$_WindCopyWithImpl<$Res>;
+abstract class _$$WindImplCopyWith<$Res> implements $WindCopyWith<$Res> {
+  factory _$$WindImplCopyWith(
+          _$WindImpl value, $Res Function(_$WindImpl) then) =
+      __$$WindImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Heading from, Speed speed});
 }
 
 /// @nodoc
-class __$$_WindCopyWithImpl<$Res> extends _$WindCopyWithImpl<$Res>
-    implements _$$_WindCopyWith<$Res> {
-  __$$_WindCopyWithImpl(_$_Wind _value, $Res Function(_$_Wind) _then)
-      : super(_value, (v) => _then(v as _$_Wind));
+class __$$WindImplCopyWithImpl<$Res>
+    extends _$WindCopyWithImpl<$Res, _$WindImpl>
+    implements _$$WindImplCopyWith<$Res> {
+  __$$WindImplCopyWithImpl(_$WindImpl _value, $Res Function(_$WindImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_Wind get _value => super._value as _$_Wind;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? from = freezed,
-    Object? speed = freezed,
+    Object? from = null,
+    Object? speed = null,
   }) {
-    return _then(_$_Wind(
-      from: from == freezed
+    return _then(_$WindImpl(
+      from: null == from
           ? _value.from
           : from // ignore: cast_nullable_to_non_nullable
               as Heading,
-      speed: speed == freezed
+      speed: null == speed
           ? _value.speed
           : speed // ignore: cast_nullable_to_non_nullable
               as Speed,
@@ -99,10 +104,11 @@ class __$$_WindCopyWithImpl<$Res> extends _$WindCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Wind extends _Wind {
-  const _$_Wind({required this.from, required this.speed}) : super._();
+class _$WindImpl extends _Wind {
+  const _$WindImpl({required this.from, required this.speed}) : super._();
 
-  factory _$_Wind.fromJson(Map<String, dynamic> json) => _$$_WindFromJson(json);
+  factory _$WindImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WindImplFromJson(json);
 
   /// Wind blowing from this direction
   @override
@@ -111,29 +117,27 @@ class _$_Wind extends _Wind {
   final Speed speed;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Wind &&
-            const DeepCollectionEquality().equals(other.from, from) &&
-            const DeepCollectionEquality().equals(other.speed, speed));
+            other is _$WindImpl &&
+            (identical(other.from, from) || other.from == from) &&
+            (identical(other.speed, speed) || other.speed == speed));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(from),
-      const DeepCollectionEquality().hash(speed));
+  int get hashCode => Object.hash(runtimeType, from, speed);
 
   @JsonKey(ignore: true)
   @override
-  _$$_WindCopyWith<_$_Wind> get copyWith =>
-      __$$_WindCopyWithImpl<_$_Wind>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$WindImplCopyWith<_$WindImpl> get copyWith =>
+      __$$WindImplCopyWithImpl<_$WindImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_WindToJson(
+    return _$$WindImplToJson(
       this,
     );
   }
@@ -141,10 +145,10 @@ class _$_Wind extends _Wind {
 
 abstract class _Wind extends Wind {
   const factory _Wind(
-      {required final Heading from, required final Speed speed}) = _$_Wind;
+      {required final Heading from, required final Speed speed}) = _$WindImpl;
   const _Wind._() : super._();
 
-  factory _Wind.fromJson(Map<String, dynamic> json) = _$_Wind.fromJson;
+  factory _Wind.fromJson(Map<String, dynamic> json) = _$WindImpl.fromJson;
 
   @override
 
@@ -154,5 +158,6 @@ abstract class _Wind extends Wind {
   Speed get speed;
   @override
   @JsonKey(ignore: true)
-  _$$_WindCopyWith<_$_Wind> get copyWith => throw _privateConstructorUsedError;
+  _$$WindImplCopyWith<_$WindImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

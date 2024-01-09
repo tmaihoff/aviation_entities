@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'holding_solution.dart';
 
@@ -31,7 +31,8 @@ mixin _$HoldingSolution {
 abstract class $HoldingSolutionCopyWith<$Res> {
   factory $HoldingSolutionCopyWith(
           HoldingSolution value, $Res Function(HoldingSolution) then) =
-      _$HoldingSolutionCopyWithImpl<$Res>;
+      _$HoldingSolutionCopyWithImpl<$Res, HoldingSolution>;
+  @useResult
   $Res call(
       {Holding holding,
       HoldingEntry entry,
@@ -44,68 +45,73 @@ abstract class $HoldingSolutionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$HoldingSolutionCopyWithImpl<$Res>
+class _$HoldingSolutionCopyWithImpl<$Res, $Val extends HoldingSolution>
     implements $HoldingSolutionCopyWith<$Res> {
   _$HoldingSolutionCopyWithImpl(this._value, this._then);
 
-  final HoldingSolution _value;
   // ignore: unused_field
-  final $Res Function(HoldingSolution) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? holding = freezed,
-    Object? entry = freezed,
-    Object? outboundWca = freezed,
-    Object? inboundWca = freezed,
-    Object? outboundTiming = freezed,
+    Object? holding = null,
+    Object? entry = null,
+    Object? outboundWca = null,
+    Object? inboundWca = null,
+    Object? outboundTiming = null,
   }) {
     return _then(_value.copyWith(
-      holding: holding == freezed
+      holding: null == holding
           ? _value.holding
           : holding // ignore: cast_nullable_to_non_nullable
               as Holding,
-      entry: entry == freezed
+      entry: null == entry
           ? _value.entry
           : entry // ignore: cast_nullable_to_non_nullable
               as HoldingEntry,
-      outboundWca: outboundWca == freezed
+      outboundWca: null == outboundWca
           ? _value.outboundWca
           : outboundWca // ignore: cast_nullable_to_non_nullable
               as Angle,
-      inboundWca: inboundWca == freezed
+      inboundWca: null == inboundWca
           ? _value.inboundWca
           : inboundWca // ignore: cast_nullable_to_non_nullable
               as Angle,
-      outboundTiming: outboundTiming == freezed
+      outboundTiming: null == outboundTiming
           ? _value.outboundTiming
           : outboundTiming // ignore: cast_nullable_to_non_nullable
               as Duration,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $HoldingCopyWith<$Res> get holding {
     return $HoldingCopyWith<$Res>(_value.holding, (value) {
-      return _then(_value.copyWith(holding: value));
+      return _then(_value.copyWith(holding: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $HoldingEntryCopyWith<$Res> get entry {
     return $HoldingEntryCopyWith<$Res>(_value.entry, (value) {
-      return _then(_value.copyWith(entry: value));
+      return _then(_value.copyWith(entry: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_HoldingSolutionCopyWith<$Res>
+abstract class _$$HoldingSolutionImplCopyWith<$Res>
     implements $HoldingSolutionCopyWith<$Res> {
-  factory _$$_HoldingSolutionCopyWith(
-          _$_HoldingSolution value, $Res Function(_$_HoldingSolution) then) =
-      __$$_HoldingSolutionCopyWithImpl<$Res>;
+  factory _$$HoldingSolutionImplCopyWith(_$HoldingSolutionImpl value,
+          $Res Function(_$HoldingSolutionImpl) then) =
+      __$$HoldingSolutionImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Holding holding,
       HoldingEntry entry,
@@ -120,42 +126,40 @@ abstract class _$$_HoldingSolutionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_HoldingSolutionCopyWithImpl<$Res>
-    extends _$HoldingSolutionCopyWithImpl<$Res>
-    implements _$$_HoldingSolutionCopyWith<$Res> {
-  __$$_HoldingSolutionCopyWithImpl(
-      _$_HoldingSolution _value, $Res Function(_$_HoldingSolution) _then)
-      : super(_value, (v) => _then(v as _$_HoldingSolution));
+class __$$HoldingSolutionImplCopyWithImpl<$Res>
+    extends _$HoldingSolutionCopyWithImpl<$Res, _$HoldingSolutionImpl>
+    implements _$$HoldingSolutionImplCopyWith<$Res> {
+  __$$HoldingSolutionImplCopyWithImpl(
+      _$HoldingSolutionImpl _value, $Res Function(_$HoldingSolutionImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_HoldingSolution get _value => super._value as _$_HoldingSolution;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? holding = freezed,
-    Object? entry = freezed,
-    Object? outboundWca = freezed,
-    Object? inboundWca = freezed,
-    Object? outboundTiming = freezed,
+    Object? holding = null,
+    Object? entry = null,
+    Object? outboundWca = null,
+    Object? inboundWca = null,
+    Object? outboundTiming = null,
   }) {
-    return _then(_$_HoldingSolution(
-      holding: holding == freezed
+    return _then(_$HoldingSolutionImpl(
+      holding: null == holding
           ? _value.holding
           : holding // ignore: cast_nullable_to_non_nullable
               as Holding,
-      entry: entry == freezed
+      entry: null == entry
           ? _value.entry
           : entry // ignore: cast_nullable_to_non_nullable
               as HoldingEntry,
-      outboundWca: outboundWca == freezed
+      outboundWca: null == outboundWca
           ? _value.outboundWca
           : outboundWca // ignore: cast_nullable_to_non_nullable
               as Angle,
-      inboundWca: inboundWca == freezed
+      inboundWca: null == inboundWca
           ? _value.inboundWca
           : inboundWca // ignore: cast_nullable_to_non_nullable
               as Angle,
-      outboundTiming: outboundTiming == freezed
+      outboundTiming: null == outboundTiming
           ? _value.outboundTiming
           : outboundTiming // ignore: cast_nullable_to_non_nullable
               as Duration,
@@ -165,8 +169,8 @@ class __$$_HoldingSolutionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_HoldingSolution extends _HoldingSolution {
-  const _$_HoldingSolution(
+class _$HoldingSolutionImpl extends _HoldingSolution {
+  const _$HoldingSolutionImpl(
       {required this.holding,
       required this.entry,
       required this.outboundWca,
@@ -191,33 +195,30 @@ class _$_HoldingSolution extends _HoldingSolution {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_HoldingSolution &&
-            const DeepCollectionEquality().equals(other.holding, holding) &&
-            const DeepCollectionEquality().equals(other.entry, entry) &&
-            const DeepCollectionEquality()
-                .equals(other.outboundWca, outboundWca) &&
-            const DeepCollectionEquality()
-                .equals(other.inboundWca, inboundWca) &&
-            const DeepCollectionEquality()
-                .equals(other.outboundTiming, outboundTiming));
+            other is _$HoldingSolutionImpl &&
+            (identical(other.holding, holding) || other.holding == holding) &&
+            (identical(other.entry, entry) || other.entry == entry) &&
+            (identical(other.outboundWca, outboundWca) ||
+                other.outboundWca == outboundWca) &&
+            (identical(other.inboundWca, inboundWca) ||
+                other.inboundWca == inboundWca) &&
+            (identical(other.outboundTiming, outboundTiming) ||
+                other.outboundTiming == outboundTiming));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(holding),
-      const DeepCollectionEquality().hash(entry),
-      const DeepCollectionEquality().hash(outboundWca),
-      const DeepCollectionEquality().hash(inboundWca),
-      const DeepCollectionEquality().hash(outboundTiming));
+      runtimeType, holding, entry, outboundWca, inboundWca, outboundTiming);
 
   @JsonKey(ignore: true)
   @override
-  _$$_HoldingSolutionCopyWith<_$_HoldingSolution> get copyWith =>
-      __$$_HoldingSolutionCopyWithImpl<_$_HoldingSolution>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$HoldingSolutionImplCopyWith<_$HoldingSolutionImpl> get copyWith =>
+      __$$HoldingSolutionImplCopyWithImpl<_$HoldingSolutionImpl>(
+          this, _$identity);
 }
 
 abstract class _HoldingSolution extends HoldingSolution {
@@ -226,7 +227,7 @@ abstract class _HoldingSolution extends HoldingSolution {
       required final HoldingEntry entry,
       required final Angle outboundWca,
       required final Angle inboundWca,
-      required final Duration outboundTiming}) = _$_HoldingSolution;
+      required final Duration outboundTiming}) = _$HoldingSolutionImpl;
   const _HoldingSolution._() : super._();
 
   @override
@@ -241,6 +242,6 @@ abstract class _HoldingSolution extends HoldingSolution {
   Duration get outboundTiming;
   @override
   @JsonKey(ignore: true)
-  _$$_HoldingSolutionCopyWith<_$_HoldingSolution> get copyWith =>
+  _$$HoldingSolutionImplCopyWith<_$HoldingSolutionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

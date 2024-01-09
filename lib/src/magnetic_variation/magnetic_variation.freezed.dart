@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'magnetic_variation.dart';
 
@@ -34,79 +34,81 @@ mixin _$MagneticVariation {
 abstract class $MagneticVariationCopyWith<$Res> {
   factory $MagneticVariationCopyWith(
           MagneticVariation value, $Res Function(MagneticVariation) then) =
-      _$MagneticVariationCopyWithImpl<$Res>;
+      _$MagneticVariationCopyWithImpl<$Res, MagneticVariation>;
+  @useResult
   $Res call({double declination, double latitude, double longitude});
 }
 
 /// @nodoc
-class _$MagneticVariationCopyWithImpl<$Res>
+class _$MagneticVariationCopyWithImpl<$Res, $Val extends MagneticVariation>
     implements $MagneticVariationCopyWith<$Res> {
   _$MagneticVariationCopyWithImpl(this._value, this._then);
 
-  final MagneticVariation _value;
   // ignore: unused_field
-  final $Res Function(MagneticVariation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? declination = freezed,
-    Object? latitude = freezed,
-    Object? longitude = freezed,
+    Object? declination = null,
+    Object? latitude = null,
+    Object? longitude = null,
   }) {
     return _then(_value.copyWith(
-      declination: declination == freezed
+      declination: null == declination
           ? _value.declination
           : declination // ignore: cast_nullable_to_non_nullable
               as double,
-      latitude: latitude == freezed
+      latitude: null == latitude
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
               as double,
-      longitude: longitude == freezed
+      longitude: null == longitude
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as double,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_MagneticVariationCopyWith<$Res>
+abstract class _$$MagneticVariationImplCopyWith<$Res>
     implements $MagneticVariationCopyWith<$Res> {
-  factory _$$_MagneticVariationCopyWith(_$_MagneticVariation value,
-          $Res Function(_$_MagneticVariation) then) =
-      __$$_MagneticVariationCopyWithImpl<$Res>;
+  factory _$$MagneticVariationImplCopyWith(_$MagneticVariationImpl value,
+          $Res Function(_$MagneticVariationImpl) then) =
+      __$$MagneticVariationImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({double declination, double latitude, double longitude});
 }
 
 /// @nodoc
-class __$$_MagneticVariationCopyWithImpl<$Res>
-    extends _$MagneticVariationCopyWithImpl<$Res>
-    implements _$$_MagneticVariationCopyWith<$Res> {
-  __$$_MagneticVariationCopyWithImpl(
-      _$_MagneticVariation _value, $Res Function(_$_MagneticVariation) _then)
-      : super(_value, (v) => _then(v as _$_MagneticVariation));
+class __$$MagneticVariationImplCopyWithImpl<$Res>
+    extends _$MagneticVariationCopyWithImpl<$Res, _$MagneticVariationImpl>
+    implements _$$MagneticVariationImplCopyWith<$Res> {
+  __$$MagneticVariationImplCopyWithImpl(_$MagneticVariationImpl _value,
+      $Res Function(_$MagneticVariationImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_MagneticVariation get _value => super._value as _$_MagneticVariation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? declination = freezed,
-    Object? latitude = freezed,
-    Object? longitude = freezed,
+    Object? declination = null,
+    Object? latitude = null,
+    Object? longitude = null,
   }) {
-    return _then(_$_MagneticVariation(
-      declination: declination == freezed
+    return _then(_$MagneticVariationImpl(
+      declination: null == declination
           ? _value.declination
           : declination // ignore: cast_nullable_to_non_nullable
               as double,
-      latitude: latitude == freezed
+      latitude: null == latitude
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
               as double,
-      longitude: longitude == freezed
+      longitude: null == longitude
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as double,
@@ -116,15 +118,15 @@ class __$$_MagneticVariationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MagneticVariation extends _MagneticVariation {
-  const _$_MagneticVariation(
+class _$MagneticVariationImpl extends _MagneticVariation {
+  const _$MagneticVariationImpl(
       {required this.declination,
       required this.latitude,
       required this.longitude})
       : super._();
 
-  factory _$_MagneticVariation.fromJson(Map<String, dynamic> json) =>
-      _$$_MagneticVariationFromJson(json);
+  factory _$MagneticVariationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MagneticVariationImplFromJson(json);
 
   @override
   final double declination;
@@ -139,33 +141,33 @@ class _$_MagneticVariation extends _MagneticVariation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MagneticVariation &&
-            const DeepCollectionEquality()
-                .equals(other.declination, declination) &&
-            const DeepCollectionEquality().equals(other.latitude, latitude) &&
-            const DeepCollectionEquality().equals(other.longitude, longitude));
+            other is _$MagneticVariationImpl &&
+            (identical(other.declination, declination) ||
+                other.declination == declination) &&
+            (identical(other.latitude, latitude) ||
+                other.latitude == latitude) &&
+            (identical(other.longitude, longitude) ||
+                other.longitude == longitude));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(declination),
-      const DeepCollectionEquality().hash(latitude),
-      const DeepCollectionEquality().hash(longitude));
+  int get hashCode =>
+      Object.hash(runtimeType, declination, latitude, longitude);
 
   @JsonKey(ignore: true)
   @override
-  _$$_MagneticVariationCopyWith<_$_MagneticVariation> get copyWith =>
-      __$$_MagneticVariationCopyWithImpl<_$_MagneticVariation>(
+  @pragma('vm:prefer-inline')
+  _$$MagneticVariationImplCopyWith<_$MagneticVariationImpl> get copyWith =>
+      __$$MagneticVariationImplCopyWithImpl<_$MagneticVariationImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MagneticVariationToJson(
+    return _$$MagneticVariationImplToJson(
       this,
     );
   }
@@ -175,11 +177,11 @@ abstract class _MagneticVariation extends MagneticVariation {
   const factory _MagneticVariation(
       {required final double declination,
       required final double latitude,
-      required final double longitude}) = _$_MagneticVariation;
+      required final double longitude}) = _$MagneticVariationImpl;
   const _MagneticVariation._() : super._();
 
   factory _MagneticVariation.fromJson(Map<String, dynamic> json) =
-      _$_MagneticVariation.fromJson;
+      _$MagneticVariationImpl.fromJson;
 
   @override
   double get declination;
@@ -189,6 +191,6 @@ abstract class _MagneticVariation extends MagneticVariation {
   double get longitude;
   @override
   @JsonKey(ignore: true)
-  _$$_MagneticVariationCopyWith<_$_MagneticVariation> get copyWith =>
+  _$$MagneticVariationImplCopyWith<_$MagneticVariationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

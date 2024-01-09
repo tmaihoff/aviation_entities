@@ -6,7 +6,7 @@ part of 'nav_aid.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_NavAid _$$_NavAidFromJson(Map<String, dynamic> json) => _$_NavAid(
+_$NavAidImpl _$$NavAidImplFromJson(Map<String, dynamic> json) => _$NavAidImpl(
       type: $enumDecode(_$NavAidTypeEnumMap, json['type']),
       identifier: json['identifier'] as String,
       name: json['name'] as String,
@@ -20,8 +20,9 @@ _$_NavAid _$$_NavAidFromJson(Map<String, dynamic> json) => _$_NavAid(
           Angle.fromJson(json['slavedVariation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_NavAidToJson(_$_NavAid instance) => <String, dynamic>{
-      'type': _$NavAidTypeEnumMap[instance.type],
+Map<String, dynamic> _$$NavAidImplToJson(_$NavAidImpl instance) =>
+    <String, dynamic>{
+      'type': _$NavAidTypeEnumMap[instance.type]!,
       'identifier': instance.identifier,
       'name': instance.name,
       'frequency': instance.frequency,

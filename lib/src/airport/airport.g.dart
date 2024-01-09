@@ -6,7 +6,8 @@ part of 'airport.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Airport _$$_AirportFromJson(Map<String, dynamic> json) => _$_Airport(
+_$AirportImpl _$$AirportImplFromJson(Map<String, dynamic> json) =>
+    _$AirportImpl(
       icaoCode: json['icaoCode'] as String,
       iataCode: json['iataCode'] as String,
       name: json['name'] as String,
@@ -22,7 +23,7 @@ _$_Airport _$$_AirportFromJson(Map<String, dynamic> json) => _$_Airport(
           .toList(),
     );
 
-Map<String, dynamic> _$$_AirportToJson(_$_Airport instance) =>
+Map<String, dynamic> _$$AirportImplToJson(_$AirportImpl instance) =>
     <String, dynamic>{
       'icaoCode': instance.icaoCode,
       'iataCode': instance.iataCode,

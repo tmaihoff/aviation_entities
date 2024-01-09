@@ -6,7 +6,7 @@ part of 'ils.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Ils _$$_IlsFromJson(Map<String, dynamic> json) => _$_Ils(
+_$IlsImpl _$$IlsImplFromJson(Map<String, dynamic> json) => _$IlsImpl(
       identifier: json['identifier'] as String,
       name: json['name'] as String,
       frequency: json['frequency'] as String,
@@ -32,7 +32,7 @@ _$_Ils _$$_IlsFromJson(Map<String, dynamic> json) => _$_Ils(
       dmeLongitude: (json['dmeLongitude'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$_IlsToJson(_$_Ils instance) => <String, dynamic>{
+Map<String, dynamic> _$$IlsImplToJson(_$IlsImpl instance) => <String, dynamic>{
       'identifier': instance.identifier,
       'name': instance.name,
       'frequency': instance.frequency,

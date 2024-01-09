@@ -6,20 +6,21 @@ part of 'runway.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RunwaySet _$$_RunwaySetFromJson(Map<String, dynamic> json) => _$_RunwaySet(
+_$RunwaySetImpl _$$RunwaySetImplFromJson(Map<String, dynamic> json) =>
+    _$RunwaySetImpl(
       airportIcaoCode: json['airportIcaoCode'] as String,
       direction1: Runway.fromJson(json['direction1'] as Map<String, dynamic>),
       direction2: Runway.fromJson(json['direction2'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RunwaySetToJson(_$_RunwaySet instance) =>
+Map<String, dynamic> _$$RunwaySetImplToJson(_$RunwaySetImpl instance) =>
     <String, dynamic>{
       'airportIcaoCode': instance.airportIcaoCode,
       'direction1': instance.direction1.toJson(),
       'direction2': instance.direction2.toJson(),
     };
 
-_$_Runway _$$_RunwayFromJson(Map<String, dynamic> json) => _$_Runway(
+_$RunwayImpl _$$RunwayImplFromJson(Map<String, dynamic> json) => _$RunwayImpl(
       airportIcaoCode: json['airportIcaoCode'] as String,
       identifier: json['identifier'] as String,
       trueHeading:
@@ -38,7 +39,8 @@ _$_Runway _$$_RunwayFromJson(Map<String, dynamic> json) => _$_Runway(
           Angle.fromJson(json['magneticVariation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RunwayToJson(_$_Runway instance) => <String, dynamic>{
+Map<String, dynamic> _$$RunwayImplToJson(_$RunwayImpl instance) =>
+    <String, dynamic>{
       'airportIcaoCode': instance.airportIcaoCode,
       'identifier': instance.identifier,
       'trueHeading': instance.trueHeading.toJson(),
@@ -53,14 +55,15 @@ Map<String, dynamic> _$$_RunwayToJson(_$_Runway instance) => <String, dynamic>{
       'magneticVariation': instance.magneticVariation.toJson(),
     };
 
-_$_Threshold _$$_ThresholdFromJson(Map<String, dynamic> json) => _$_Threshold(
+_$ThresholdImpl _$$ThresholdImplFromJson(Map<String, dynamic> json) =>
+    _$ThresholdImpl(
       latitude: (json['latitude'] as num).toDouble(),
       longitude: (json['longitude'] as num).toDouble(),
       displaced: Length.fromJson(json['displaced'] as Map<String, dynamic>),
       elevation: Length.fromJson(json['elevation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ThresholdToJson(_$_Threshold instance) =>
+Map<String, dynamic> _$$ThresholdImplToJson(_$ThresholdImpl instance) =>
     <String, dynamic>{
       'latitude': instance.latitude,
       'longitude': instance.longitude,

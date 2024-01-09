@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'nav_aid.dart';
 
@@ -40,7 +40,8 @@ mixin _$NavAid {
 /// @nodoc
 abstract class $NavAidCopyWith<$Res> {
   factory $NavAidCopyWith(NavAid value, $Res Function(NavAid) then) =
-      _$NavAidCopyWithImpl<$Res>;
+      _$NavAidCopyWithImpl<$Res, NavAid>;
+  @useResult
   $Res call(
       {NavAidType type,
       String identifier,
@@ -54,71 +55,76 @@ abstract class $NavAidCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NavAidCopyWithImpl<$Res> implements $NavAidCopyWith<$Res> {
+class _$NavAidCopyWithImpl<$Res, $Val extends NavAid>
+    implements $NavAidCopyWith<$Res> {
   _$NavAidCopyWithImpl(this._value, this._then);
 
-  final NavAid _value;
   // ignore: unused_field
-  final $Res Function(NavAid) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
-    Object? identifier = freezed,
-    Object? name = freezed,
-    Object? frequency = freezed,
-    Object? latitude = freezed,
-    Object? longitude = freezed,
-    Object? elevation = freezed,
-    Object? magneticVariation = freezed,
-    Object? slavedVariation = freezed,
+    Object? type = null,
+    Object? identifier = null,
+    Object? name = null,
+    Object? frequency = null,
+    Object? latitude = null,
+    Object? longitude = null,
+    Object? elevation = null,
+    Object? magneticVariation = null,
+    Object? slavedVariation = null,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as NavAidType,
-      identifier: identifier == freezed
+      identifier: null == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      frequency: frequency == freezed
+      frequency: null == frequency
           ? _value.frequency
           : frequency // ignore: cast_nullable_to_non_nullable
               as String,
-      latitude: latitude == freezed
+      latitude: null == latitude
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
               as double,
-      longitude: longitude == freezed
+      longitude: null == longitude
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as double,
-      elevation: elevation == freezed
+      elevation: null == elevation
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as Length,
-      magneticVariation: magneticVariation == freezed
+      magneticVariation: null == magneticVariation
           ? _value.magneticVariation
           : magneticVariation // ignore: cast_nullable_to_non_nullable
               as Angle,
-      slavedVariation: slavedVariation == freezed
+      slavedVariation: null == slavedVariation
           ? _value.slavedVariation
           : slavedVariation // ignore: cast_nullable_to_non_nullable
               as Angle,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_NavAidCopyWith<$Res> implements $NavAidCopyWith<$Res> {
-  factory _$$_NavAidCopyWith(_$_NavAid value, $Res Function(_$_NavAid) then) =
-      __$$_NavAidCopyWithImpl<$Res>;
+abstract class _$$NavAidImplCopyWith<$Res> implements $NavAidCopyWith<$Res> {
+  factory _$$NavAidImplCopyWith(
+          _$NavAidImpl value, $Res Function(_$NavAidImpl) then) =
+      __$$NavAidImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {NavAidType type,
       String identifier,
@@ -132,60 +138,60 @@ abstract class _$$_NavAidCopyWith<$Res> implements $NavAidCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_NavAidCopyWithImpl<$Res> extends _$NavAidCopyWithImpl<$Res>
-    implements _$$_NavAidCopyWith<$Res> {
-  __$$_NavAidCopyWithImpl(_$_NavAid _value, $Res Function(_$_NavAid) _then)
-      : super(_value, (v) => _then(v as _$_NavAid));
+class __$$NavAidImplCopyWithImpl<$Res>
+    extends _$NavAidCopyWithImpl<$Res, _$NavAidImpl>
+    implements _$$NavAidImplCopyWith<$Res> {
+  __$$NavAidImplCopyWithImpl(
+      _$NavAidImpl _value, $Res Function(_$NavAidImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_NavAid get _value => super._value as _$_NavAid;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
-    Object? identifier = freezed,
-    Object? name = freezed,
-    Object? frequency = freezed,
-    Object? latitude = freezed,
-    Object? longitude = freezed,
-    Object? elevation = freezed,
-    Object? magneticVariation = freezed,
-    Object? slavedVariation = freezed,
+    Object? type = null,
+    Object? identifier = null,
+    Object? name = null,
+    Object? frequency = null,
+    Object? latitude = null,
+    Object? longitude = null,
+    Object? elevation = null,
+    Object? magneticVariation = null,
+    Object? slavedVariation = null,
   }) {
-    return _then(_$_NavAid(
-      type: type == freezed
+    return _then(_$NavAidImpl(
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as NavAidType,
-      identifier: identifier == freezed
+      identifier: null == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      frequency: frequency == freezed
+      frequency: null == frequency
           ? _value.frequency
           : frequency // ignore: cast_nullable_to_non_nullable
               as String,
-      latitude: latitude == freezed
+      latitude: null == latitude
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
               as double,
-      longitude: longitude == freezed
+      longitude: null == longitude
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as double,
-      elevation: elevation == freezed
+      elevation: null == elevation
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as Length,
-      magneticVariation: magneticVariation == freezed
+      magneticVariation: null == magneticVariation
           ? _value.magneticVariation
           : magneticVariation // ignore: cast_nullable_to_non_nullable
               as Angle,
-      slavedVariation: slavedVariation == freezed
+      slavedVariation: null == slavedVariation
           ? _value.slavedVariation
           : slavedVariation // ignore: cast_nullable_to_non_nullable
               as Angle,
@@ -195,8 +201,8 @@ class __$$_NavAidCopyWithImpl<$Res> extends _$NavAidCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NavAid extends _NavAid {
-  const _$_NavAid(
+class _$NavAidImpl extends _NavAid {
+  const _$NavAidImpl(
       {required this.type,
       required this.identifier,
       required this.name,
@@ -208,8 +214,8 @@ class _$_NavAid extends _NavAid {
       required this.slavedVariation})
       : super._();
 
-  factory _$_NavAid.fromJson(Map<String, dynamic> json) =>
-      _$$_NavAidFromJson(json);
+  factory _$NavAidImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NavAidImplFromJson(json);
 
   @override
   final NavAidType type;
@@ -239,46 +245,51 @@ class _$_NavAid extends _NavAid {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NavAid &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.frequency, frequency) &&
-            const DeepCollectionEquality().equals(other.latitude, latitude) &&
-            const DeepCollectionEquality().equals(other.longitude, longitude) &&
-            const DeepCollectionEquality().equals(other.elevation, elevation) &&
-            const DeepCollectionEquality()
-                .equals(other.magneticVariation, magneticVariation) &&
-            const DeepCollectionEquality()
-                .equals(other.slavedVariation, slavedVariation));
+            other is _$NavAidImpl &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.identifier, identifier) ||
+                other.identifier == identifier) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.frequency, frequency) ||
+                other.frequency == frequency) &&
+            (identical(other.latitude, latitude) ||
+                other.latitude == latitude) &&
+            (identical(other.longitude, longitude) ||
+                other.longitude == longitude) &&
+            (identical(other.elevation, elevation) ||
+                other.elevation == elevation) &&
+            (identical(other.magneticVariation, magneticVariation) ||
+                other.magneticVariation == magneticVariation) &&
+            (identical(other.slavedVariation, slavedVariation) ||
+                other.slavedVariation == slavedVariation));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(identifier),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(frequency),
-      const DeepCollectionEquality().hash(latitude),
-      const DeepCollectionEquality().hash(longitude),
-      const DeepCollectionEquality().hash(elevation),
-      const DeepCollectionEquality().hash(magneticVariation),
-      const DeepCollectionEquality().hash(slavedVariation));
+      type,
+      identifier,
+      name,
+      frequency,
+      latitude,
+      longitude,
+      elevation,
+      magneticVariation,
+      slavedVariation);
 
   @JsonKey(ignore: true)
   @override
-  _$$_NavAidCopyWith<_$_NavAid> get copyWith =>
-      __$$_NavAidCopyWithImpl<_$_NavAid>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$NavAidImplCopyWith<_$NavAidImpl> get copyWith =>
+      __$$NavAidImplCopyWithImpl<_$NavAidImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NavAidToJson(
+    return _$$NavAidImplToJson(
       this,
     );
   }
@@ -294,10 +305,10 @@ abstract class _NavAid extends NavAid {
       required final double longitude,
       required final Length elevation,
       required final Angle magneticVariation,
-      required final Angle slavedVariation}) = _$_NavAid;
+      required final Angle slavedVariation}) = _$NavAidImpl;
   const _NavAid._() : super._();
 
-  factory _NavAid.fromJson(Map<String, dynamic> json) = _$_NavAid.fromJson;
+  factory _NavAid.fromJson(Map<String, dynamic> json) = _$NavAidImpl.fromJson;
 
   @override
   NavAidType get type;
@@ -321,6 +332,6 @@ abstract class _NavAid extends NavAid {
   Angle get slavedVariation;
   @override
   @JsonKey(ignore: true)
-  _$$_NavAidCopyWith<_$_NavAid> get copyWith =>
+  _$$NavAidImplCopyWith<_$NavAidImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'intercept_solution.dart';
 
@@ -36,58 +36,63 @@ mixin _$InterceptSolution {
 abstract class $InterceptSolutionCopyWith<$Res> {
   factory $InterceptSolutionCopyWith(
           InterceptSolution value, $Res Function(InterceptSolution) then) =
-      _$InterceptSolutionCopyWithImpl<$Res>;
+      _$InterceptSolutionCopyWithImpl<$Res, InterceptSolution>;
+  @useResult
   $Res call({Intercept intercept, Heading heading, Angle? g});
 
   $InterceptCopyWith<$Res> get intercept;
 }
 
 /// @nodoc
-class _$InterceptSolutionCopyWithImpl<$Res>
+class _$InterceptSolutionCopyWithImpl<$Res, $Val extends InterceptSolution>
     implements $InterceptSolutionCopyWith<$Res> {
   _$InterceptSolutionCopyWithImpl(this._value, this._then);
 
-  final InterceptSolution _value;
   // ignore: unused_field
-  final $Res Function(InterceptSolution) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? intercept = freezed,
-    Object? heading = freezed,
+    Object? intercept = null,
+    Object? heading = null,
     Object? g = freezed,
   }) {
     return _then(_value.copyWith(
-      intercept: intercept == freezed
+      intercept: null == intercept
           ? _value.intercept
           : intercept // ignore: cast_nullable_to_non_nullable
               as Intercept,
-      heading: heading == freezed
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
               as Heading,
-      g: g == freezed
+      g: freezed == g
           ? _value.g
           : g // ignore: cast_nullable_to_non_nullable
               as Angle?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $InterceptCopyWith<$Res> get intercept {
     return $InterceptCopyWith<$Res>(_value.intercept, (value) {
-      return _then(_value.copyWith(intercept: value));
+      return _then(_value.copyWith(intercept: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_InterceptSolutionCopyWith<$Res>
+abstract class _$$InterceptSolutionImplCopyWith<$Res>
     implements $InterceptSolutionCopyWith<$Res> {
-  factory _$$_InterceptSolutionCopyWith(_$_InterceptSolution value,
-          $Res Function(_$_InterceptSolution) then) =
-      __$$_InterceptSolutionCopyWithImpl<$Res>;
+  factory _$$InterceptSolutionImplCopyWith(_$InterceptSolutionImpl value,
+          $Res Function(_$InterceptSolutionImpl) then) =
+      __$$InterceptSolutionImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Intercept intercept, Heading heading, Angle? g});
 
   @override
@@ -95,32 +100,30 @@ abstract class _$$_InterceptSolutionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_InterceptSolutionCopyWithImpl<$Res>
-    extends _$InterceptSolutionCopyWithImpl<$Res>
-    implements _$$_InterceptSolutionCopyWith<$Res> {
-  __$$_InterceptSolutionCopyWithImpl(
-      _$_InterceptSolution _value, $Res Function(_$_InterceptSolution) _then)
-      : super(_value, (v) => _then(v as _$_InterceptSolution));
+class __$$InterceptSolutionImplCopyWithImpl<$Res>
+    extends _$InterceptSolutionCopyWithImpl<$Res, _$InterceptSolutionImpl>
+    implements _$$InterceptSolutionImplCopyWith<$Res> {
+  __$$InterceptSolutionImplCopyWithImpl(_$InterceptSolutionImpl _value,
+      $Res Function(_$InterceptSolutionImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_InterceptSolution get _value => super._value as _$_InterceptSolution;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? intercept = freezed,
-    Object? heading = freezed,
+    Object? intercept = null,
+    Object? heading = null,
     Object? g = freezed,
   }) {
-    return _then(_$_InterceptSolution(
-      intercept: intercept == freezed
+    return _then(_$InterceptSolutionImpl(
+      intercept: null == intercept
           ? _value.intercept
           : intercept // ignore: cast_nullable_to_non_nullable
               as Intercept,
-      heading: heading == freezed
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
               as Heading,
-      g: g == freezed
+      g: freezed == g
           ? _value.g
           : g // ignore: cast_nullable_to_non_nullable
               as Angle?,
@@ -130,8 +133,8 @@ class __$$_InterceptSolutionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InterceptSolution extends _InterceptSolution {
-  const _$_InterceptSolution(
+class _$InterceptSolutionImpl extends _InterceptSolution {
+  const _$InterceptSolutionImpl(
       {required this.intercept, required this.heading, this.g})
       : super._();
 
@@ -155,26 +158,24 @@ class _$_InterceptSolution extends _InterceptSolution {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InterceptSolution &&
-            const DeepCollectionEquality().equals(other.intercept, intercept) &&
-            const DeepCollectionEquality().equals(other.heading, heading) &&
-            const DeepCollectionEquality().equals(other.g, g));
+            other is _$InterceptSolutionImpl &&
+            (identical(other.intercept, intercept) ||
+                other.intercept == intercept) &&
+            (identical(other.heading, heading) || other.heading == heading) &&
+            (identical(other.g, g) || other.g == g));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(intercept),
-      const DeepCollectionEquality().hash(heading),
-      const DeepCollectionEquality().hash(g));
+  int get hashCode => Object.hash(runtimeType, intercept, heading, g);
 
   @JsonKey(ignore: true)
   @override
-  _$$_InterceptSolutionCopyWith<_$_InterceptSolution> get copyWith =>
-      __$$_InterceptSolutionCopyWithImpl<_$_InterceptSolution>(
+  @pragma('vm:prefer-inline')
+  _$$InterceptSolutionImplCopyWith<_$InterceptSolutionImpl> get copyWith =>
+      __$$InterceptSolutionImplCopyWithImpl<_$InterceptSolutionImpl>(
           this, _$identity);
 }
 
@@ -182,7 +183,7 @@ abstract class _InterceptSolution extends InterceptSolution {
   const factory _InterceptSolution(
       {required final Intercept intercept,
       required final Heading heading,
-      final Angle? g}) = _$_InterceptSolution;
+      final Angle? g}) = _$InterceptSolutionImpl;
   const _InterceptSolution._() : super._();
 
   @override
@@ -201,6 +202,6 @@ abstract class _InterceptSolution extends InterceptSolution {
   Angle? get g;
   @override
   @JsonKey(ignore: true)
-  _$$_InterceptSolutionCopyWith<_$_InterceptSolution> get copyWith =>
+  _$$InterceptSolutionImplCopyWith<_$InterceptSolutionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

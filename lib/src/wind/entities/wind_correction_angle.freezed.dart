@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'wind_correction_angle.dart';
 
@@ -29,58 +29,63 @@ mixin _$WindCorrectionAngle {
 abstract class $WindCorrectionAngleCopyWith<$Res> {
   factory $WindCorrectionAngleCopyWith(
           WindCorrectionAngle value, $Res Function(WindCorrectionAngle) then) =
-      _$WindCorrectionAngleCopyWithImpl<$Res>;
+      _$WindCorrectionAngleCopyWithImpl<$Res, WindCorrectionAngle>;
+  @useResult
   $Res call({Wind wind, Heading heading, Speed trueAirspeed});
 
   $WindCopyWith<$Res> get wind;
 }
 
 /// @nodoc
-class _$WindCorrectionAngleCopyWithImpl<$Res>
+class _$WindCorrectionAngleCopyWithImpl<$Res, $Val extends WindCorrectionAngle>
     implements $WindCorrectionAngleCopyWith<$Res> {
   _$WindCorrectionAngleCopyWithImpl(this._value, this._then);
 
-  final WindCorrectionAngle _value;
   // ignore: unused_field
-  final $Res Function(WindCorrectionAngle) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? wind = freezed,
-    Object? heading = freezed,
-    Object? trueAirspeed = freezed,
+    Object? wind = null,
+    Object? heading = null,
+    Object? trueAirspeed = null,
   }) {
     return _then(_value.copyWith(
-      wind: wind == freezed
+      wind: null == wind
           ? _value.wind
           : wind // ignore: cast_nullable_to_non_nullable
               as Wind,
-      heading: heading == freezed
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
               as Heading,
-      trueAirspeed: trueAirspeed == freezed
+      trueAirspeed: null == trueAirspeed
           ? _value.trueAirspeed
           : trueAirspeed // ignore: cast_nullable_to_non_nullable
               as Speed,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $WindCopyWith<$Res> get wind {
     return $WindCopyWith<$Res>(_value.wind, (value) {
-      return _then(_value.copyWith(wind: value));
+      return _then(_value.copyWith(wind: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_WindCorrectionAngleCopyWith<$Res>
+abstract class _$$WindCorrectionAngleImplCopyWith<$Res>
     implements $WindCorrectionAngleCopyWith<$Res> {
-  factory _$$_WindCorrectionAngleCopyWith(_$_WindCorrectionAngle value,
-          $Res Function(_$_WindCorrectionAngle) then) =
-      __$$_WindCorrectionAngleCopyWithImpl<$Res>;
+  factory _$$WindCorrectionAngleImplCopyWith(_$WindCorrectionAngleImpl value,
+          $Res Function(_$WindCorrectionAngleImpl) then) =
+      __$$WindCorrectionAngleImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Wind wind, Heading heading, Speed trueAirspeed});
 
   @override
@@ -88,32 +93,30 @@ abstract class _$$_WindCorrectionAngleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_WindCorrectionAngleCopyWithImpl<$Res>
-    extends _$WindCorrectionAngleCopyWithImpl<$Res>
-    implements _$$_WindCorrectionAngleCopyWith<$Res> {
-  __$$_WindCorrectionAngleCopyWithImpl(_$_WindCorrectionAngle _value,
-      $Res Function(_$_WindCorrectionAngle) _then)
-      : super(_value, (v) => _then(v as _$_WindCorrectionAngle));
+class __$$WindCorrectionAngleImplCopyWithImpl<$Res>
+    extends _$WindCorrectionAngleCopyWithImpl<$Res, _$WindCorrectionAngleImpl>
+    implements _$$WindCorrectionAngleImplCopyWith<$Res> {
+  __$$WindCorrectionAngleImplCopyWithImpl(_$WindCorrectionAngleImpl _value,
+      $Res Function(_$WindCorrectionAngleImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_WindCorrectionAngle get _value => super._value as _$_WindCorrectionAngle;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? wind = freezed,
-    Object? heading = freezed,
-    Object? trueAirspeed = freezed,
+    Object? wind = null,
+    Object? heading = null,
+    Object? trueAirspeed = null,
   }) {
-    return _then(_$_WindCorrectionAngle(
-      wind: wind == freezed
+    return _then(_$WindCorrectionAngleImpl(
+      wind: null == wind
           ? _value.wind
           : wind // ignore: cast_nullable_to_non_nullable
               as Wind,
-      heading: heading == freezed
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
               as Heading,
-      trueAirspeed: trueAirspeed == freezed
+      trueAirspeed: null == trueAirspeed
           ? _value.trueAirspeed
           : trueAirspeed // ignore: cast_nullable_to_non_nullable
               as Speed,
@@ -123,8 +126,8 @@ class __$$_WindCorrectionAngleCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_WindCorrectionAngle extends _WindCorrectionAngle {
-  const _$_WindCorrectionAngle(
+class _$WindCorrectionAngleImpl extends _WindCorrectionAngle {
+  const _$WindCorrectionAngleImpl(
       {required this.wind, required this.heading, required this.trueAirspeed})
       : super._();
 
@@ -141,27 +144,24 @@ class _$_WindCorrectionAngle extends _WindCorrectionAngle {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_WindCorrectionAngle &&
-            const DeepCollectionEquality().equals(other.wind, wind) &&
-            const DeepCollectionEquality().equals(other.heading, heading) &&
-            const DeepCollectionEquality()
-                .equals(other.trueAirspeed, trueAirspeed));
+            other is _$WindCorrectionAngleImpl &&
+            (identical(other.wind, wind) || other.wind == wind) &&
+            (identical(other.heading, heading) || other.heading == heading) &&
+            (identical(other.trueAirspeed, trueAirspeed) ||
+                other.trueAirspeed == trueAirspeed));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(wind),
-      const DeepCollectionEquality().hash(heading),
-      const DeepCollectionEquality().hash(trueAirspeed));
+  int get hashCode => Object.hash(runtimeType, wind, heading, trueAirspeed);
 
   @JsonKey(ignore: true)
   @override
-  _$$_WindCorrectionAngleCopyWith<_$_WindCorrectionAngle> get copyWith =>
-      __$$_WindCorrectionAngleCopyWithImpl<_$_WindCorrectionAngle>(
+  @pragma('vm:prefer-inline')
+  _$$WindCorrectionAngleImplCopyWith<_$WindCorrectionAngleImpl> get copyWith =>
+      __$$WindCorrectionAngleImplCopyWithImpl<_$WindCorrectionAngleImpl>(
           this, _$identity);
 }
 
@@ -169,7 +169,7 @@ abstract class _WindCorrectionAngle extends WindCorrectionAngle {
   const factory _WindCorrectionAngle(
       {required final Wind wind,
       required final Heading heading,
-      required final Speed trueAirspeed}) = _$_WindCorrectionAngle;
+      required final Speed trueAirspeed}) = _$WindCorrectionAngleImpl;
   const _WindCorrectionAngle._() : super._();
 
   @override
@@ -180,6 +180,6 @@ abstract class _WindCorrectionAngle extends WindCorrectionAngle {
   Speed get trueAirspeed;
   @override
   @JsonKey(ignore: true)
-  _$$_WindCorrectionAngleCopyWith<_$_WindCorrectionAngle> get copyWith =>
+  _$$WindCorrectionAngleImplCopyWith<_$WindCorrectionAngleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

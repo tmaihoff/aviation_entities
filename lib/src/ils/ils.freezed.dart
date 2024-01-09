@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'ils.dart';
 
@@ -46,7 +46,8 @@ mixin _$Ils {
 /// @nodoc
 abstract class $IlsCopyWith<$Res> {
   factory $IlsCopyWith(Ils value, $Res Function(Ils) then) =
-      _$IlsCopyWithImpl<$Res>;
+      _$IlsCopyWithImpl<$Res, Ils>;
+  @useResult
   $Res call(
       {String identifier,
       String name,
@@ -68,111 +69,114 @@ abstract class $IlsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$IlsCopyWithImpl<$Res> implements $IlsCopyWith<$Res> {
+class _$IlsCopyWithImpl<$Res, $Val extends Ils> implements $IlsCopyWith<$Res> {
   _$IlsCopyWithImpl(this._value, this._then);
 
-  final Ils _value;
   // ignore: unused_field
-  final $Res Function(Ils) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? identifier = freezed,
-    Object? name = freezed,
-    Object? frequency = freezed,
-    Object? airportIcaoCode = freezed,
-    Object? range = freezed,
-    Object? magneticVariation = freezed,
-    Object? glideSlopeAngle = freezed,
-    Object? glideSlopeElevation = freezed,
-    Object? glideSlopeLatitude = freezed,
-    Object? glideSlopeLongitude = freezed,
-    Object? localizerTrueHeading = freezed,
-    Object? localizerLatitude = freezed,
-    Object? localizerLongitude = freezed,
-    Object? hasDme = freezed,
+    Object? identifier = null,
+    Object? name = null,
+    Object? frequency = null,
+    Object? airportIcaoCode = null,
+    Object? range = null,
+    Object? magneticVariation = null,
+    Object? glideSlopeAngle = null,
+    Object? glideSlopeElevation = null,
+    Object? glideSlopeLatitude = null,
+    Object? glideSlopeLongitude = null,
+    Object? localizerTrueHeading = null,
+    Object? localizerLatitude = null,
+    Object? localizerLongitude = null,
+    Object? hasDme = null,
     Object? dmeElevation = freezed,
     Object? dmeLatitude = freezed,
     Object? dmeLongitude = freezed,
   }) {
     return _then(_value.copyWith(
-      identifier: identifier == freezed
+      identifier: null == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      frequency: frequency == freezed
+      frequency: null == frequency
           ? _value.frequency
           : frequency // ignore: cast_nullable_to_non_nullable
               as String,
-      airportIcaoCode: airportIcaoCode == freezed
+      airportIcaoCode: null == airportIcaoCode
           ? _value.airportIcaoCode
           : airportIcaoCode // ignore: cast_nullable_to_non_nullable
               as String,
-      range: range == freezed
+      range: null == range
           ? _value.range
           : range // ignore: cast_nullable_to_non_nullable
               as double,
-      magneticVariation: magneticVariation == freezed
+      magneticVariation: null == magneticVariation
           ? _value.magneticVariation
           : magneticVariation // ignore: cast_nullable_to_non_nullable
               as Angle,
-      glideSlopeAngle: glideSlopeAngle == freezed
+      glideSlopeAngle: null == glideSlopeAngle
           ? _value.glideSlopeAngle
           : glideSlopeAngle // ignore: cast_nullable_to_non_nullable
               as Angle,
-      glideSlopeElevation: glideSlopeElevation == freezed
+      glideSlopeElevation: null == glideSlopeElevation
           ? _value.glideSlopeElevation
           : glideSlopeElevation // ignore: cast_nullable_to_non_nullable
               as Length,
-      glideSlopeLatitude: glideSlopeLatitude == freezed
+      glideSlopeLatitude: null == glideSlopeLatitude
           ? _value.glideSlopeLatitude
           : glideSlopeLatitude // ignore: cast_nullable_to_non_nullable
               as double,
-      glideSlopeLongitude: glideSlopeLongitude == freezed
+      glideSlopeLongitude: null == glideSlopeLongitude
           ? _value.glideSlopeLongitude
           : glideSlopeLongitude // ignore: cast_nullable_to_non_nullable
               as double,
-      localizerTrueHeading: localizerTrueHeading == freezed
+      localizerTrueHeading: null == localizerTrueHeading
           ? _value.localizerTrueHeading
           : localizerTrueHeading // ignore: cast_nullable_to_non_nullable
               as Heading,
-      localizerLatitude: localizerLatitude == freezed
+      localizerLatitude: null == localizerLatitude
           ? _value.localizerLatitude
           : localizerLatitude // ignore: cast_nullable_to_non_nullable
               as double,
-      localizerLongitude: localizerLongitude == freezed
+      localizerLongitude: null == localizerLongitude
           ? _value.localizerLongitude
           : localizerLongitude // ignore: cast_nullable_to_non_nullable
               as double,
-      hasDme: hasDme == freezed
+      hasDme: null == hasDme
           ? _value.hasDme
           : hasDme // ignore: cast_nullable_to_non_nullable
               as bool,
-      dmeElevation: dmeElevation == freezed
+      dmeElevation: freezed == dmeElevation
           ? _value.dmeElevation
           : dmeElevation // ignore: cast_nullable_to_non_nullable
               as Length?,
-      dmeLatitude: dmeLatitude == freezed
+      dmeLatitude: freezed == dmeLatitude
           ? _value.dmeLatitude
           : dmeLatitude // ignore: cast_nullable_to_non_nullable
               as double?,
-      dmeLongitude: dmeLongitude == freezed
+      dmeLongitude: freezed == dmeLongitude
           ? _value.dmeLongitude
           : dmeLongitude // ignore: cast_nullable_to_non_nullable
               as double?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_IlsCopyWith<$Res> implements $IlsCopyWith<$Res> {
-  factory _$$_IlsCopyWith(_$_Ils value, $Res Function(_$_Ils) then) =
-      __$$_IlsCopyWithImpl<$Res>;
+abstract class _$$IlsImplCopyWith<$Res> implements $IlsCopyWith<$Res> {
+  factory _$$IlsImplCopyWith(_$IlsImpl value, $Res Function(_$IlsImpl) then) =
+      __$$IlsImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String identifier,
       String name,
@@ -194,100 +198,98 @@ abstract class _$$_IlsCopyWith<$Res> implements $IlsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_IlsCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res>
-    implements _$$_IlsCopyWith<$Res> {
-  __$$_IlsCopyWithImpl(_$_Ils _value, $Res Function(_$_Ils) _then)
-      : super(_value, (v) => _then(v as _$_Ils));
+class __$$IlsImplCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res, _$IlsImpl>
+    implements _$$IlsImplCopyWith<$Res> {
+  __$$IlsImplCopyWithImpl(_$IlsImpl _value, $Res Function(_$IlsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_Ils get _value => super._value as _$_Ils;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? identifier = freezed,
-    Object? name = freezed,
-    Object? frequency = freezed,
-    Object? airportIcaoCode = freezed,
-    Object? range = freezed,
-    Object? magneticVariation = freezed,
-    Object? glideSlopeAngle = freezed,
-    Object? glideSlopeElevation = freezed,
-    Object? glideSlopeLatitude = freezed,
-    Object? glideSlopeLongitude = freezed,
-    Object? localizerTrueHeading = freezed,
-    Object? localizerLatitude = freezed,
-    Object? localizerLongitude = freezed,
-    Object? hasDme = freezed,
+    Object? identifier = null,
+    Object? name = null,
+    Object? frequency = null,
+    Object? airportIcaoCode = null,
+    Object? range = null,
+    Object? magneticVariation = null,
+    Object? glideSlopeAngle = null,
+    Object? glideSlopeElevation = null,
+    Object? glideSlopeLatitude = null,
+    Object? glideSlopeLongitude = null,
+    Object? localizerTrueHeading = null,
+    Object? localizerLatitude = null,
+    Object? localizerLongitude = null,
+    Object? hasDme = null,
     Object? dmeElevation = freezed,
     Object? dmeLatitude = freezed,
     Object? dmeLongitude = freezed,
   }) {
-    return _then(_$_Ils(
-      identifier: identifier == freezed
+    return _then(_$IlsImpl(
+      identifier: null == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      frequency: frequency == freezed
+      frequency: null == frequency
           ? _value.frequency
           : frequency // ignore: cast_nullable_to_non_nullable
               as String,
-      airportIcaoCode: airportIcaoCode == freezed
+      airportIcaoCode: null == airportIcaoCode
           ? _value.airportIcaoCode
           : airportIcaoCode // ignore: cast_nullable_to_non_nullable
               as String,
-      range: range == freezed
+      range: null == range
           ? _value.range
           : range // ignore: cast_nullable_to_non_nullable
               as double,
-      magneticVariation: magneticVariation == freezed
+      magneticVariation: null == magneticVariation
           ? _value.magneticVariation
           : magneticVariation // ignore: cast_nullable_to_non_nullable
               as Angle,
-      glideSlopeAngle: glideSlopeAngle == freezed
+      glideSlopeAngle: null == glideSlopeAngle
           ? _value.glideSlopeAngle
           : glideSlopeAngle // ignore: cast_nullable_to_non_nullable
               as Angle,
-      glideSlopeElevation: glideSlopeElevation == freezed
+      glideSlopeElevation: null == glideSlopeElevation
           ? _value.glideSlopeElevation
           : glideSlopeElevation // ignore: cast_nullable_to_non_nullable
               as Length,
-      glideSlopeLatitude: glideSlopeLatitude == freezed
+      glideSlopeLatitude: null == glideSlopeLatitude
           ? _value.glideSlopeLatitude
           : glideSlopeLatitude // ignore: cast_nullable_to_non_nullable
               as double,
-      glideSlopeLongitude: glideSlopeLongitude == freezed
+      glideSlopeLongitude: null == glideSlopeLongitude
           ? _value.glideSlopeLongitude
           : glideSlopeLongitude // ignore: cast_nullable_to_non_nullable
               as double,
-      localizerTrueHeading: localizerTrueHeading == freezed
+      localizerTrueHeading: null == localizerTrueHeading
           ? _value.localizerTrueHeading
           : localizerTrueHeading // ignore: cast_nullable_to_non_nullable
               as Heading,
-      localizerLatitude: localizerLatitude == freezed
+      localizerLatitude: null == localizerLatitude
           ? _value.localizerLatitude
           : localizerLatitude // ignore: cast_nullable_to_non_nullable
               as double,
-      localizerLongitude: localizerLongitude == freezed
+      localizerLongitude: null == localizerLongitude
           ? _value.localizerLongitude
           : localizerLongitude // ignore: cast_nullable_to_non_nullable
               as double,
-      hasDme: hasDme == freezed
+      hasDme: null == hasDme
           ? _value.hasDme
           : hasDme // ignore: cast_nullable_to_non_nullable
               as bool,
-      dmeElevation: dmeElevation == freezed
+      dmeElevation: freezed == dmeElevation
           ? _value.dmeElevation
           : dmeElevation // ignore: cast_nullable_to_non_nullable
               as Length?,
-      dmeLatitude: dmeLatitude == freezed
+      dmeLatitude: freezed == dmeLatitude
           ? _value.dmeLatitude
           : dmeLatitude // ignore: cast_nullable_to_non_nullable
               as double?,
-      dmeLongitude: dmeLongitude == freezed
+      dmeLongitude: freezed == dmeLongitude
           ? _value.dmeLongitude
           : dmeLongitude // ignore: cast_nullable_to_non_nullable
               as double?,
@@ -297,8 +299,8 @@ class __$$_IlsCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Ils extends _Ils {
-  const _$_Ils(
+class _$IlsImpl extends _Ils {
+  const _$IlsImpl(
       {required this.identifier,
       required this.name,
       required this.frequency,
@@ -318,7 +320,8 @@ class _$_Ils extends _Ils {
       required this.dmeLongitude})
       : super._();
 
-  factory _$_Ils.fromJson(Map<String, dynamic> json) => _$$_IlsFromJson(json);
+  factory _$IlsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$IlsImplFromJson(json);
 
   @override
   final String identifier;
@@ -361,72 +364,74 @@ class _$_Ils extends _Ils {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Ils &&
-            const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.frequency, frequency) &&
-            const DeepCollectionEquality()
-                .equals(other.airportIcaoCode, airportIcaoCode) &&
-            const DeepCollectionEquality().equals(other.range, range) &&
-            const DeepCollectionEquality()
-                .equals(other.magneticVariation, magneticVariation) &&
-            const DeepCollectionEquality()
-                .equals(other.glideSlopeAngle, glideSlopeAngle) &&
-            const DeepCollectionEquality()
-                .equals(other.glideSlopeElevation, glideSlopeElevation) &&
-            const DeepCollectionEquality()
-                .equals(other.glideSlopeLatitude, glideSlopeLatitude) &&
-            const DeepCollectionEquality()
-                .equals(other.glideSlopeLongitude, glideSlopeLongitude) &&
-            const DeepCollectionEquality()
-                .equals(other.localizerTrueHeading, localizerTrueHeading) &&
-            const DeepCollectionEquality()
-                .equals(other.localizerLatitude, localizerLatitude) &&
-            const DeepCollectionEquality()
-                .equals(other.localizerLongitude, localizerLongitude) &&
-            const DeepCollectionEquality().equals(other.hasDme, hasDme) &&
-            const DeepCollectionEquality()
-                .equals(other.dmeElevation, dmeElevation) &&
-            const DeepCollectionEquality()
-                .equals(other.dmeLatitude, dmeLatitude) &&
-            const DeepCollectionEquality()
-                .equals(other.dmeLongitude, dmeLongitude));
+            other is _$IlsImpl &&
+            (identical(other.identifier, identifier) ||
+                other.identifier == identifier) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.frequency, frequency) ||
+                other.frequency == frequency) &&
+            (identical(other.airportIcaoCode, airportIcaoCode) ||
+                other.airportIcaoCode == airportIcaoCode) &&
+            (identical(other.range, range) || other.range == range) &&
+            (identical(other.magneticVariation, magneticVariation) ||
+                other.magneticVariation == magneticVariation) &&
+            (identical(other.glideSlopeAngle, glideSlopeAngle) ||
+                other.glideSlopeAngle == glideSlopeAngle) &&
+            (identical(other.glideSlopeElevation, glideSlopeElevation) ||
+                other.glideSlopeElevation == glideSlopeElevation) &&
+            (identical(other.glideSlopeLatitude, glideSlopeLatitude) ||
+                other.glideSlopeLatitude == glideSlopeLatitude) &&
+            (identical(other.glideSlopeLongitude, glideSlopeLongitude) ||
+                other.glideSlopeLongitude == glideSlopeLongitude) &&
+            (identical(other.localizerTrueHeading, localizerTrueHeading) ||
+                other.localizerTrueHeading == localizerTrueHeading) &&
+            (identical(other.localizerLatitude, localizerLatitude) ||
+                other.localizerLatitude == localizerLatitude) &&
+            (identical(other.localizerLongitude, localizerLongitude) ||
+                other.localizerLongitude == localizerLongitude) &&
+            (identical(other.hasDme, hasDme) || other.hasDme == hasDme) &&
+            (identical(other.dmeElevation, dmeElevation) ||
+                other.dmeElevation == dmeElevation) &&
+            (identical(other.dmeLatitude, dmeLatitude) ||
+                other.dmeLatitude == dmeLatitude) &&
+            (identical(other.dmeLongitude, dmeLongitude) ||
+                other.dmeLongitude == dmeLongitude));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(identifier),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(frequency),
-      const DeepCollectionEquality().hash(airportIcaoCode),
-      const DeepCollectionEquality().hash(range),
-      const DeepCollectionEquality().hash(magneticVariation),
-      const DeepCollectionEquality().hash(glideSlopeAngle),
-      const DeepCollectionEquality().hash(glideSlopeElevation),
-      const DeepCollectionEquality().hash(glideSlopeLatitude),
-      const DeepCollectionEquality().hash(glideSlopeLongitude),
-      const DeepCollectionEquality().hash(localizerTrueHeading),
-      const DeepCollectionEquality().hash(localizerLatitude),
-      const DeepCollectionEquality().hash(localizerLongitude),
-      const DeepCollectionEquality().hash(hasDme),
-      const DeepCollectionEquality().hash(dmeElevation),
-      const DeepCollectionEquality().hash(dmeLatitude),
-      const DeepCollectionEquality().hash(dmeLongitude));
+      identifier,
+      name,
+      frequency,
+      airportIcaoCode,
+      range,
+      magneticVariation,
+      glideSlopeAngle,
+      glideSlopeElevation,
+      glideSlopeLatitude,
+      glideSlopeLongitude,
+      localizerTrueHeading,
+      localizerLatitude,
+      localizerLongitude,
+      hasDme,
+      dmeElevation,
+      dmeLatitude,
+      dmeLongitude);
 
   @JsonKey(ignore: true)
   @override
-  _$$_IlsCopyWith<_$_Ils> get copyWith =>
-      __$$_IlsCopyWithImpl<_$_Ils>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$IlsImplCopyWith<_$IlsImpl> get copyWith =>
+      __$$IlsImplCopyWithImpl<_$IlsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_IlsToJson(
+    return _$$IlsImplToJson(
       this,
     );
   }
@@ -450,10 +455,10 @@ abstract class _Ils extends Ils {
       required final bool hasDme,
       required final Length? dmeElevation,
       required final double? dmeLatitude,
-      required final double? dmeLongitude}) = _$_Ils;
+      required final double? dmeLongitude}) = _$IlsImpl;
   const _Ils._() : super._();
 
-  factory _Ils.fromJson(Map<String, dynamic> json) = _$_Ils.fromJson;
+  factory _Ils.fromJson(Map<String, dynamic> json) = _$IlsImpl.fromJson;
 
   @override
   String get identifier;
@@ -491,5 +496,6 @@ abstract class _Ils extends Ils {
   double? get dmeLongitude;
   @override
   @JsonKey(ignore: true)
-  _$$_IlsCopyWith<_$_Ils> get copyWith => throw _privateConstructorUsedError;
+  _$$IlsImplCopyWith<_$IlsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

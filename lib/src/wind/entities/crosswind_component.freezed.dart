@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'crosswind_component.dart';
 
@@ -29,58 +29,63 @@ mixin _$CrosswindComponent {
 abstract class $CrosswindComponentCopyWith<$Res> {
   factory $CrosswindComponentCopyWith(
           CrosswindComponent value, $Res Function(CrosswindComponent) then) =
-      _$CrosswindComponentCopyWithImpl<$Res>;
+      _$CrosswindComponentCopyWithImpl<$Res, CrosswindComponent>;
+  @useResult
   $Res call({Wind wind, Heading heading, Speed trueAirspeed});
 
   $WindCopyWith<$Res> get wind;
 }
 
 /// @nodoc
-class _$CrosswindComponentCopyWithImpl<$Res>
+class _$CrosswindComponentCopyWithImpl<$Res, $Val extends CrosswindComponent>
     implements $CrosswindComponentCopyWith<$Res> {
   _$CrosswindComponentCopyWithImpl(this._value, this._then);
 
-  final CrosswindComponent _value;
   // ignore: unused_field
-  final $Res Function(CrosswindComponent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? wind = freezed,
-    Object? heading = freezed,
-    Object? trueAirspeed = freezed,
+    Object? wind = null,
+    Object? heading = null,
+    Object? trueAirspeed = null,
   }) {
     return _then(_value.copyWith(
-      wind: wind == freezed
+      wind: null == wind
           ? _value.wind
           : wind // ignore: cast_nullable_to_non_nullable
               as Wind,
-      heading: heading == freezed
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
               as Heading,
-      trueAirspeed: trueAirspeed == freezed
+      trueAirspeed: null == trueAirspeed
           ? _value.trueAirspeed
           : trueAirspeed // ignore: cast_nullable_to_non_nullable
               as Speed,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $WindCopyWith<$Res> get wind {
     return $WindCopyWith<$Res>(_value.wind, (value) {
-      return _then(_value.copyWith(wind: value));
+      return _then(_value.copyWith(wind: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_CrosswindComponentCopyWith<$Res>
+abstract class _$$CrosswindComponentImplCopyWith<$Res>
     implements $CrosswindComponentCopyWith<$Res> {
-  factory _$$_CrosswindComponentCopyWith(_$_CrosswindComponent value,
-          $Res Function(_$_CrosswindComponent) then) =
-      __$$_CrosswindComponentCopyWithImpl<$Res>;
+  factory _$$CrosswindComponentImplCopyWith(_$CrosswindComponentImpl value,
+          $Res Function(_$CrosswindComponentImpl) then) =
+      __$$CrosswindComponentImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Wind wind, Heading heading, Speed trueAirspeed});
 
   @override
@@ -88,32 +93,30 @@ abstract class _$$_CrosswindComponentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CrosswindComponentCopyWithImpl<$Res>
-    extends _$CrosswindComponentCopyWithImpl<$Res>
-    implements _$$_CrosswindComponentCopyWith<$Res> {
-  __$$_CrosswindComponentCopyWithImpl(
-      _$_CrosswindComponent _value, $Res Function(_$_CrosswindComponent) _then)
-      : super(_value, (v) => _then(v as _$_CrosswindComponent));
+class __$$CrosswindComponentImplCopyWithImpl<$Res>
+    extends _$CrosswindComponentCopyWithImpl<$Res, _$CrosswindComponentImpl>
+    implements _$$CrosswindComponentImplCopyWith<$Res> {
+  __$$CrosswindComponentImplCopyWithImpl(_$CrosswindComponentImpl _value,
+      $Res Function(_$CrosswindComponentImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_CrosswindComponent get _value => super._value as _$_CrosswindComponent;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? wind = freezed,
-    Object? heading = freezed,
-    Object? trueAirspeed = freezed,
+    Object? wind = null,
+    Object? heading = null,
+    Object? trueAirspeed = null,
   }) {
-    return _then(_$_CrosswindComponent(
-      wind: wind == freezed
+    return _then(_$CrosswindComponentImpl(
+      wind: null == wind
           ? _value.wind
           : wind // ignore: cast_nullable_to_non_nullable
               as Wind,
-      heading: heading == freezed
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
               as Heading,
-      trueAirspeed: trueAirspeed == freezed
+      trueAirspeed: null == trueAirspeed
           ? _value.trueAirspeed
           : trueAirspeed // ignore: cast_nullable_to_non_nullable
               as Speed,
@@ -123,8 +126,8 @@ class __$$_CrosswindComponentCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_CrosswindComponent extends _CrosswindComponent {
-  const _$_CrosswindComponent(
+class _$CrosswindComponentImpl extends _CrosswindComponent {
+  const _$CrosswindComponentImpl(
       {required this.wind, required this.heading, required this.trueAirspeed})
       : super._();
 
@@ -141,27 +144,24 @@ class _$_CrosswindComponent extends _CrosswindComponent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CrosswindComponent &&
-            const DeepCollectionEquality().equals(other.wind, wind) &&
-            const DeepCollectionEquality().equals(other.heading, heading) &&
-            const DeepCollectionEquality()
-                .equals(other.trueAirspeed, trueAirspeed));
+            other is _$CrosswindComponentImpl &&
+            (identical(other.wind, wind) || other.wind == wind) &&
+            (identical(other.heading, heading) || other.heading == heading) &&
+            (identical(other.trueAirspeed, trueAirspeed) ||
+                other.trueAirspeed == trueAirspeed));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(wind),
-      const DeepCollectionEquality().hash(heading),
-      const DeepCollectionEquality().hash(trueAirspeed));
+  int get hashCode => Object.hash(runtimeType, wind, heading, trueAirspeed);
 
   @JsonKey(ignore: true)
   @override
-  _$$_CrosswindComponentCopyWith<_$_CrosswindComponent> get copyWith =>
-      __$$_CrosswindComponentCopyWithImpl<_$_CrosswindComponent>(
+  @pragma('vm:prefer-inline')
+  _$$CrosswindComponentImplCopyWith<_$CrosswindComponentImpl> get copyWith =>
+      __$$CrosswindComponentImplCopyWithImpl<_$CrosswindComponentImpl>(
           this, _$identity);
 }
 
@@ -169,7 +169,7 @@ abstract class _CrosswindComponent extends CrosswindComponent {
   const factory _CrosswindComponent(
       {required final Wind wind,
       required final Heading heading,
-      required final Speed trueAirspeed}) = _$_CrosswindComponent;
+      required final Speed trueAirspeed}) = _$CrosswindComponentImpl;
   const _CrosswindComponent._() : super._();
 
   @override
@@ -180,6 +180,6 @@ abstract class _CrosswindComponent extends CrosswindComponent {
   Speed get trueAirspeed;
   @override
   @JsonKey(ignore: true)
-  _$$_CrosswindComponentCopyWith<_$_CrosswindComponent> get copyWith =>
+  _$$CrosswindComponentImplCopyWith<_$CrosswindComponentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

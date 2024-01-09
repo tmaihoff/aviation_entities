@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'intercept.dart';
 
@@ -30,7 +30,8 @@ mixin _$Intercept {
 /// @nodoc
 abstract class $InterceptCopyWith<$Res> {
   factory $InterceptCopyWith(Intercept value, $Res Function(Intercept) then) =
-      _$InterceptCopyWithImpl<$Res>;
+      _$InterceptCopyWithImpl<$Res, Intercept>;
+  @useResult
   $Res call(
       {Heading interceptCourse,
       Heading aircraftBearingToFix,
@@ -42,63 +43,69 @@ abstract class $InterceptCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InterceptCopyWithImpl<$Res> implements $InterceptCopyWith<$Res> {
+class _$InterceptCopyWithImpl<$Res, $Val extends Intercept>
+    implements $InterceptCopyWith<$Res> {
   _$InterceptCopyWithImpl(this._value, this._then);
 
-  final Intercept _value;
   // ignore: unused_field
-  final $Res Function(Intercept) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? interceptCourse = freezed,
-    Object? aircraftBearingToFix = freezed,
-    Object? aircraftHeading = freezed,
-    Object? type = freezed,
+    Object? interceptCourse = null,
+    Object? aircraftBearingToFix = null,
+    Object? aircraftHeading = null,
+    Object? type = null,
     Object? navAid = freezed,
   }) {
     return _then(_value.copyWith(
-      interceptCourse: interceptCourse == freezed
+      interceptCourse: null == interceptCourse
           ? _value.interceptCourse
           : interceptCourse // ignore: cast_nullable_to_non_nullable
               as Heading,
-      aircraftBearingToFix: aircraftBearingToFix == freezed
+      aircraftBearingToFix: null == aircraftBearingToFix
           ? _value.aircraftBearingToFix
           : aircraftBearingToFix // ignore: cast_nullable_to_non_nullable
               as Heading,
-      aircraftHeading: aircraftHeading == freezed
+      aircraftHeading: null == aircraftHeading
           ? _value.aircraftHeading
           : aircraftHeading // ignore: cast_nullable_to_non_nullable
               as Heading,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as InterceptType,
-      navAid: navAid == freezed
+      navAid: freezed == navAid
           ? _value.navAid
           : navAid // ignore: cast_nullable_to_non_nullable
               as NavAid?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NavAidCopyWith<$Res>? get navAid {
     if (_value.navAid == null) {
       return null;
     }
 
     return $NavAidCopyWith<$Res>(_value.navAid!, (value) {
-      return _then(_value.copyWith(navAid: value));
+      return _then(_value.copyWith(navAid: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_InterceptCopyWith<$Res> implements $InterceptCopyWith<$Res> {
-  factory _$$_InterceptCopyWith(
-          _$_Intercept value, $Res Function(_$_Intercept) then) =
-      __$$_InterceptCopyWithImpl<$Res>;
+abstract class _$$InterceptImplCopyWith<$Res>
+    implements $InterceptCopyWith<$Res> {
+  factory _$$InterceptImplCopyWith(
+          _$InterceptImpl value, $Res Function(_$InterceptImpl) then) =
+      __$$InterceptImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Heading interceptCourse,
       Heading aircraftBearingToFix,
@@ -111,41 +118,40 @@ abstract class _$$_InterceptCopyWith<$Res> implements $InterceptCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_InterceptCopyWithImpl<$Res> extends _$InterceptCopyWithImpl<$Res>
-    implements _$$_InterceptCopyWith<$Res> {
-  __$$_InterceptCopyWithImpl(
-      _$_Intercept _value, $Res Function(_$_Intercept) _then)
-      : super(_value, (v) => _then(v as _$_Intercept));
+class __$$InterceptImplCopyWithImpl<$Res>
+    extends _$InterceptCopyWithImpl<$Res, _$InterceptImpl>
+    implements _$$InterceptImplCopyWith<$Res> {
+  __$$InterceptImplCopyWithImpl(
+      _$InterceptImpl _value, $Res Function(_$InterceptImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_Intercept get _value => super._value as _$_Intercept;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? interceptCourse = freezed,
-    Object? aircraftBearingToFix = freezed,
-    Object? aircraftHeading = freezed,
-    Object? type = freezed,
+    Object? interceptCourse = null,
+    Object? aircraftBearingToFix = null,
+    Object? aircraftHeading = null,
+    Object? type = null,
     Object? navAid = freezed,
   }) {
-    return _then(_$_Intercept(
-      interceptCourse: interceptCourse == freezed
+    return _then(_$InterceptImpl(
+      interceptCourse: null == interceptCourse
           ? _value.interceptCourse
           : interceptCourse // ignore: cast_nullable_to_non_nullable
               as Heading,
-      aircraftBearingToFix: aircraftBearingToFix == freezed
+      aircraftBearingToFix: null == aircraftBearingToFix
           ? _value.aircraftBearingToFix
           : aircraftBearingToFix // ignore: cast_nullable_to_non_nullable
               as Heading,
-      aircraftHeading: aircraftHeading == freezed
+      aircraftHeading: null == aircraftHeading
           ? _value.aircraftHeading
           : aircraftHeading // ignore: cast_nullable_to_non_nullable
               as Heading,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as InterceptType,
-      navAid: navAid == freezed
+      navAid: freezed == navAid
           ? _value.navAid
           : navAid // ignore: cast_nullable_to_non_nullable
               as NavAid?,
@@ -155,8 +161,8 @@ class __$$_InterceptCopyWithImpl<$Res> extends _$InterceptCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Intercept extends _Intercept {
-  const _$_Intercept(
+class _$InterceptImpl extends _Intercept {
+  const _$InterceptImpl(
       {required this.interceptCourse,
       required this.aircraftBearingToFix,
       required this.aircraftHeading,
@@ -181,33 +187,29 @@ class _$_Intercept extends _Intercept {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Intercept &&
-            const DeepCollectionEquality()
-                .equals(other.interceptCourse, interceptCourse) &&
-            const DeepCollectionEquality()
-                .equals(other.aircraftBearingToFix, aircraftBearingToFix) &&
-            const DeepCollectionEquality()
-                .equals(other.aircraftHeading, aircraftHeading) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.navAid, navAid));
+            other is _$InterceptImpl &&
+            (identical(other.interceptCourse, interceptCourse) ||
+                other.interceptCourse == interceptCourse) &&
+            (identical(other.aircraftBearingToFix, aircraftBearingToFix) ||
+                other.aircraftBearingToFix == aircraftBearingToFix) &&
+            (identical(other.aircraftHeading, aircraftHeading) ||
+                other.aircraftHeading == aircraftHeading) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.navAid, navAid) || other.navAid == navAid));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(interceptCourse),
-      const DeepCollectionEquality().hash(aircraftBearingToFix),
-      const DeepCollectionEquality().hash(aircraftHeading),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(navAid));
+  int get hashCode => Object.hash(runtimeType, interceptCourse,
+      aircraftBearingToFix, aircraftHeading, type, navAid);
 
   @JsonKey(ignore: true)
   @override
-  _$$_InterceptCopyWith<_$_Intercept> get copyWith =>
-      __$$_InterceptCopyWithImpl<_$_Intercept>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InterceptImplCopyWith<_$InterceptImpl> get copyWith =>
+      __$$InterceptImplCopyWithImpl<_$InterceptImpl>(this, _$identity);
 }
 
 abstract class _Intercept extends Intercept {
@@ -216,7 +218,7 @@ abstract class _Intercept extends Intercept {
       required final Heading aircraftBearingToFix,
       required final Heading aircraftHeading,
       required final InterceptType type,
-      final NavAid? navAid}) = _$_Intercept;
+      final NavAid? navAid}) = _$InterceptImpl;
   const _Intercept._() : super._();
 
   @override
@@ -231,6 +233,6 @@ abstract class _Intercept extends Intercept {
   NavAid? get navAid;
   @override
   @JsonKey(ignore: true)
-  _$$_InterceptCopyWith<_$_Intercept> get copyWith =>
+  _$$InterceptImplCopyWith<_$InterceptImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

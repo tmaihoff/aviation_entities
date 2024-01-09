@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'runway.dart';
 
@@ -33,7 +33,8 @@ mixin _$RunwaySet {
 /// @nodoc
 abstract class $RunwaySetCopyWith<$Res> {
   factory $RunwaySetCopyWith(RunwaySet value, $Res Function(RunwaySet) then) =
-      _$RunwaySetCopyWithImpl<$Res>;
+      _$RunwaySetCopyWithImpl<$Res, RunwaySet>;
+  @useResult
   $Res call({String airportIcaoCode, Runway direction1, Runway direction2});
 
   $RunwayCopyWith<$Res> get direction1;
@@ -41,56 +42,63 @@ abstract class $RunwaySetCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RunwaySetCopyWithImpl<$Res> implements $RunwaySetCopyWith<$Res> {
+class _$RunwaySetCopyWithImpl<$Res, $Val extends RunwaySet>
+    implements $RunwaySetCopyWith<$Res> {
   _$RunwaySetCopyWithImpl(this._value, this._then);
 
-  final RunwaySet _value;
   // ignore: unused_field
-  final $Res Function(RunwaySet) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? airportIcaoCode = freezed,
-    Object? direction1 = freezed,
-    Object? direction2 = freezed,
+    Object? airportIcaoCode = null,
+    Object? direction1 = null,
+    Object? direction2 = null,
   }) {
     return _then(_value.copyWith(
-      airportIcaoCode: airportIcaoCode == freezed
+      airportIcaoCode: null == airportIcaoCode
           ? _value.airportIcaoCode
           : airportIcaoCode // ignore: cast_nullable_to_non_nullable
               as String,
-      direction1: direction1 == freezed
+      direction1: null == direction1
           ? _value.direction1
           : direction1 // ignore: cast_nullable_to_non_nullable
               as Runway,
-      direction2: direction2 == freezed
+      direction2: null == direction2
           ? _value.direction2
           : direction2 // ignore: cast_nullable_to_non_nullable
               as Runway,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RunwayCopyWith<$Res> get direction1 {
     return $RunwayCopyWith<$Res>(_value.direction1, (value) {
-      return _then(_value.copyWith(direction1: value));
+      return _then(_value.copyWith(direction1: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RunwayCopyWith<$Res> get direction2 {
     return $RunwayCopyWith<$Res>(_value.direction2, (value) {
-      return _then(_value.copyWith(direction2: value));
+      return _then(_value.copyWith(direction2: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_RunwaySetCopyWith<$Res> implements $RunwaySetCopyWith<$Res> {
-  factory _$$_RunwaySetCopyWith(
-          _$_RunwaySet value, $Res Function(_$_RunwaySet) then) =
-      __$$_RunwaySetCopyWithImpl<$Res>;
+abstract class _$$RunwaySetImplCopyWith<$Res>
+    implements $RunwaySetCopyWith<$Res> {
+  factory _$$RunwaySetImplCopyWith(
+          _$RunwaySetImpl value, $Res Function(_$RunwaySetImpl) then) =
+      __$$RunwaySetImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String airportIcaoCode, Runway direction1, Runway direction2});
 
   @override
@@ -100,31 +108,30 @@ abstract class _$$_RunwaySetCopyWith<$Res> implements $RunwaySetCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_RunwaySetCopyWithImpl<$Res> extends _$RunwaySetCopyWithImpl<$Res>
-    implements _$$_RunwaySetCopyWith<$Res> {
-  __$$_RunwaySetCopyWithImpl(
-      _$_RunwaySet _value, $Res Function(_$_RunwaySet) _then)
-      : super(_value, (v) => _then(v as _$_RunwaySet));
+class __$$RunwaySetImplCopyWithImpl<$Res>
+    extends _$RunwaySetCopyWithImpl<$Res, _$RunwaySetImpl>
+    implements _$$RunwaySetImplCopyWith<$Res> {
+  __$$RunwaySetImplCopyWithImpl(
+      _$RunwaySetImpl _value, $Res Function(_$RunwaySetImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_RunwaySet get _value => super._value as _$_RunwaySet;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? airportIcaoCode = freezed,
-    Object? direction1 = freezed,
-    Object? direction2 = freezed,
+    Object? airportIcaoCode = null,
+    Object? direction1 = null,
+    Object? direction2 = null,
   }) {
-    return _then(_$_RunwaySet(
-      airportIcaoCode: airportIcaoCode == freezed
+    return _then(_$RunwaySetImpl(
+      airportIcaoCode: null == airportIcaoCode
           ? _value.airportIcaoCode
           : airportIcaoCode // ignore: cast_nullable_to_non_nullable
               as String,
-      direction1: direction1 == freezed
+      direction1: null == direction1
           ? _value.direction1
           : direction1 // ignore: cast_nullable_to_non_nullable
               as Runway,
-      direction2: direction2 == freezed
+      direction2: null == direction2
           ? _value.direction2
           : direction2 // ignore: cast_nullable_to_non_nullable
               as Runway,
@@ -134,15 +141,15 @@ class __$$_RunwaySetCopyWithImpl<$Res> extends _$RunwaySetCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RunwaySet extends _RunwaySet {
-  const _$_RunwaySet(
+class _$RunwaySetImpl extends _RunwaySet {
+  const _$RunwaySetImpl(
       {required this.airportIcaoCode,
       required this.direction1,
       required this.direction2})
       : super._();
 
-  factory _$_RunwaySet.fromJson(Map<String, dynamic> json) =>
-      _$$_RunwaySetFromJson(json);
+  factory _$RunwaySetImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RunwaySetImplFromJson(json);
 
   @override
   final String airportIcaoCode;
@@ -157,34 +164,32 @@ class _$_RunwaySet extends _RunwaySet {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RunwaySet &&
-            const DeepCollectionEquality()
-                .equals(other.airportIcaoCode, airportIcaoCode) &&
-            const DeepCollectionEquality()
-                .equals(other.direction1, direction1) &&
-            const DeepCollectionEquality()
-                .equals(other.direction2, direction2));
+            other is _$RunwaySetImpl &&
+            (identical(other.airportIcaoCode, airportIcaoCode) ||
+                other.airportIcaoCode == airportIcaoCode) &&
+            (identical(other.direction1, direction1) ||
+                other.direction1 == direction1) &&
+            (identical(other.direction2, direction2) ||
+                other.direction2 == direction2));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(airportIcaoCode),
-      const DeepCollectionEquality().hash(direction1),
-      const DeepCollectionEquality().hash(direction2));
+  int get hashCode =>
+      Object.hash(runtimeType, airportIcaoCode, direction1, direction2);
 
   @JsonKey(ignore: true)
   @override
-  _$$_RunwaySetCopyWith<_$_RunwaySet> get copyWith =>
-      __$$_RunwaySetCopyWithImpl<_$_RunwaySet>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$RunwaySetImplCopyWith<_$RunwaySetImpl> get copyWith =>
+      __$$RunwaySetImplCopyWithImpl<_$RunwaySetImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RunwaySetToJson(
+    return _$$RunwaySetImplToJson(
       this,
     );
   }
@@ -194,11 +199,11 @@ abstract class _RunwaySet extends RunwaySet {
   const factory _RunwaySet(
       {required final String airportIcaoCode,
       required final Runway direction1,
-      required final Runway direction2}) = _$_RunwaySet;
+      required final Runway direction2}) = _$RunwaySetImpl;
   const _RunwaySet._() : super._();
 
   factory _RunwaySet.fromJson(Map<String, dynamic> json) =
-      _$_RunwaySet.fromJson;
+      _$RunwaySetImpl.fromJson;
 
   @override
   String get airportIcaoCode;
@@ -208,7 +213,7 @@ abstract class _RunwaySet extends RunwaySet {
   Runway get direction2;
   @override
   @JsonKey(ignore: true)
-  _$$_RunwaySetCopyWith<_$_RunwaySet> get copyWith =>
+  _$$RunwaySetImplCopyWith<_$RunwaySetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -239,7 +244,8 @@ mixin _$Runway {
 /// @nodoc
 abstract class $RunwayCopyWith<$Res> {
   factory $RunwayCopyWith(Runway value, $Res Function(Runway) then) =
-      _$RunwayCopyWithImpl<$Res>;
+      _$RunwayCopyWithImpl<$Res, Runway>;
+  @useResult
   $Res call(
       {String airportIcaoCode,
       String identifier,
@@ -260,111 +266,119 @@ abstract class $RunwayCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RunwayCopyWithImpl<$Res> implements $RunwayCopyWith<$Res> {
+class _$RunwayCopyWithImpl<$Res, $Val extends Runway>
+    implements $RunwayCopyWith<$Res> {
   _$RunwayCopyWithImpl(this._value, this._then);
 
-  final Runway _value;
   // ignore: unused_field
-  final $Res Function(Runway) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? airportIcaoCode = freezed,
-    Object? identifier = freezed,
-    Object? trueHeading = freezed,
-    Object? length = freezed,
-    Object? width = freezed,
-    Object? surface = freezed,
-    Object? lighted = freezed,
-    Object? closed = freezed,
-    Object? start = freezed,
-    Object? end = freezed,
+    Object? airportIcaoCode = null,
+    Object? identifier = null,
+    Object? trueHeading = null,
+    Object? length = null,
+    Object? width = null,
+    Object? surface = null,
+    Object? lighted = null,
+    Object? closed = null,
+    Object? start = null,
+    Object? end = null,
     Object? ils = freezed,
-    Object? magneticVariation = freezed,
+    Object? magneticVariation = null,
   }) {
     return _then(_value.copyWith(
-      airportIcaoCode: airportIcaoCode == freezed
+      airportIcaoCode: null == airportIcaoCode
           ? _value.airportIcaoCode
           : airportIcaoCode // ignore: cast_nullable_to_non_nullable
               as String,
-      identifier: identifier == freezed
+      identifier: null == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as String,
-      trueHeading: trueHeading == freezed
+      trueHeading: null == trueHeading
           ? _value.trueHeading
           : trueHeading // ignore: cast_nullable_to_non_nullable
               as Heading,
-      length: length == freezed
+      length: null == length
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
               as Length,
-      width: width == freezed
+      width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as Length,
-      surface: surface == freezed
+      surface: null == surface
           ? _value.surface
           : surface // ignore: cast_nullable_to_non_nullable
               as String,
-      lighted: lighted == freezed
+      lighted: null == lighted
           ? _value.lighted
           : lighted // ignore: cast_nullable_to_non_nullable
               as bool,
-      closed: closed == freezed
+      closed: null == closed
           ? _value.closed
           : closed // ignore: cast_nullable_to_non_nullable
               as bool,
-      start: start == freezed
+      start: null == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
               as Threshold,
-      end: end == freezed
+      end: null == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
               as Threshold,
-      ils: ils == freezed
+      ils: freezed == ils
           ? _value.ils
           : ils // ignore: cast_nullable_to_non_nullable
               as Ils?,
-      magneticVariation: magneticVariation == freezed
+      magneticVariation: null == magneticVariation
           ? _value.magneticVariation
           : magneticVariation // ignore: cast_nullable_to_non_nullable
               as Angle,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ThresholdCopyWith<$Res> get start {
     return $ThresholdCopyWith<$Res>(_value.start, (value) {
-      return _then(_value.copyWith(start: value));
+      return _then(_value.copyWith(start: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ThresholdCopyWith<$Res> get end {
     return $ThresholdCopyWith<$Res>(_value.end, (value) {
-      return _then(_value.copyWith(end: value));
+      return _then(_value.copyWith(end: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IlsCopyWith<$Res>? get ils {
     if (_value.ils == null) {
       return null;
     }
 
     return $IlsCopyWith<$Res>(_value.ils!, (value) {
-      return _then(_value.copyWith(ils: value));
+      return _then(_value.copyWith(ils: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_RunwayCopyWith<$Res> implements $RunwayCopyWith<$Res> {
-  factory _$$_RunwayCopyWith(_$_Runway value, $Res Function(_$_Runway) then) =
-      __$$_RunwayCopyWithImpl<$Res>;
+abstract class _$$RunwayImplCopyWith<$Res> implements $RunwayCopyWith<$Res> {
+  factory _$$RunwayImplCopyWith(
+          _$RunwayImpl value, $Res Function(_$RunwayImpl) then) =
+      __$$RunwayImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String airportIcaoCode,
       String identifier,
@@ -388,75 +402,75 @@ abstract class _$$_RunwayCopyWith<$Res> implements $RunwayCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_RunwayCopyWithImpl<$Res> extends _$RunwayCopyWithImpl<$Res>
-    implements _$$_RunwayCopyWith<$Res> {
-  __$$_RunwayCopyWithImpl(_$_Runway _value, $Res Function(_$_Runway) _then)
-      : super(_value, (v) => _then(v as _$_Runway));
+class __$$RunwayImplCopyWithImpl<$Res>
+    extends _$RunwayCopyWithImpl<$Res, _$RunwayImpl>
+    implements _$$RunwayImplCopyWith<$Res> {
+  __$$RunwayImplCopyWithImpl(
+      _$RunwayImpl _value, $Res Function(_$RunwayImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_Runway get _value => super._value as _$_Runway;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? airportIcaoCode = freezed,
-    Object? identifier = freezed,
-    Object? trueHeading = freezed,
-    Object? length = freezed,
-    Object? width = freezed,
-    Object? surface = freezed,
-    Object? lighted = freezed,
-    Object? closed = freezed,
-    Object? start = freezed,
-    Object? end = freezed,
+    Object? airportIcaoCode = null,
+    Object? identifier = null,
+    Object? trueHeading = null,
+    Object? length = null,
+    Object? width = null,
+    Object? surface = null,
+    Object? lighted = null,
+    Object? closed = null,
+    Object? start = null,
+    Object? end = null,
     Object? ils = freezed,
-    Object? magneticVariation = freezed,
+    Object? magneticVariation = null,
   }) {
-    return _then(_$_Runway(
-      airportIcaoCode: airportIcaoCode == freezed
+    return _then(_$RunwayImpl(
+      airportIcaoCode: null == airportIcaoCode
           ? _value.airportIcaoCode
           : airportIcaoCode // ignore: cast_nullable_to_non_nullable
               as String,
-      identifier: identifier == freezed
+      identifier: null == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as String,
-      trueHeading: trueHeading == freezed
+      trueHeading: null == trueHeading
           ? _value.trueHeading
           : trueHeading // ignore: cast_nullable_to_non_nullable
               as Heading,
-      length: length == freezed
+      length: null == length
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
               as Length,
-      width: width == freezed
+      width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as Length,
-      surface: surface == freezed
+      surface: null == surface
           ? _value.surface
           : surface // ignore: cast_nullable_to_non_nullable
               as String,
-      lighted: lighted == freezed
+      lighted: null == lighted
           ? _value.lighted
           : lighted // ignore: cast_nullable_to_non_nullable
               as bool,
-      closed: closed == freezed
+      closed: null == closed
           ? _value.closed
           : closed // ignore: cast_nullable_to_non_nullable
               as bool,
-      start: start == freezed
+      start: null == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
               as Threshold,
-      end: end == freezed
+      end: null == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
               as Threshold,
-      ils: ils == freezed
+      ils: freezed == ils
           ? _value.ils
           : ils // ignore: cast_nullable_to_non_nullable
               as Ils?,
-      magneticVariation: magneticVariation == freezed
+      magneticVariation: null == magneticVariation
           ? _value.magneticVariation
           : magneticVariation // ignore: cast_nullable_to_non_nullable
               as Angle,
@@ -466,8 +480,8 @@ class __$$_RunwayCopyWithImpl<$Res> extends _$RunwayCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Runway extends _Runway {
-  const _$_Runway(
+class _$RunwayImpl extends _Runway {
+  const _$RunwayImpl(
       {required this.airportIcaoCode,
       required this.identifier,
       required this.trueHeading,
@@ -482,8 +496,8 @@ class _$_Runway extends _Runway {
       required this.magneticVariation})
       : super._();
 
-  factory _$_Runway.fromJson(Map<String, dynamic> json) =>
-      _$$_RunwayFromJson(json);
+  factory _$RunwayImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RunwayImplFromJson(json);
 
   @override
   final String airportIcaoCode;
@@ -516,53 +530,54 @@ class _$_Runway extends _Runway {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Runway &&
-            const DeepCollectionEquality()
-                .equals(other.airportIcaoCode, airportIcaoCode) &&
-            const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality()
-                .equals(other.trueHeading, trueHeading) &&
-            const DeepCollectionEquality().equals(other.length, length) &&
-            const DeepCollectionEquality().equals(other.width, width) &&
-            const DeepCollectionEquality().equals(other.surface, surface) &&
-            const DeepCollectionEquality().equals(other.lighted, lighted) &&
-            const DeepCollectionEquality().equals(other.closed, closed) &&
-            const DeepCollectionEquality().equals(other.start, start) &&
-            const DeepCollectionEquality().equals(other.end, end) &&
-            const DeepCollectionEquality().equals(other.ils, ils) &&
-            const DeepCollectionEquality()
-                .equals(other.magneticVariation, magneticVariation));
+            other is _$RunwayImpl &&
+            (identical(other.airportIcaoCode, airportIcaoCode) ||
+                other.airportIcaoCode == airportIcaoCode) &&
+            (identical(other.identifier, identifier) ||
+                other.identifier == identifier) &&
+            (identical(other.trueHeading, trueHeading) ||
+                other.trueHeading == trueHeading) &&
+            (identical(other.length, length) || other.length == length) &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.surface, surface) || other.surface == surface) &&
+            (identical(other.lighted, lighted) || other.lighted == lighted) &&
+            (identical(other.closed, closed) || other.closed == closed) &&
+            (identical(other.start, start) || other.start == start) &&
+            (identical(other.end, end) || other.end == end) &&
+            (identical(other.ils, ils) || other.ils == ils) &&
+            (identical(other.magneticVariation, magneticVariation) ||
+                other.magneticVariation == magneticVariation));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(airportIcaoCode),
-      const DeepCollectionEquality().hash(identifier),
-      const DeepCollectionEquality().hash(trueHeading),
-      const DeepCollectionEquality().hash(length),
-      const DeepCollectionEquality().hash(width),
-      const DeepCollectionEquality().hash(surface),
-      const DeepCollectionEquality().hash(lighted),
-      const DeepCollectionEquality().hash(closed),
-      const DeepCollectionEquality().hash(start),
-      const DeepCollectionEquality().hash(end),
-      const DeepCollectionEquality().hash(ils),
-      const DeepCollectionEquality().hash(magneticVariation));
+      airportIcaoCode,
+      identifier,
+      trueHeading,
+      length,
+      width,
+      surface,
+      lighted,
+      closed,
+      start,
+      end,
+      ils,
+      magneticVariation);
 
   @JsonKey(ignore: true)
   @override
-  _$$_RunwayCopyWith<_$_Runway> get copyWith =>
-      __$$_RunwayCopyWithImpl<_$_Runway>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$RunwayImplCopyWith<_$RunwayImpl> get copyWith =>
+      __$$RunwayImplCopyWithImpl<_$RunwayImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RunwayToJson(
+    return _$$RunwayImplToJson(
       this,
     );
   }
@@ -581,10 +596,10 @@ abstract class _Runway extends Runway {
       required final Threshold start,
       required final Threshold end,
       required final Ils? ils,
-      required final Angle magneticVariation}) = _$_Runway;
+      required final Angle magneticVariation}) = _$RunwayImpl;
   const _Runway._() : super._();
 
-  factory _Runway.fromJson(Map<String, dynamic> json) = _$_Runway.fromJson;
+  factory _Runway.fromJson(Map<String, dynamic> json) = _$RunwayImpl.fromJson;
 
   @override
   String get airportIcaoCode;
@@ -612,7 +627,7 @@ abstract class _Runway extends Runway {
   Angle get magneticVariation;
   @override
   @JsonKey(ignore: true)
-  _$$_RunwayCopyWith<_$_Runway> get copyWith =>
+  _$$RunwayImplCopyWith<_$RunwayImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -636,88 +651,93 @@ mixin _$Threshold {
 /// @nodoc
 abstract class $ThresholdCopyWith<$Res> {
   factory $ThresholdCopyWith(Threshold value, $Res Function(Threshold) then) =
-      _$ThresholdCopyWithImpl<$Res>;
+      _$ThresholdCopyWithImpl<$Res, Threshold>;
+  @useResult
   $Res call(
       {double latitude, double longitude, Length displaced, Length elevation});
 }
 
 /// @nodoc
-class _$ThresholdCopyWithImpl<$Res> implements $ThresholdCopyWith<$Res> {
+class _$ThresholdCopyWithImpl<$Res, $Val extends Threshold>
+    implements $ThresholdCopyWith<$Res> {
   _$ThresholdCopyWithImpl(this._value, this._then);
 
-  final Threshold _value;
   // ignore: unused_field
-  final $Res Function(Threshold) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? latitude = freezed,
-    Object? longitude = freezed,
-    Object? displaced = freezed,
-    Object? elevation = freezed,
+    Object? latitude = null,
+    Object? longitude = null,
+    Object? displaced = null,
+    Object? elevation = null,
   }) {
     return _then(_value.copyWith(
-      latitude: latitude == freezed
+      latitude: null == latitude
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
               as double,
-      longitude: longitude == freezed
+      longitude: null == longitude
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as double,
-      displaced: displaced == freezed
+      displaced: null == displaced
           ? _value.displaced
           : displaced // ignore: cast_nullable_to_non_nullable
               as Length,
-      elevation: elevation == freezed
+      elevation: null == elevation
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as Length,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_ThresholdCopyWith<$Res> implements $ThresholdCopyWith<$Res> {
-  factory _$$_ThresholdCopyWith(
-          _$_Threshold value, $Res Function(_$_Threshold) then) =
-      __$$_ThresholdCopyWithImpl<$Res>;
+abstract class _$$ThresholdImplCopyWith<$Res>
+    implements $ThresholdCopyWith<$Res> {
+  factory _$$ThresholdImplCopyWith(
+          _$ThresholdImpl value, $Res Function(_$ThresholdImpl) then) =
+      __$$ThresholdImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {double latitude, double longitude, Length displaced, Length elevation});
 }
 
 /// @nodoc
-class __$$_ThresholdCopyWithImpl<$Res> extends _$ThresholdCopyWithImpl<$Res>
-    implements _$$_ThresholdCopyWith<$Res> {
-  __$$_ThresholdCopyWithImpl(
-      _$_Threshold _value, $Res Function(_$_Threshold) _then)
-      : super(_value, (v) => _then(v as _$_Threshold));
+class __$$ThresholdImplCopyWithImpl<$Res>
+    extends _$ThresholdCopyWithImpl<$Res, _$ThresholdImpl>
+    implements _$$ThresholdImplCopyWith<$Res> {
+  __$$ThresholdImplCopyWithImpl(
+      _$ThresholdImpl _value, $Res Function(_$ThresholdImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_Threshold get _value => super._value as _$_Threshold;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? latitude = freezed,
-    Object? longitude = freezed,
-    Object? displaced = freezed,
-    Object? elevation = freezed,
+    Object? latitude = null,
+    Object? longitude = null,
+    Object? displaced = null,
+    Object? elevation = null,
   }) {
-    return _then(_$_Threshold(
-      latitude: latitude == freezed
+    return _then(_$ThresholdImpl(
+      latitude: null == latitude
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
               as double,
-      longitude: longitude == freezed
+      longitude: null == longitude
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as double,
-      displaced: displaced == freezed
+      displaced: null == displaced
           ? _value.displaced
           : displaced // ignore: cast_nullable_to_non_nullable
               as Length,
-      elevation: elevation == freezed
+      elevation: null == elevation
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as Length,
@@ -727,16 +747,16 @@ class __$$_ThresholdCopyWithImpl<$Res> extends _$ThresholdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Threshold extends _Threshold {
-  const _$_Threshold(
+class _$ThresholdImpl extends _Threshold {
+  const _$ThresholdImpl(
       {required this.latitude,
       required this.longitude,
       required this.displaced,
       required this.elevation})
       : super._();
 
-  factory _$_Threshold.fromJson(Map<String, dynamic> json) =>
-      _$$_ThresholdFromJson(json);
+  factory _$ThresholdImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ThresholdImplFromJson(json);
 
   @override
   final double latitude;
@@ -753,33 +773,34 @@ class _$_Threshold extends _Threshold {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Threshold &&
-            const DeepCollectionEquality().equals(other.latitude, latitude) &&
-            const DeepCollectionEquality().equals(other.longitude, longitude) &&
-            const DeepCollectionEquality().equals(other.displaced, displaced) &&
-            const DeepCollectionEquality().equals(other.elevation, elevation));
+            other is _$ThresholdImpl &&
+            (identical(other.latitude, latitude) ||
+                other.latitude == latitude) &&
+            (identical(other.longitude, longitude) ||
+                other.longitude == longitude) &&
+            (identical(other.displaced, displaced) ||
+                other.displaced == displaced) &&
+            (identical(other.elevation, elevation) ||
+                other.elevation == elevation));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(latitude),
-      const DeepCollectionEquality().hash(longitude),
-      const DeepCollectionEquality().hash(displaced),
-      const DeepCollectionEquality().hash(elevation));
+  int get hashCode =>
+      Object.hash(runtimeType, latitude, longitude, displaced, elevation);
 
   @JsonKey(ignore: true)
   @override
-  _$$_ThresholdCopyWith<_$_Threshold> get copyWith =>
-      __$$_ThresholdCopyWithImpl<_$_Threshold>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ThresholdImplCopyWith<_$ThresholdImpl> get copyWith =>
+      __$$ThresholdImplCopyWithImpl<_$ThresholdImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ThresholdToJson(
+    return _$$ThresholdImplToJson(
       this,
     );
   }
@@ -790,11 +811,11 @@ abstract class _Threshold extends Threshold {
       {required final double latitude,
       required final double longitude,
       required final Length displaced,
-      required final Length elevation}) = _$_Threshold;
+      required final Length elevation}) = _$ThresholdImpl;
   const _Threshold._() : super._();
 
   factory _Threshold.fromJson(Map<String, dynamic> json) =
-      _$_Threshold.fromJson;
+      _$ThresholdImpl.fromJson;
 
   @override
   double get latitude;
@@ -806,6 +827,6 @@ abstract class _Threshold extends Threshold {
   Length get elevation;
   @override
   @JsonKey(ignore: true)
-  _$$_ThresholdCopyWith<_$_Threshold> get copyWith =>
+  _$$ThresholdImplCopyWith<_$ThresholdImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
