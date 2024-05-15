@@ -28,15 +28,12 @@ _$RunwayImpl _$$RunwayImplFromJson(Map<String, dynamic> json) => _$RunwayImpl(
       length: Length.fromJson(json['length'] as Map<String, dynamic>),
       width: Length.fromJson(json['width'] as Map<String, dynamic>),
       surface: json['surface'] as String,
-      lighted: json['lighted'] as bool,
       closed: json['closed'] as bool,
       start: Threshold.fromJson(json['start'] as Map<String, dynamic>),
       end: Threshold.fromJson(json['end'] as Map<String, dynamic>),
       ils: json['ils'] == null
           ? null
           : Ils.fromJson(json['ils'] as Map<String, dynamic>),
-      magneticVariation:
-          Angle.fromJson(json['magneticVariation'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$RunwayImplToJson(_$RunwayImpl instance) =>
@@ -47,12 +44,10 @@ Map<String, dynamic> _$$RunwayImplToJson(_$RunwayImpl instance) =>
       'length': instance.length.toJson(),
       'width': instance.width.toJson(),
       'surface': instance.surface,
-      'lighted': instance.lighted,
       'closed': instance.closed,
       'start': instance.start.toJson(),
       'end': instance.end.toJson(),
       'ils': instance.ils?.toJson(),
-      'magneticVariation': instance.magneticVariation.toJson(),
     };
 
 _$ThresholdImpl _$$ThresholdImplFromJson(Map<String, dynamic> json) =>

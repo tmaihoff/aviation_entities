@@ -14,8 +14,6 @@ _$NavAidImpl _$$NavAidImplFromJson(Map<String, dynamic> json) => _$NavAidImpl(
       latitude: (json['latitude'] as num).toDouble(),
       longitude: (json['longitude'] as num).toDouble(),
       elevation: Length.fromJson(json['elevation'] as Map<String, dynamic>),
-      magneticVariation:
-          Angle.fromJson(json['magneticVariation'] as Map<String, dynamic>),
       slavedVariation:
           Angle.fromJson(json['slavedVariation'] as Map<String, dynamic>),
     );
@@ -29,7 +27,6 @@ Map<String, dynamic> _$$NavAidImplToJson(_$NavAidImpl instance) =>
       'latitude': instance.latitude,
       'longitude': instance.longitude,
       'elevation': instance.elevation.toJson(),
-      'magneticVariation': instance.magneticVariation.toJson(),
       'slavedVariation': instance.slavedVariation.toJson(),
     };
 

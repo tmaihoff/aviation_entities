@@ -12,7 +12,6 @@ void main() {
       latitude: 1,
       longitude: 2,
       elevation: Length.zero,
-      magneticVariation: Angle.zero,
       slavedVariation: Angle.zero,
     );
     test('to and from json', () async {

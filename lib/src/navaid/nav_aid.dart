@@ -17,7 +17,6 @@ class NavAid with _$NavAid {
     required double latitude,
     required double longitude,
     required Length elevation,
-    required Angle magneticVariation,
 
     /// Only applicable for VORs, VORTACs, VORDMEs, and TACANs
     required Angle slavedVariation,

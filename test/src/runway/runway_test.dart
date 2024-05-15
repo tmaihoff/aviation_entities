@@ -11,7 +11,6 @@ void main() {
       length: Length.zero,
       width: Length.zero,
       surface: 'surface',
-      lighted: true,
       closed: false,
       start: Threshold(
         latitude: 1,
@@ -26,7 +25,6 @@ void main() {
         elevation: Length.zero,
       ),
       ils: null,
-      magneticVariation: Angle.zero,
     );
 
     final runwaySet = RunwaySet(

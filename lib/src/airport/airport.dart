@@ -19,7 +19,6 @@ class Airport with _$Airport {
     required double latitude,
     required double longitude,
     required double elevation, // TODO: use Length class?
-    required Angle magneticVariation,
     required String type,
     required List<RunwaySet> runways,
   }) = _Airport;

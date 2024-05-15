@@ -229,12 +229,10 @@ mixin _$Runway {
   Length get length => throw _privateConstructorUsedError;
   Length get width => throw _privateConstructorUsedError;
   String get surface => throw _privateConstructorUsedError;
-  bool get lighted => throw _privateConstructorUsedError;
   bool get closed => throw _privateConstructorUsedError;
   Threshold get start => throw _privateConstructorUsedError;
   Threshold get end => throw _privateConstructorUsedError;
   Ils? get ils => throw _privateConstructorUsedError;
-  Angle get magneticVariation => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -253,12 +251,10 @@ abstract class $RunwayCopyWith<$Res> {
       Length length,
       Length width,
       String surface,
-      bool lighted,
       bool closed,
       Threshold start,
       Threshold end,
-      Ils? ils,
-      Angle magneticVariation});
+      Ils? ils});
 
   $ThresholdCopyWith<$Res> get start;
   $ThresholdCopyWith<$Res> get end;
@@ -284,12 +280,10 @@ class _$RunwayCopyWithImpl<$Res, $Val extends Runway>
     Object? length = null,
     Object? width = null,
     Object? surface = null,
-    Object? lighted = null,
     Object? closed = null,
     Object? start = null,
     Object? end = null,
     Object? ils = freezed,
-    Object? magneticVariation = null,
   }) {
     return _then(_value.copyWith(
       airportIcaoCode: null == airportIcaoCode
@@ -316,10 +310,6 @@ class _$RunwayCopyWithImpl<$Res, $Val extends Runway>
           ? _value.surface
           : surface // ignore: cast_nullable_to_non_nullable
               as String,
-      lighted: null == lighted
-          ? _value.lighted
-          : lighted // ignore: cast_nullable_to_non_nullable
-              as bool,
       closed: null == closed
           ? _value.closed
           : closed // ignore: cast_nullable_to_non_nullable
@@ -336,10 +326,6 @@ class _$RunwayCopyWithImpl<$Res, $Val extends Runway>
           ? _value.ils
           : ils // ignore: cast_nullable_to_non_nullable
               as Ils?,
-      magneticVariation: null == magneticVariation
-          ? _value.magneticVariation
-          : magneticVariation // ignore: cast_nullable_to_non_nullable
-              as Angle,
     ) as $Val);
   }
 
@@ -386,12 +372,10 @@ abstract class _$$RunwayImplCopyWith<$Res> implements $RunwayCopyWith<$Res> {
       Length length,
       Length width,
       String surface,
-      bool lighted,
       bool closed,
       Threshold start,
       Threshold end,
-      Ils? ils,
-      Angle magneticVariation});
+      Ils? ils});
 
   @override
   $ThresholdCopyWith<$Res> get start;
@@ -418,12 +402,10 @@ class __$$RunwayImplCopyWithImpl<$Res>
     Object? length = null,
     Object? width = null,
     Object? surface = null,
-    Object? lighted = null,
     Object? closed = null,
     Object? start = null,
     Object? end = null,
     Object? ils = freezed,
-    Object? magneticVariation = null,
   }) {
     return _then(_$RunwayImpl(
       airportIcaoCode: null == airportIcaoCode
@@ -450,10 +432,6 @@ class __$$RunwayImplCopyWithImpl<$Res>
           ? _value.surface
           : surface // ignore: cast_nullable_to_non_nullable
               as String,
-      lighted: null == lighted
-          ? _value.lighted
-          : lighted // ignore: cast_nullable_to_non_nullable
-              as bool,
       closed: null == closed
           ? _value.closed
           : closed // ignore: cast_nullable_to_non_nullable
@@ -470,10 +448,6 @@ class __$$RunwayImplCopyWithImpl<$Res>
           ? _value.ils
           : ils // ignore: cast_nullable_to_non_nullable
               as Ils?,
-      magneticVariation: null == magneticVariation
-          ? _value.magneticVariation
-          : magneticVariation // ignore: cast_nullable_to_non_nullable
-              as Angle,
     ));
   }
 }
@@ -488,12 +462,10 @@ class _$RunwayImpl extends _Runway {
       required this.length,
       required this.width,
       required this.surface,
-      required this.lighted,
       required this.closed,
       required this.start,
       required this.end,
-      required this.ils,
-      required this.magneticVariation})
+      required this.ils})
       : super._();
 
   factory _$RunwayImpl.fromJson(Map<String, dynamic> json) =>
@@ -512,8 +484,6 @@ class _$RunwayImpl extends _Runway {
   @override
   final String surface;
   @override
-  final bool lighted;
-  @override
   final bool closed;
   @override
   final Threshold start;
@@ -521,12 +491,10 @@ class _$RunwayImpl extends _Runway {
   final Threshold end;
   @override
   final Ils? ils;
-  @override
-  final Angle magneticVariation;
 
   @override
   String toString() {
-    return 'Runway(airportIcaoCode: $airportIcaoCode, identifier: $identifier, trueHeading: $trueHeading, length: $length, width: $width, surface: $surface, lighted: $lighted, closed: $closed, start: $start, end: $end, ils: $ils, magneticVariation: $magneticVariation)';
+    return 'Runway(airportIcaoCode: $airportIcaoCode, identifier: $identifier, trueHeading: $trueHeading, length: $length, width: $width, surface: $surface, closed: $closed, start: $start, end: $end, ils: $ils)';
   }
 
   @override
@@ -543,31 +511,16 @@ class _$RunwayImpl extends _Runway {
             (identical(other.length, length) || other.length == length) &&
             (identical(other.width, width) || other.width == width) &&
             (identical(other.surface, surface) || other.surface == surface) &&
-            (identical(other.lighted, lighted) || other.lighted == lighted) &&
             (identical(other.closed, closed) || other.closed == closed) &&
             (identical(other.start, start) || other.start == start) &&
             (identical(other.end, end) || other.end == end) &&
-            (identical(other.ils, ils) || other.ils == ils) &&
-            (identical(other.magneticVariation, magneticVariation) ||
-                other.magneticVariation == magneticVariation));
+            (identical(other.ils, ils) || other.ils == ils));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      airportIcaoCode,
-      identifier,
-      trueHeading,
-      length,
-      width,
-      surface,
-      lighted,
-      closed,
-      start,
-      end,
-      ils,
-      magneticVariation);
+  int get hashCode => Object.hash(runtimeType, airportIcaoCode, identifier,
+      trueHeading, length, width, surface, closed, start, end, ils);
 
   @JsonKey(ignore: true)
   @override
@@ -591,12 +544,10 @@ abstract class _Runway extends Runway {
       required final Length length,
       required final Length width,
       required final String surface,
-      required final bool lighted,
       required final bool closed,
       required final Threshold start,
       required final Threshold end,
-      required final Ils? ils,
-      required final Angle magneticVariation}) = _$RunwayImpl;
+      required final Ils? ils}) = _$RunwayImpl;
   const _Runway._() : super._();
 
   factory _Runway.fromJson(Map<String, dynamic> json) = _$RunwayImpl.fromJson;
@@ -614,8 +565,6 @@ abstract class _Runway extends Runway {
   @override
   String get surface;
   @override
-  bool get lighted;
-  @override
   bool get closed;
   @override
   Threshold get start;
@@ -623,8 +572,6 @@ abstract class _Runway extends Runway {
   Threshold get end;
   @override
   Ils? get ils;
-  @override
-  Angle get magneticVariation;
   @override
   @JsonKey(ignore: true)
   _$$RunwayImplCopyWith<_$RunwayImpl> get copyWith =>

@@ -43,12 +43,10 @@ class Runway with _$Runway {
     required Length length,
     required Length width,
     required String surface,
-    required bool lighted,
     required bool closed,
     required Threshold start,
     required Threshold end,
     required Ils? ils,
-    required Angle magneticVariation,
   }) = _Runway;
 
   LatLng get startLatLng => start.latLng;

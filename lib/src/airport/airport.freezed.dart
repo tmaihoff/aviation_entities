@@ -28,7 +28,6 @@ mixin _$Airport {
   double get longitude => throw _privateConstructorUsedError;
   double get elevation =>
       throw _privateConstructorUsedError; // TODO: use Length class?
-  Angle get magneticVariation => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   List<RunwaySet> get runways => throw _privateConstructorUsedError;
 
@@ -50,7 +49,6 @@ abstract class $AirportCopyWith<$Res> {
       double latitude,
       double longitude,
       double elevation,
-      Angle magneticVariation,
       String type,
       List<RunwaySet> runways});
 }
@@ -75,7 +73,6 @@ class _$AirportCopyWithImpl<$Res, $Val extends Airport>
     Object? latitude = null,
     Object? longitude = null,
     Object? elevation = null,
-    Object? magneticVariation = null,
     Object? type = null,
     Object? runways = null,
   }) {
@@ -108,10 +105,6 @@ class _$AirportCopyWithImpl<$Res, $Val extends Airport>
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as double,
-      magneticVariation: null == magneticVariation
-          ? _value.magneticVariation
-          : magneticVariation // ignore: cast_nullable_to_non_nullable
-              as Angle,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -139,7 +132,6 @@ abstract class _$$AirportImplCopyWith<$Res> implements $AirportCopyWith<$Res> {
       double latitude,
       double longitude,
       double elevation,
-      Angle magneticVariation,
       String type,
       List<RunwaySet> runways});
 }
@@ -162,7 +154,6 @@ class __$$AirportImplCopyWithImpl<$Res>
     Object? latitude = null,
     Object? longitude = null,
     Object? elevation = null,
-    Object? magneticVariation = null,
     Object? type = null,
     Object? runways = null,
   }) {
@@ -195,10 +186,6 @@ class __$$AirportImplCopyWithImpl<$Res>
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as double,
-      magneticVariation: null == magneticVariation
-          ? _value.magneticVariation
-          : magneticVariation // ignore: cast_nullable_to_non_nullable
-              as Angle,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -222,7 +209,6 @@ class _$AirportImpl extends _Airport {
       required this.latitude,
       required this.longitude,
       required this.elevation,
-      required this.magneticVariation,
       required this.type,
       required final List<RunwaySet> runways})
       : _runways = runways,
@@ -247,8 +233,6 @@ class _$AirportImpl extends _Airport {
   final double elevation;
 // TODO: use Length class?
   @override
-  final Angle magneticVariation;
-  @override
   final String type;
   final List<RunwaySet> _runways;
   @override
@@ -260,7 +244,7 @@ class _$AirportImpl extends _Airport {
 
   @override
   String toString() {
-    return 'Airport(icaoCode: $icaoCode, iataCode: $iataCode, name: $name, city: $city, latitude: $latitude, longitude: $longitude, elevation: $elevation, magneticVariation: $magneticVariation, type: $type, runways: $runways)';
+    return 'Airport(icaoCode: $icaoCode, iataCode: $iataCode, name: $name, city: $city, latitude: $latitude, longitude: $longitude, elevation: $elevation, type: $type, runways: $runways)';
   }
 
   @override
@@ -280,8 +264,6 @@ class _$AirportImpl extends _Airport {
                 other.longitude == longitude) &&
             (identical(other.elevation, elevation) ||
                 other.elevation == elevation) &&
-            (identical(other.magneticVariation, magneticVariation) ||
-                other.magneticVariation == magneticVariation) &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._runways, _runways));
   }
@@ -297,7 +279,6 @@ class _$AirportImpl extends _Airport {
       latitude,
       longitude,
       elevation,
-      magneticVariation,
       type,
       const DeepCollectionEquality().hash(_runways));
 
@@ -324,7 +305,6 @@ abstract class _Airport extends Airport {
       required final double latitude,
       required final double longitude,
       required final double elevation,
-      required final Angle magneticVariation,
       required final String type,
       required final List<RunwaySet> runways}) = _$AirportImpl;
   const _Airport._() : super._();
@@ -346,8 +326,6 @@ abstract class _Airport extends Airport {
   @override
   double get elevation;
   @override // TODO: use Length class?
-  Angle get magneticVariation;
-  @override
   String get type;
   @override
   List<RunwaySet> get runways;

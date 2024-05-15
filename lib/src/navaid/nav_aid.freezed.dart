@@ -27,7 +27,6 @@ mixin _$NavAid {
   double get latitude => throw _privateConstructorUsedError;
   double get longitude => throw _privateConstructorUsedError;
   Length get elevation => throw _privateConstructorUsedError;
-  Angle get magneticVariation => throw _privateConstructorUsedError;
 
   /// Only applicable for VORs, VORTACs, VORDMEs, and TACANs
   Angle get slavedVariation => throw _privateConstructorUsedError;
@@ -50,7 +49,6 @@ abstract class $NavAidCopyWith<$Res> {
       double latitude,
       double longitude,
       Length elevation,
-      Angle magneticVariation,
       Angle slavedVariation});
 }
 
@@ -74,7 +72,6 @@ class _$NavAidCopyWithImpl<$Res, $Val extends NavAid>
     Object? latitude = null,
     Object? longitude = null,
     Object? elevation = null,
-    Object? magneticVariation = null,
     Object? slavedVariation = null,
   }) {
     return _then(_value.copyWith(
@@ -106,10 +103,6 @@ class _$NavAidCopyWithImpl<$Res, $Val extends NavAid>
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as Length,
-      magneticVariation: null == magneticVariation
-          ? _value.magneticVariation
-          : magneticVariation // ignore: cast_nullable_to_non_nullable
-              as Angle,
       slavedVariation: null == slavedVariation
           ? _value.slavedVariation
           : slavedVariation // ignore: cast_nullable_to_non_nullable
@@ -133,7 +126,6 @@ abstract class _$$NavAidImplCopyWith<$Res> implements $NavAidCopyWith<$Res> {
       double latitude,
       double longitude,
       Length elevation,
-      Angle magneticVariation,
       Angle slavedVariation});
 }
 
@@ -155,7 +147,6 @@ class __$$NavAidImplCopyWithImpl<$Res>
     Object? latitude = null,
     Object? longitude = null,
     Object? elevation = null,
-    Object? magneticVariation = null,
     Object? slavedVariation = null,
   }) {
     return _then(_$NavAidImpl(
@@ -187,10 +178,6 @@ class __$$NavAidImplCopyWithImpl<$Res>
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as Length,
-      magneticVariation: null == magneticVariation
-          ? _value.magneticVariation
-          : magneticVariation // ignore: cast_nullable_to_non_nullable
-              as Angle,
       slavedVariation: null == slavedVariation
           ? _value.slavedVariation
           : slavedVariation // ignore: cast_nullable_to_non_nullable
@@ -210,7 +197,6 @@ class _$NavAidImpl extends _NavAid {
       required this.latitude,
       required this.longitude,
       required this.elevation,
-      required this.magneticVariation,
       required this.slavedVariation})
       : super._();
 
@@ -232,8 +218,6 @@ class _$NavAidImpl extends _NavAid {
   final double longitude;
   @override
   final Length elevation;
-  @override
-  final Angle magneticVariation;
 
   /// Only applicable for VORs, VORTACs, VORDMEs, and TACANs
   @override
@@ -241,7 +225,7 @@ class _$NavAidImpl extends _NavAid {
 
   @override
   String toString() {
-    return 'NavAid(type: $type, identifier: $identifier, name: $name, frequency: $frequency, latitude: $latitude, longitude: $longitude, elevation: $elevation, magneticVariation: $magneticVariation, slavedVariation: $slavedVariation)';
+    return 'NavAid(type: $type, identifier: $identifier, name: $name, frequency: $frequency, latitude: $latitude, longitude: $longitude, elevation: $elevation, slavedVariation: $slavedVariation)';
   }
 
   @override
@@ -261,25 +245,14 @@ class _$NavAidImpl extends _NavAid {
                 other.longitude == longitude) &&
             (identical(other.elevation, elevation) ||
                 other.elevation == elevation) &&
-            (identical(other.magneticVariation, magneticVariation) ||
-                other.magneticVariation == magneticVariation) &&
             (identical(other.slavedVariation, slavedVariation) ||
                 other.slavedVariation == slavedVariation));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      type,
-      identifier,
-      name,
-      frequency,
-      latitude,
-      longitude,
-      elevation,
-      magneticVariation,
-      slavedVariation);
+  int get hashCode => Object.hash(runtimeType, type, identifier, name,
+      frequency, latitude, longitude, elevation, slavedVariation);
 
   @JsonKey(ignore: true)
   @override
@@ -304,7 +277,6 @@ abstract class _NavAid extends NavAid {
       required final double latitude,
       required final double longitude,
       required final Length elevation,
-      required final Angle magneticVariation,
       required final Angle slavedVariation}) = _$NavAidImpl;
   const _NavAid._() : super._();
 
@@ -324,8 +296,6 @@ abstract class _NavAid extends NavAid {
   double get longitude;
   @override
   Length get elevation;
-  @override
-  Angle get magneticVariation;
   @override
 
   /// Only applicable for VORs, VORTACs, VORDMEs, and TACANs

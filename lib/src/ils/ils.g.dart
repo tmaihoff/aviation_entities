@@ -12,16 +12,14 @@ _$IlsImpl _$$IlsImplFromJson(Map<String, dynamic> json) => _$IlsImpl(
       frequency: json['frequency'] as String,
       airportIcaoCode: json['airportIcaoCode'] as String,
       range: (json['range'] as num).toDouble(),
-      magneticVariation:
-          Angle.fromJson(json['magneticVariation'] as Map<String, dynamic>),
       glideSlopeAngle:
           Angle.fromJson(json['glideSlopeAngle'] as Map<String, dynamic>),
       glideSlopeElevation:
           Length.fromJson(json['glideSlopeElevation'] as Map<String, dynamic>),
       glideSlopeLatitude: (json['glideSlopeLatitude'] as num).toDouble(),
       glideSlopeLongitude: (json['glideSlopeLongitude'] as num).toDouble(),
-      localizerTrueHeading: Heading.fromJson(
-          json['localizerTrueHeading'] as Map<String, dynamic>),
+      localizerMagneticHeading: Heading.fromJson(
+          json['localizerMagneticHeading'] as Map<String, dynamic>),
       localizerLatitude: (json['localizerLatitude'] as num).toDouble(),
       localizerLongitude: (json['localizerLongitude'] as num).toDouble(),
       hasDme: json['hasDme'] as bool,
@@ -38,12 +36,11 @@ Map<String, dynamic> _$$IlsImplToJson(_$IlsImpl instance) => <String, dynamic>{
       'frequency': instance.frequency,
       'airportIcaoCode': instance.airportIcaoCode,
       'range': instance.range,
-      'magneticVariation': instance.magneticVariation.toJson(),
       'glideSlopeAngle': instance.glideSlopeAngle.toJson(),
       'glideSlopeElevation': instance.glideSlopeElevation.toJson(),
       'glideSlopeLatitude': instance.glideSlopeLatitude,
       'glideSlopeLongitude': instance.glideSlopeLongitude,
-      'localizerTrueHeading': instance.localizerTrueHeading.toJson(),
+      'localizerMagneticHeading': instance.localizerMagneticHeading.toJson(),
       'localizerLatitude': instance.localizerLatitude,
       'localizerLongitude': instance.localizerLongitude,
       'hasDme': instance.hasDme,
