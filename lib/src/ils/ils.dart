@@ -12,6 +12,7 @@ class Ils with _$Ils {
     required String name,
     required String frequency,
     required String airportIcaoCode,
+    required String runwayIdentifier,
     required double range,
     required Angle glideSlopeAngle,
     required Length glideSlopeElevation,

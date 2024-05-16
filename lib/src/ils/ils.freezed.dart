@@ -24,6 +24,7 @@ mixin _$Ils {
   String get name => throw _privateConstructorUsedError;
   String get frequency => throw _privateConstructorUsedError;
   String get airportIcaoCode => throw _privateConstructorUsedError;
+  String get runwayIdentifier => throw _privateConstructorUsedError;
   double get range => throw _privateConstructorUsedError;
   Angle get glideSlopeAngle => throw _privateConstructorUsedError;
   Length get glideSlopeElevation => throw _privateConstructorUsedError;
@@ -52,6 +53,7 @@ abstract class $IlsCopyWith<$Res> {
       String name,
       String frequency,
       String airportIcaoCode,
+      String runwayIdentifier,
       double range,
       Angle glideSlopeAngle,
       Length glideSlopeElevation,
@@ -82,6 +84,7 @@ class _$IlsCopyWithImpl<$Res, $Val extends Ils> implements $IlsCopyWith<$Res> {
     Object? name = null,
     Object? frequency = null,
     Object? airportIcaoCode = null,
+    Object? runwayIdentifier = null,
     Object? range = null,
     Object? glideSlopeAngle = null,
     Object? glideSlopeElevation = null,
@@ -111,6 +114,10 @@ class _$IlsCopyWithImpl<$Res, $Val extends Ils> implements $IlsCopyWith<$Res> {
       airportIcaoCode: null == airportIcaoCode
           ? _value.airportIcaoCode
           : airportIcaoCode // ignore: cast_nullable_to_non_nullable
+              as String,
+      runwayIdentifier: null == runwayIdentifier
+          ? _value.runwayIdentifier
+          : runwayIdentifier // ignore: cast_nullable_to_non_nullable
               as String,
       range: null == range
           ? _value.range
@@ -175,6 +182,7 @@ abstract class _$$IlsImplCopyWith<$Res> implements $IlsCopyWith<$Res> {
       String name,
       String frequency,
       String airportIcaoCode,
+      String runwayIdentifier,
       double range,
       Angle glideSlopeAngle,
       Length glideSlopeElevation,
@@ -202,6 +210,7 @@ class __$$IlsImplCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res, _$IlsImpl>
     Object? name = null,
     Object? frequency = null,
     Object? airportIcaoCode = null,
+    Object? runwayIdentifier = null,
     Object? range = null,
     Object? glideSlopeAngle = null,
     Object? glideSlopeElevation = null,
@@ -231,6 +240,10 @@ class __$$IlsImplCopyWithImpl<$Res> extends _$IlsCopyWithImpl<$Res, _$IlsImpl>
       airportIcaoCode: null == airportIcaoCode
           ? _value.airportIcaoCode
           : airportIcaoCode // ignore: cast_nullable_to_non_nullable
+              as String,
+      runwayIdentifier: null == runwayIdentifier
+          ? _value.runwayIdentifier
+          : runwayIdentifier // ignore: cast_nullable_to_non_nullable
               as String,
       range: null == range
           ? _value.range
@@ -292,6 +305,7 @@ class _$IlsImpl extends _Ils {
       required this.name,
       required this.frequency,
       required this.airportIcaoCode,
+      required this.runwayIdentifier,
       required this.range,
       required this.glideSlopeAngle,
       required this.glideSlopeElevation,
@@ -317,6 +331,8 @@ class _$IlsImpl extends _Ils {
   final String frequency;
   @override
   final String airportIcaoCode;
+  @override
+  final String runwayIdentifier;
   @override
   final double range;
   @override
@@ -344,7 +360,7 @@ class _$IlsImpl extends _Ils {
 
   @override
   String toString() {
-    return 'Ils(identifier: $identifier, name: $name, frequency: $frequency, airportIcaoCode: $airportIcaoCode, range: $range, glideSlopeAngle: $glideSlopeAngle, glideSlopeElevation: $glideSlopeElevation, glideSlopeLatitude: $glideSlopeLatitude, glideSlopeLongitude: $glideSlopeLongitude, localizerMagneticHeading: $localizerMagneticHeading, localizerLatitude: $localizerLatitude, localizerLongitude: $localizerLongitude, hasDme: $hasDme, dmeElevation: $dmeElevation, dmeLatitude: $dmeLatitude, dmeLongitude: $dmeLongitude)';
+    return 'Ils(identifier: $identifier, name: $name, frequency: $frequency, airportIcaoCode: $airportIcaoCode, runwayIdentifier: $runwayIdentifier, range: $range, glideSlopeAngle: $glideSlopeAngle, glideSlopeElevation: $glideSlopeElevation, glideSlopeLatitude: $glideSlopeLatitude, glideSlopeLongitude: $glideSlopeLongitude, localizerMagneticHeading: $localizerMagneticHeading, localizerLatitude: $localizerLatitude, localizerLongitude: $localizerLongitude, hasDme: $hasDme, dmeElevation: $dmeElevation, dmeLatitude: $dmeLatitude, dmeLongitude: $dmeLongitude)';
   }
 
   @override
@@ -359,6 +375,8 @@ class _$IlsImpl extends _Ils {
                 other.frequency == frequency) &&
             (identical(other.airportIcaoCode, airportIcaoCode) ||
                 other.airportIcaoCode == airportIcaoCode) &&
+            (identical(other.runwayIdentifier, runwayIdentifier) ||
+                other.runwayIdentifier == runwayIdentifier) &&
             (identical(other.range, range) || other.range == range) &&
             (identical(other.glideSlopeAngle, glideSlopeAngle) ||
                 other.glideSlopeAngle == glideSlopeAngle) &&
@@ -392,6 +410,7 @@ class _$IlsImpl extends _Ils {
       name,
       frequency,
       airportIcaoCode,
+      runwayIdentifier,
       range,
       glideSlopeAngle,
       glideSlopeElevation,
@@ -425,6 +444,7 @@ abstract class _Ils extends Ils {
       required final String name,
       required final String frequency,
       required final String airportIcaoCode,
+      required final String runwayIdentifier,
       required final double range,
       required final Angle glideSlopeAngle,
       required final Length glideSlopeElevation,
@@ -449,6 +469,8 @@ abstract class _Ils extends Ils {
   String get frequency;
   @override
   String get airportIcaoCode;
+  @override
+  String get runwayIdentifier;
   @override
   double get range;
   @override

@@ -5,4 +5,5 @@ export 'intercept.dart';
 export 'magnetic_variation.dart';
 export 'nav_aid.dart';
 export 'runway.dart';
+export 'src/types.dart';
 export 'wind.dart';

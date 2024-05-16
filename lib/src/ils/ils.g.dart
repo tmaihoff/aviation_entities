@@ -11,6 +11,7 @@ _$IlsImpl _$$IlsImplFromJson(Map<String, dynamic> json) => _$IlsImpl(
       name: json['name'] as String,
       frequency: json['frequency'] as String,
       airportIcaoCode: json['airportIcaoCode'] as String,
+      runwayIdentifier: json['runwayIdentifier'] as String,
       range: (json['range'] as num).toDouble(),
       glideSlopeAngle:
           Angle.fromJson(json['glideSlopeAngle'] as Map<String, dynamic>),
@@ -35,6 +36,7 @@ Map<String, dynamic> _$$IlsImplToJson(_$IlsImpl instance) => <String, dynamic>{
       'name': instance.name,
       'frequency': instance.frequency,
       'airportIcaoCode': instance.airportIcaoCode,
+      'runwayIdentifier': instance.runwayIdentifier,
       'range': instance.range,
       'glideSlopeAngle': instance.glideSlopeAngle.toJson(),
       'glideSlopeElevation': instance.glideSlopeElevation.toJson(),
