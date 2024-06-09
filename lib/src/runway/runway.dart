@@ -13,11 +13,11 @@ class RunwaySet with _$RunwaySet {
   const factory RunwaySet({
     required String airportIcaoCode,
     required Runway direction1,
-    required Runway direction2,
+    Runway? direction2,
   }) = _RunwaySet;
 
 // TODO: test this
-  List<Runway> get getBoth => [direction1, direction2];
+  List<Runway> get getBoth => [direction1, if (direction2 != null) direction2!];
   List<Ils> get allIls => getBoth
       .map((runway) => runway.ils) //
       .whereType<Ils>()

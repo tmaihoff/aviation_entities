@@ -10,14 +10,16 @@ _$RunwaySetImpl _$$RunwaySetImplFromJson(Map<String, dynamic> json) =>
     _$RunwaySetImpl(
       airportIcaoCode: json['airportIcaoCode'] as String,
       direction1: Runway.fromJson(json['direction1'] as Map<String, dynamic>),
-      direction2: Runway.fromJson(json['direction2'] as Map<String, dynamic>),
+      direction2: json['direction2'] == null
+          ? null
+          : Runway.fromJson(json['direction2'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$RunwaySetImplToJson(_$RunwaySetImpl instance) =>
     <String, dynamic>{
       'airportIcaoCode': instance.airportIcaoCode,
       'direction1': instance.direction1.toJson(),
-      'direction2': instance.direction2.toJson(),
+      'direction2': instance.direction2?.toJson(),
     };
 
 _$RunwayImpl _$$RunwayImplFromJson(Map<String, dynamic> json) => _$RunwayImpl(

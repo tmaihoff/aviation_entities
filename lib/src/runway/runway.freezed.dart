@@ -22,7 +22,7 @@ RunwaySet _$RunwaySetFromJson(Map<String, dynamic> json) {
 mixin _$RunwaySet {
   String get airportIcaoCode => throw _privateConstructorUsedError;
   Runway get direction1 => throw _privateConstructorUsedError;
-  Runway get direction2 => throw _privateConstructorUsedError;
+  Runway? get direction2 => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,10 +35,10 @@ abstract class $RunwaySetCopyWith<$Res> {
   factory $RunwaySetCopyWith(RunwaySet value, $Res Function(RunwaySet) then) =
       _$RunwaySetCopyWithImpl<$Res, RunwaySet>;
   @useResult
-  $Res call({String airportIcaoCode, Runway direction1, Runway direction2});
+  $Res call({String airportIcaoCode, Runway direction1, Runway? direction2});
 
   $RunwayCopyWith<$Res> get direction1;
-  $RunwayCopyWith<$Res> get direction2;
+  $RunwayCopyWith<$Res>? get direction2;
 }
 
 /// @nodoc
@@ -56,7 +56,7 @@ class _$RunwaySetCopyWithImpl<$Res, $Val extends RunwaySet>
   $Res call({
     Object? airportIcaoCode = null,
     Object? direction1 = null,
-    Object? direction2 = null,
+    Object? direction2 = freezed,
   }) {
     return _then(_value.copyWith(
       airportIcaoCode: null == airportIcaoCode
@@ -67,10 +67,10 @@ class _$RunwaySetCopyWithImpl<$Res, $Val extends RunwaySet>
           ? _value.direction1
           : direction1 // ignore: cast_nullable_to_non_nullable
               as Runway,
-      direction2: null == direction2
+      direction2: freezed == direction2
           ? _value.direction2
           : direction2 // ignore: cast_nullable_to_non_nullable
-              as Runway,
+              as Runway?,
     ) as $Val);
   }
 
@@ -84,8 +84,12 @@ class _$RunwaySetCopyWithImpl<$Res, $Val extends RunwaySet>
 
   @override
   @pragma('vm:prefer-inline')
-  $RunwayCopyWith<$Res> get direction2 {
-    return $RunwayCopyWith<$Res>(_value.direction2, (value) {
+  $RunwayCopyWith<$Res>? get direction2 {
+    if (_value.direction2 == null) {
+      return null;
+    }
+
+    return $RunwayCopyWith<$Res>(_value.direction2!, (value) {
       return _then(_value.copyWith(direction2: value) as $Val);
     });
   }
@@ -99,12 +103,12 @@ abstract class _$$RunwaySetImplCopyWith<$Res>
       __$$RunwaySetImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String airportIcaoCode, Runway direction1, Runway direction2});
+  $Res call({String airportIcaoCode, Runway direction1, Runway? direction2});
 
   @override
   $RunwayCopyWith<$Res> get direction1;
   @override
-  $RunwayCopyWith<$Res> get direction2;
+  $RunwayCopyWith<$Res>? get direction2;
 }
 
 /// @nodoc
@@ -120,7 +124,7 @@ class __$$RunwaySetImplCopyWithImpl<$Res>
   $Res call({
     Object? airportIcaoCode = null,
     Object? direction1 = null,
-    Object? direction2 = null,
+    Object? direction2 = freezed,
   }) {
     return _then(_$RunwaySetImpl(
       airportIcaoCode: null == airportIcaoCode
@@ -131,10 +135,10 @@ class __$$RunwaySetImplCopyWithImpl<$Res>
           ? _value.direction1
           : direction1 // ignore: cast_nullable_to_non_nullable
               as Runway,
-      direction2: null == direction2
+      direction2: freezed == direction2
           ? _value.direction2
           : direction2 // ignore: cast_nullable_to_non_nullable
-              as Runway,
+              as Runway?,
     ));
   }
 }
@@ -145,7 +149,7 @@ class _$RunwaySetImpl extends _RunwaySet {
   const _$RunwaySetImpl(
       {required this.airportIcaoCode,
       required this.direction1,
-      required this.direction2})
+      this.direction2})
       : super._();
 
   factory _$RunwaySetImpl.fromJson(Map<String, dynamic> json) =>
@@ -156,7 +160,7 @@ class _$RunwaySetImpl extends _RunwaySet {
   @override
   final Runway direction1;
   @override
-  final Runway direction2;
+  final Runway? direction2;
 
   @override
   String toString() {
@@ -199,7 +203,7 @@ abstract class _RunwaySet extends RunwaySet {
   const factory _RunwaySet(
       {required final String airportIcaoCode,
       required final Runway direction1,
-      required final Runway direction2}) = _$RunwaySetImpl;
+      final Runway? direction2}) = _$RunwaySetImpl;
   const _RunwaySet._() : super._();
 
   factory _RunwaySet.fromJson(Map<String, dynamic> json) =
@@ -210,7 +214,7 @@ abstract class _RunwaySet extends RunwaySet {
   @override
   Runway get direction1;
   @override
-  Runway get direction2;
+  Runway? get direction2;
   @override
   @JsonKey(ignore: true)
   _$$RunwaySetImplCopyWith<_$RunwaySetImpl> get copyWith =>
