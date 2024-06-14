@@ -39,6 +39,17 @@ class Airport with _$Airport {
     return '$city $name';
   }
 
+  Runway? get longestRunway {
+    final runwayList =
+        runways.map((runway) => runway.getBoth).expand((rwy) => rwy).toList();
+
+    if (runwayList.isEmpty) {
+      return null;
+    }
+
+    return runwayList.reduce((a, b) => a.length > b.length ? a : b);
+  }
+
   factory Airport.fromJson(Map<String, dynamic> json) =>
       _$AirportFromJson(json);
 
